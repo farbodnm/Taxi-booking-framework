@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="feedback" />
         <module name="fleet" />
         <module name="booking" />
         <module name="framework" />
@@ -24,6 +25,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="booking" options="-parameters" />
       <module name="dispatch" options="-parameters" />
+      <module name="feedback" options="-parameters" />
       <module name="fleet" options="-parameters" />
       <module name="framework" options="-parameters" />
       <module name="pricing" options="-parameters" />
