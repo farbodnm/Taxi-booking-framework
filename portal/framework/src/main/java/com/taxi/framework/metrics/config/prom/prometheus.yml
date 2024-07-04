@@ -1,0 +1,27 @@
+global:
+  scrape_interval: "30s"
+  scrape_timeout: "10s"
+  evaluation_interval: "30s"
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+           - 'alertmanager:9093'
+
+# rule_files:
+#   - './redis-rules.yml'
+#   - './postgres-rules.yml'
+# THERE ARE NO RULES DEFINED SO WE COMMENT THIS PART
+
+scrape_configs:
+  - job_name: prometheus
+    static_configs:
+      - targets: ['prometheus:9090']
+
+  - job_name: app
+    honor_labels: false
+    honor_timestamps: true
+    scheme: http
+    static_configs:
+      - targets: ['app:2112']
