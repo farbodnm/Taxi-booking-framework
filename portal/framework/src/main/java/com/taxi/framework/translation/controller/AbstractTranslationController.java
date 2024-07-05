@@ -50,6 +50,14 @@ public class AbstractTranslationController <T extends BaseTranslationDto, Y exte
     public ResponseEntity<Boolean> addTranslation(@RequestBody AddTranslationDto translationDto) {
         return ResponseEntity.ok(translationService.addTranslation(translationDto));
     }
+
+    @GetMapping("/translationv2")
+    public ResponseEntity<TranslationDto> getTranslationBylanguage(@RequestParam Long contentId,
+                                                               @RequestParam String languageType) {
+        return ResponseEntity.ok(translationService.findByContentIdAndLanguageTypeLanguage(contentId,
+                languageType));
+    }
+
 }
 
 

@@ -76,6 +76,13 @@ public class AbstractTranslationServiceImpl<T extends BaseTranslationDto, Y exte
         translationRepository.save(translation);
         return true;
     }
+
+    @Override
+    public TranslationDto findByContentIdAndLanguageTypeLanguage(Long contentId, String language) {
+        Translation translation = translationRepository.findByContentIdAndLanguageTypeLanguage(contentId, language);
+
+        return new TranslationDto(translation.getTranslationText());
+    }
 }
 
 

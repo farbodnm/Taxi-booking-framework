@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface AbstractTranslationRepository  extends JpaRepository<Translation, Integer> {
     List<Translation> findByContentIdAndLanguageTypeId(Long contentId, Long languageTypeId);
+    Translation findByContentIdAndLanguageTypeLanguage(Long contentId, String language);
 }

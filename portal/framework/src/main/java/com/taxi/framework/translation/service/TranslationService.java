@@ -12,4 +12,6 @@ public interface TranslationService <T extends BaseTranslationDto, Y extends Bas
     boolean addLanguageTypes(AddLanguageTypeDto languageTypeDto);
     List<TranslationDto> findByContentIdAndLanguageTypeId(Long contentId, Long languageTypeId);
     boolean addTranslation(AddTranslationDto addTranslationDto);
+    TranslationDto findByContentIdAndLanguageTypeLanguage(Long contentId, String language);
+
 }
