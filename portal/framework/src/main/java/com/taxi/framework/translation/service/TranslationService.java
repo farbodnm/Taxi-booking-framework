@@ -1,10 +1,8 @@
 package com.taxi.framework.translation.service;
 
-import com.taxi.framework.translation.dto.AddContentDto;
-import com.taxi.framework.translation.dto.AddLanguageTypeDto;
-import com.taxi.framework.translation.dto.BaseResponseTranslationDto;
-import com.taxi.framework.translation.dto.BaseTranslationDto;
+import com.taxi.framework.translation.dto.*;
 import com.taxi.framework.translation.model.LanguageType;
+import com.taxi.framework.translation.model.Translation;
 
 import java.util.List;
 
@@ -12,4 +10,5 @@ public interface TranslationService <T extends BaseTranslationDto, Y extends Bas
     List<LanguageType> getAllLanguageTypes();
     boolean addContent(AddContentDto addContentDto);
     boolean addLanguageTypes(AddLanguageTypeDto languageTypeDto);
+    List<TranslationDto> findByContentIdAndLanguageTypeId(Long contentId, Long languageTypeId);
 }

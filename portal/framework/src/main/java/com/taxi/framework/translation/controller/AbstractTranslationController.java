@@ -1,10 +1,7 @@
 package com.taxi.framework.translation.controller;
 
 import com.maxmind.geoip2.exception.GeoIp2Exception;
-import com.taxi.framework.translation.dto.AddContentDto;
-import com.taxi.framework.translation.dto.AddLanguageTypeDto;
-import com.taxi.framework.translation.dto.BaseResponseTranslationDto;
-import com.taxi.framework.translation.dto.BaseTranslationDto;
+import com.taxi.framework.translation.dto.*;
 import com.taxi.framework.translation.model.Content;
 import com.taxi.framework.translation.model.LanguageType;
 import com.taxi.framework.translation.service.GeoIPLocationService;
@@ -13,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.io.IOException;
 import java.util.List;
@@ -36,13 +34,16 @@ public class AbstractTranslationController <T extends BaseTranslationDto, Y exte
         return ResponseEntity.ok(translationService.addContent(addContentDto));
     }
 
-//    @GetMapping("/lngtype")
-//    public ResponseEntity<Boolean> addLanguageType(@RequestBody AddLanguageTypeDto languageTypeDto) {
-//        return ResponseEntity.ok(translationService.addLanguageTypes(languageTypeDto));
-//    }
     @PostMapping("/language")
     public ResponseEntity<Boolean> addLanguageType(@RequestBody AddLanguageTypeDto languageTypeDto) {
         return ResponseEntity.ok(translationService.addLanguageTypes(languageTypeDto));
+    }
+
+    @GetMapping("/gettranslation")
+    public ResponseEntity<List<TranslationDto>> getTranslation(@RequestParam Long contentId,
+                                                               @RequestParam Long languageTypeId) {
+        return ResponseEntity.ok(translationService.findByContentIdAndLanguageTypeId(contentId,
+                languageTypeId));
     }
 }
 

@@ -2,12 +2,11 @@ package com.taxi.framework.translation.service;
 
 import com.taxi.framework.translation.Repository.AbstractContentRepository;
 import com.taxi.framework.translation.Repository.AbstractLanguageTypeRepository;
-import com.taxi.framework.translation.dto.AddContentDto;
-import com.taxi.framework.translation.dto.BaseResponseTranslationDto;
-import com.taxi.framework.translation.dto.BaseTranslationDto;
-import com.taxi.framework.translation.dto.AddLanguageTypeDto;
+import com.taxi.framework.translation.Repository.AbstractTranslationRepository;
+import com.taxi.framework.translation.dto.*;
 import com.taxi.framework.translation.model.Content;
 import com.taxi.framework.translation.model.LanguageType;
+import com.taxi.framework.translation.model.Translation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,10 +16,12 @@ public class AbstractTranslationServiceImpl <T extends BaseTranslationDto, Y ext
 
     private final AbstractLanguageTypeRepository languageTypeRepository;
     private final AbstractContentRepository contentRepository;
+    private final AbstractTranslationRepository translationRepository;
 
-    public AbstractTranslationServiceImpl(AbstractLanguageTypeRepository languageTypeRepository, AbstractContentRepository contentRepository) {
+    public AbstractTranslationServiceImpl(AbstractLanguageTypeRepository languageTypeRepository, AbstractContentRepository contentRepository, AbstractTranslationRepository languageRepository) {
         this.languageTypeRepository = languageTypeRepository;
         this.contentRepository = contentRepository;
+        this.translationRepository = languageRepository;
     }
 
     public List<LanguageType> getAllLanguageTypes() {
@@ -48,6 +49,17 @@ public class AbstractTranslationServiceImpl <T extends BaseTranslationDto, Y ext
         languageTypeRepository.save(languageType);
 
         return true;
+    }
+
+    @Override
+    public List<TranslationDto> findByContentIdAndLanguageTypeId(Long contentId, Long languageTypeId) {
+        List<Translation> list = translationRepository.findByContentIdAndLanguageTypeId(contentId, languageTypeId);
+        List<TranslationDto> res = new ArrayList<>();
+        for(Translation translation : list) {
+            res.add(new TranslationDto(translation.getTranslationText()));
+        }
+
+        return res;
     }
 }
 
