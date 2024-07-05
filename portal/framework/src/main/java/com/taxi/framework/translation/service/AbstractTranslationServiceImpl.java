@@ -7,12 +7,13 @@ import com.taxi.framework.translation.dto.*;
 import com.taxi.framework.translation.model.Content;
 import com.taxi.framework.translation.model.LanguageType;
 import com.taxi.framework.translation.model.Translation;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class AbstractTranslationServiceImpl <T extends BaseTranslationDto, Y extends BaseResponseTranslationDto> implements TranslationService<T, Y> {
+public class AbstractTranslationServiceImpl<T extends BaseTranslationDto, Y extends BaseResponseTranslationDto> implements TranslationService<T, Y> {
 
     private final AbstractLanguageTypeRepository languageTypeRepository;
     private final AbstractContentRepository contentRepository;
@@ -35,7 +36,7 @@ public class AbstractTranslationServiceImpl <T extends BaseTranslationDto, Y ext
         Content content = new Content();
         content.setSection(addContentDto.getSection());
         content.setText(addContentDto.getText());
-        System.out.println(content.getSection()+" "+ content.getText());
+        System.out.println(content.getSection() + " " + content.getText());
         contentRepository.save(content);
         return true;
     }
@@ -55,11 +56,25 @@ public class AbstractTranslationServiceImpl <T extends BaseTranslationDto, Y ext
     public List<TranslationDto> findByContentIdAndLanguageTypeId(Long contentId, Long languageTypeId) {
         List<Translation> list = translationRepository.findByContentIdAndLanguageTypeId(contentId, languageTypeId);
         List<TranslationDto> res = new ArrayList<>();
-        for(Translation translation : list) {
+        for (Translation translation : list) {
             res.add(new TranslationDto(translation.getTranslationText()));
         }
-
         return res;
+    }
+
+    @Override
+    public boolean addTranslation(@RequestBody AddTranslationDto addTranslationDto) {
+        Translation translation = new Translation();
+        translation.setTranslationText(addTranslationDto.getTranslationText());
+
+        Content content = contentRepository.findById(addTranslationDto.getContentId()).orElseThrow(() -> new RuntimeException("Content not found"));
+        translation.setContent(content);
+
+        LanguageType languageType = languageTypeRepository.findById(addTranslationDto.getLanguageTypeId()).orElseThrow(() -> new RuntimeException("LanguageType not found"));
+        translation.setLanguageType(languageType);
+
+        translationRepository.save(translation);
+        return true;
     }
 }
 
