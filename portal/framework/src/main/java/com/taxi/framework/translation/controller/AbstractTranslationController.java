@@ -40,7 +40,7 @@ public class AbstractTranslationController <T extends BaseTranslationDto, Y exte
 //    public ResponseEntity<Boolean> addLanguageType(@RequestBody AddLanguageTypeDto languageTypeDto) {
 //        return ResponseEntity.ok(translationService.addLanguageTypes(languageTypeDto));
 //    }
-    @PostMapping("/lngtype")
+    @PostMapping("/language")
     public ResponseEntity<Boolean> addLanguageType(@RequestBody AddLanguageTypeDto languageTypeDto) {
         return ResponseEntity.ok(translationService.addLanguageTypes(languageTypeDto));
     }

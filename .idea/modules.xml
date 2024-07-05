@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/taxi-booking-framework.iml" filepath="$PROJECT_DIR$/.idea/taxi-booking-framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../taxi-booking-framework/portal/services/translation/translation.iml" filepath="$PROJECT_DIR$/../../../../taxi-booking-framework/portal/services/translation/translation.iml" />
     </modules>
   </component>
 </project>
