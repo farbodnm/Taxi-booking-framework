@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class AbstractTranslationServiceImpl<T extends BaseTranslationDto, Y extends BaseResponseTranslationDto> implements TranslationService<T, Y> {
+public abstract class AbstractTranslationServiceImpl<T extends BaseTranslationDto, Y extends BaseResponseTranslationDto> implements TranslationService<T, Y> {
 
     private final AbstractLanguageTypeRepository languageTypeRepository;
     private final AbstractContentRepository contentRepository;
@@ -78,11 +78,15 @@ public class AbstractTranslationServiceImpl<T extends BaseTranslationDto, Y exte
     }
 
     @Override
-    public TranslationDto findByContentIdAndLanguageTypeLanguage(Long contentId, String language) {
+    public Y findByContentIdAndLanguageTypeLanguage(Long contentId, String language) {
         Translation translation = translationRepository.findByContentIdAndLanguageTypeLanguage(contentId, language);
 
-        return new TranslationDto(translation.getTranslationText());
+        return createTranslationResponse(translation);
     }
+
+    protected abstract Y createTranslationResponse(Translation translation);
+
+
 }
 
 

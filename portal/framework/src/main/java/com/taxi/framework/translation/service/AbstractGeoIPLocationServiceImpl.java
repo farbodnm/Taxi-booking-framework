@@ -19,14 +19,14 @@ public class AbstractGeoIPLocationServiceImpl implements GeoIPLocationService {
     }
 
     @Override
-    public GeoIP getLocation(String ip) throws IOException, GeoIp2Exception {
+    public String getLocation(String ip) throws IOException, GeoIp2Exception {
 
         InetAddress ipAddress = InetAddress.getByName(ip);
         CountryResponse response = dbReader.country(ipAddress);
 
         String countryName = response.getCountry().getName();
 
-        return new GeoIP(ip, countryName);
+        return countryName;
     }
 
 }

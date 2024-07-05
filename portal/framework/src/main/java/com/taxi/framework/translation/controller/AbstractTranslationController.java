@@ -5,6 +5,7 @@ import com.taxi.framework.translation.dto.*;
 import com.taxi.framework.translation.model.Content;
 import com.taxi.framework.translation.model.LanguageType;
 import com.taxi.framework.translation.service.GeoIPLocationService;
+import com.taxi.framework.translation.service.TranslationFacadeService;
 import com.taxi.framework.translation.service.TranslationService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,9 +21,12 @@ public class AbstractTranslationController <T extends BaseTranslationDto, Y exte
     protected final TranslationService<T,Y> translationService;
     protected final GeoIPLocationService geoIPLocationService;
 
-    public AbstractTranslationController(TranslationService<T, Y> translationService, GeoIPLocationService geoIPLocationService) {
+    protected final TranslationFacadeService<T,Y> translationFacadeService;
+
+    public AbstractTranslationController(TranslationService<T, Y> translationService, GeoIPLocationService geoIPLocationService, TranslationFacadeService<T, Y> translationFacadeService) {
         this.translationService = translationService;
         this.geoIPLocationService = geoIPLocationService;
+        this.translationFacadeService = translationFacadeService;
     }
 
     @GetMapping("/test")
@@ -52,10 +56,15 @@ public class AbstractTranslationController <T extends BaseTranslationDto, Y exte
     }
 
     @GetMapping("/translationv2")
-    public ResponseEntity<TranslationDto> getTranslationBylanguage(@RequestParam Long contentId,
+    public ResponseEntity<Y> getTranslationBylanguage(@RequestParam Long contentId,
                                                                @RequestParam String languageType) {
         return ResponseEntity.ok(translationService.findByContentIdAndLanguageTypeLanguage(contentId,
                 languageType));
+    }
+
+    @GetMapping("/translationByIp")
+    public ResponseEntity<Y> getTranslationByIP(@RequestBody T inputDto) throws IOException, GeoIp2Exception {
+        return ResponseEntity.ok(translationFacadeService.GetTranslationContentByIP(inputDto, "94.182.121.78"));
     }
 
 }
