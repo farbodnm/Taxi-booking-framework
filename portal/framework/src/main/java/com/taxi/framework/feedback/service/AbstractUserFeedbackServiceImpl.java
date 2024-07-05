@@ -1,22 +1,23 @@
 package com.taxi.framework.feedback.service;
 
-import com.taxi.framework.feedback.dto.BaseFeedbackDTO;
-import com.taxi.framework.feedback.dto.BaseFeedbackResponseDTO;
+import com.taxi.framework.feedback.dto.BaseUserFeedbackDto;
+import com.taxi.framework.feedback.dto.BaseUserFeedbackResponseDto;
 import com.taxi.framework.utils.Utilities;
 
-public abstract class AbstractFeedbackServiceImpl <B extends BaseFeedbackDTO, R extends BaseFeedbackResponseDTO> implements FeedbackService<B, R>{
+public abstract class AbstractUserFeedbackServiceImpl<B extends BaseUserFeedbackDto, R extends BaseUserFeedbackResponseDto> implements UserFeedbackService<B, R> {
 
     @Override
     public R saveFeedback(B dto) {
-        R baseFeedbackResponseDTO = createBookedRequestDTO();
+        R baseFeedbackResponseDTO = createFeedbackResponseDTO();
         baseFeedbackResponseDTO.setId(1L);
-        baseFeedbackResponseDTO.setUserId(dto.getUserId());
-        baseFeedbackResponseDTO.setDriverId(dto.getDriverId());
+        baseFeedbackResponseDTO.setFeedbackGiverDriverId(dto.getFeedbackGiverDriverId());
+        baseFeedbackResponseDTO.setFeedbackReceiverUserId(dto.getFeedbackReceiverUserId());
         baseFeedbackResponseDTO.setRating(dto.getRating());
         baseFeedbackResponseDTO.setComments(dto.getComments());
         baseFeedbackResponseDTO.setCreatedAt(Utilities.getCurrentDateTime());
         return baseFeedbackResponseDTO;
     }
+
     @Override
     public R getFeedback(Long id) {
         return null;
@@ -29,9 +30,7 @@ public abstract class AbstractFeedbackServiceImpl <B extends BaseFeedbackDTO, R 
 
     @Override
     public void deleteFeedback(Long id) {
-
     }
-    protected abstract R createBookedRequestDTO();
 
-
+    protected abstract R createFeedbackResponseDTO();
 }

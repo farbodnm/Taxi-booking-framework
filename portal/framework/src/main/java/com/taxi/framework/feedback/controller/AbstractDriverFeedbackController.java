@@ -1,34 +1,33 @@
 package com.taxi.framework.feedback.controller;
 
-import com.taxi.framework.feedback.service.AbstractFeedbackServiceImpl;
-import com.taxi.framework.feedback.dto.BaseFeedbackDTO;
-import com.taxi.framework.feedback.dto.BaseFeedbackResponseDTO;
+import com.taxi.framework.feedback.service.AbstractDriverFeedbackServiceImpl;
+import com.taxi.framework.feedback.dto.BaseDriverFeedbackDto;
+import com.taxi.framework.feedback.dto.BaseDriverFeedbackResponseDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-public abstract class AbstractFeedbackController<T extends BaseFeedbackDTO, Y extends BaseFeedbackResponseDTO> {
-    protected final AbstractFeedbackServiceImpl<T, Y> feedbackService;
+public abstract class AbstractDriverFeedbackController<T extends BaseDriverFeedbackDto, Y extends BaseDriverFeedbackResponseDto> {
+    protected final AbstractDriverFeedbackServiceImpl<T, Y> feedbackService;
 
-    protected AbstractFeedbackController(AbstractFeedbackServiceImpl<T, Y> feedbackService) {
+    protected AbstractDriverFeedbackController(AbstractDriverFeedbackServiceImpl<T, Y> feedbackService) {
         this.feedbackService = feedbackService;
     }
 
-    @PostMapping("/feedback")
-    public ResponseEntity<Y> feedback(@RequestBody T dto) {
+    @PostMapping
+    public ResponseEntity<Y> submitFeedback(@RequestBody T dto) {
         return ResponseEntity.ok(feedbackService.saveFeedback(dto));
     }
-
-    @GetMapping("/feedback/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Y> getFeedback(@PathVariable Long id) {
         return ResponseEntity.ok(feedbackService.getFeedback(id));
     }
 
-    @PutMapping("/feedback/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<Y> updateFeedback(@PathVariable Long id, @RequestBody T dto) {
         return ResponseEntity.ok(feedbackService.updateFeedback(id, dto));
     }
 
-    @DeleteMapping("/feedback/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteFeedback(@PathVariable Long id) {
         feedbackService.deleteFeedback(id);
         return ResponseEntity.noContent().build();

@@ -7,10 +7,10 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class BaseFeedbackResponseDTO {
+public class BaseDriverFeedbackResponseDto {
     private Long id;
-    private Long userId;
-    private Long driverId;
+    private Long feedbackGiverUserId;
+    private Long feedbackReceiverDriverId;
     private int rating;
     private String comments;
     private String createdAt;
