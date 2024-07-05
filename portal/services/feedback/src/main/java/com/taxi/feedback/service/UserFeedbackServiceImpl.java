@@ -3,7 +3,7 @@ package com.taxi.feedback.service;
 import com.taxi.feedback.repository.FeedbackOptionRepository;
 import com.taxi.feedback.repository.UserDaoRepository;
 import com.taxi.feedback.repository.UserFeedbackRepository;
-import com.taxi.framework.commons.dao.UserDao;
+import com.taxi.framework.commons.dao.User;
 import com.taxi.framework.feedback.dao.FeedbackOption;
 import com.taxi.framework.feedback.dao.UserFeedback;
 import com.taxi.framework.feedback.dto.BaseUserFeedbackDto;
@@ -79,7 +79,7 @@ public class UserFeedbackServiceImpl extends AbstractUserFeedbackServiceImpl<Bas
         return option;
     }
 
-    private void updateRatedUserNewAverageRating(UserDao user, BigDecimal newRating) {
+    private void updateRatedUserNewAverageRating(User user, BigDecimal newRating) {
         List<UserFeedback> previousFeedbacks = userFeedbackRepository.findByFeedbackReceiverUser(user);
         BigDecimal totalRating = previousFeedbacks.stream()
                 .map(feedback -> BigDecimal.valueOf(feedback.getRating()))
@@ -90,7 +90,7 @@ public class UserFeedbackServiceImpl extends AbstractUserFeedbackServiceImpl<Bas
         user.setAverageRating(averageRating);
         userDaoRepository.save(user);
     }
-    public Optional<UserDao> getRatedUser(Long id) {
+    public Optional<User> getRatedUser(Long id) {
         return userDaoRepository.findById(id);
     }
 

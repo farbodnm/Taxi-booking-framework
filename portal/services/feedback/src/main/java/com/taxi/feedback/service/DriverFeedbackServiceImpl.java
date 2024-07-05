@@ -3,7 +3,7 @@ package com.taxi.feedback.service;
 import com.taxi.feedback.repository.DriverFeedbackRepository;
 import com.taxi.feedback.repository.FeedbackOptionRepository;
 import com.taxi.feedback.repository.UserDaoRepository;
-import com.taxi.framework.commons.dao.UserDao;
+import com.taxi.framework.commons.dao.User;
 import com.taxi.framework.feedback.dao.DriverFeedback;
 import com.taxi.framework.feedback.dao.FeedbackOption;
 import com.taxi.framework.feedback.dto.*;
@@ -76,7 +76,7 @@ public class DriverFeedbackServiceImpl extends AbstractDriverFeedbackServiceImpl
         feedbackOptionRepository.save(option);
         return option;
     }
-    private void updateRatedUserNewAverageRating(UserDao driver, BigDecimal newRating) {
+    private void updateRatedUserNewAverageRating(User driver, BigDecimal newRating) {
         List<DriverFeedback> previousFeedbacks = driverFeedbackRepository.findByFeedbackReceiverDriver(driver);
         BigDecimal averageRating = previousFeedbacks.stream()
                 .map(feedback -> BigDecimal.valueOf(feedback.getRating()))
@@ -87,7 +87,7 @@ public class DriverFeedbackServiceImpl extends AbstractDriverFeedbackServiceImpl
         userDaoRepository.save(driver);
     }
 
-    public Optional<UserDao> getRatedDriver(Long id) {
+    public Optional<User> getRatedDriver(Long id) {
         return userDaoRepository.findById(id);
     }
 }

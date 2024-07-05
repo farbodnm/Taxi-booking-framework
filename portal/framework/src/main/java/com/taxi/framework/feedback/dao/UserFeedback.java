@@ -1,11 +1,11 @@
 package com.taxi.framework.feedback.dao;
 
-import com.taxi.framework.commons.dao.UserDao;
+import com.taxi.framework.commons.dao.User;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.List;
 
 @Getter
@@ -20,11 +20,11 @@ public class UserFeedback {
 
     @ManyToOne
     @JoinColumn(name = "feedback_giver_driver_id")
-    private UserDao feedbackGiverDriver;
+    private User feedbackGiverDriver;
 
     @ManyToOne
     @JoinColumn(name = "feedback_receiver_user_id")
-    private UserDao feedbackReceiverUser;
+    private User feedbackReceiverUser;
 
     @Column(name = "rating")
     private int rating;

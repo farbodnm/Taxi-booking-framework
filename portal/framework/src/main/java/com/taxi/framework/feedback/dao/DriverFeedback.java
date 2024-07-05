@@ -1,6 +1,6 @@
 package com.taxi.framework.feedback.dao;
 
-import com.taxi.framework.commons.dao.UserDao;
+import com.taxi.framework.commons.dao.User;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -20,11 +20,11 @@ public class DriverFeedback {
 
     @ManyToOne
     @JoinColumn(name = "feedback_giver_user_id")
-    private UserDao feedbackGiverUser;
+    private User feedbackGiverUser;
 
     @ManyToOne
     @JoinColumn(name = "feedback_receiver_driver_id")
-    private UserDao feedbackReceiverDriver;
+    private User feedbackReceiverDriver;
 
     @Column(name = "rating")
     private int rating;

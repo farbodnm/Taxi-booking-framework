@@ -1,7 +1,7 @@
 package com.taxi.feedback.controller;
 
 import com.taxi.feedback.service.UserFeedbackServiceImpl;
-import com.taxi.framework.commons.dao.UserDao;
+import com.taxi.framework.commons.dao.User;
 import com.taxi.framework.feedback.controller.AbstractUserFeedbackController;
 import com.taxi.framework.feedback.dto.BaseUserFeedbackDto;
 import com.taxi.framework.feedback.dto.BaseUserFeedbackResponseDto;
@@ -26,7 +26,7 @@ public class UserFeedbackControllerImpl extends AbstractUserFeedbackController<B
     }
     @GetMapping("/{userId}/average-rating")
     public ResponseEntity<String> getAverageRating(@PathVariable Long userId) {
-        Optional<UserDao> userOptional = feedbackService.getRatedUser(userId);
+        Optional<User> userOptional = feedbackService.getRatedUser(userId);
 
         if (userOptional.isPresent()) {
             BigDecimal averageRating = userOptional.get().getAverageRating();
