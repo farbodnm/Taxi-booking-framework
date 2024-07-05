@@ -18,7 +18,6 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class UserFeedbackServiceImpl extends AbstractUserFeedbackServiceImpl<BaseUserFeedbackDto, BaseUserFeedbackResponseDto> {
@@ -40,7 +39,7 @@ public class UserFeedbackServiceImpl extends AbstractUserFeedbackServiceImpl<Bas
     @Override
     public BaseUserFeedbackResponseDto saveFeedback(BaseUserFeedbackDto dto) {
         UserFeedback feedback = userFeedbackRepository.save(mapFeedbackDtoToEntity(dto));
-        updateRatedUserNewAverageRating(feedback.getFeedbackReceiverUser(), new BigDecimal(dto.getRating()));
+        updateRatedUserNewAverageRating(feedback.getFeedbackReceiverUser());
         return generateFeedbackSubmissionResponseDto(feedback);
     }
 
@@ -55,7 +54,8 @@ public class UserFeedbackServiceImpl extends AbstractUserFeedbackServiceImpl<Bas
         feedback.setRating(dto.getRating());
         feedback.setComments(dto.getComments());
         feedback.setFeedbackOptions(dto.getFeedbackOptions().stream().map(this::mapFeedbackOptionDtoToEntity)
-                .collect(Collectors.toList()));
+                .toList());
+        feedback.setCreatedAt(Utilities.getCurrentDateTime());
         return feedback;
     }
 
@@ -79,14 +79,12 @@ public class UserFeedbackServiceImpl extends AbstractUserFeedbackServiceImpl<Bas
         return option;
     }
 
-    private void updateRatedUserNewAverageRating(User user, BigDecimal newRating) {
-        List<UserFeedback> previousFeedbacks = userFeedbackRepository.findByFeedbackReceiverUser(user);
-        BigDecimal totalRating = previousFeedbacks.stream()
+    private void updateRatedUserNewAverageRating(User user) {
+        List<UserFeedback> feedbacks = userFeedbackRepository.findByFeedbackReceiverUser(user);
+        BigDecimal averageRating = feedbacks.stream()
                 .map(feedback -> BigDecimal.valueOf(feedback.getRating()))
-                .reduce(BigDecimal.ZERO, BigDecimal::add);
-        totalRating = totalRating.add(newRating);
-        int numberOfFeedbacks = previousFeedbacks.size() + 1;
-        BigDecimal averageRating = totalRating.divide(BigDecimal.valueOf(numberOfFeedbacks), 2, RoundingMode.HALF_UP);
+                .reduce(BigDecimal.ZERO, BigDecimal::add)
+                .divide(BigDecimal.valueOf(feedbacks.size()), 2, RoundingMode.HALF_UP);
         user.setAverageRating(averageRating);
         userDaoRepository.save(user);
     }

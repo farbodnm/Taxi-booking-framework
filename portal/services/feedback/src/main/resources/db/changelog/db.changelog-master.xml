@@ -5,8 +5,5 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <include file="changelog-driver-feedback.xml"/>
-    <include file="changelog-feedback-option.xml"/>
-    <include file="changelog-user-feedback.xml"/>
-    <include file="changelog-userdao.xml"/>
+    <include file="db/changelog/changelog-add-created-at-to-feedback-tables.xml"/>
 </databaseChangeLog>

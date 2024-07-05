@@ -32,6 +32,9 @@ public class UserFeedback {
     @Column(name = "comments")
     private String comments;
 
+    @Column(name = "created_at")
+    private String createdAt;
+
     @ManyToMany
     @JoinTable(
             name = "user_feedback_options",

@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.math.BigDecimal;
+import java.util.Collections;
+import java.util.Map;
 import java.util.Optional;
 
 @RequestMapping("/api/driver-feedback")
@@ -22,15 +24,16 @@ public class DriverFeedbackControllerImpl extends AbstractDriverFeedbackControll
     @Autowired
     protected DriverFeedbackControllerImpl(DriverFeedbackServiceImpl feedbackService) {
         super(feedbackService);
+        this.feedbackService = feedbackService;
     }
 
     @GetMapping("/{userId}/average-rating")
-    public ResponseEntity<String> getAverageRating(@PathVariable Long userId) {
+    public ResponseEntity<Map<String, BigDecimal>> getAverageRating(@PathVariable Long userId) {
         Optional<User> userOptional = feedbackService.getRatedDriver(userId);
 
         if (userOptional.isPresent()) {
             BigDecimal averageRating = userOptional.get().getAverageRating();
-            return ResponseEntity.ok("Average Rating: " + averageRating);
+            return ResponseEntity.ok(Collections.singletonMap("averageRating", averageRating));
         } else {
             return ResponseEntity.notFound().build();
         }

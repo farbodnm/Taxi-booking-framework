@@ -16,7 +16,6 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class DriverFeedbackServiceImpl extends AbstractDriverFeedbackServiceImpl<BaseDriverFeedbackDto, BaseDriverFeedbackResponseDto> {
@@ -42,7 +41,7 @@ public class DriverFeedbackServiceImpl extends AbstractDriverFeedbackServiceImpl
     @Override
     public BaseDriverFeedbackResponseDto saveFeedback(BaseDriverFeedbackDto dto) {
         DriverFeedback feedback = driverFeedbackRepository.save(mapFeedbackDtoToEntity(dto));
-        updateRatedUserNewAverageRating(feedback.getFeedbackReceiverDriver(), new BigDecimal(dto.getRating()));
+        updateRatedUserNewAverageRating(feedback.getFeedbackReceiverDriver());
         return generateFeedbackSubmissionResponseDto(feedback);
     }
 
@@ -53,7 +52,8 @@ public class DriverFeedbackServiceImpl extends AbstractDriverFeedbackServiceImpl
         feedback.setRating(dto.getRating());
         feedback.setComments(dto.getComments());
         feedback.setFeedbackOptions(dto.getFeedbackOptions().stream().map(this::mapFeedbackOptionDtoToEntity)
-                .collect(Collectors.toList()));
+                .toList());
+        feedback.setCreatedAt(Utilities.getCurrentDateTime());
         return feedback;
     }
 
@@ -76,13 +76,12 @@ public class DriverFeedbackServiceImpl extends AbstractDriverFeedbackServiceImpl
         feedbackOptionRepository.save(option);
         return option;
     }
-    private void updateRatedUserNewAverageRating(User driver, BigDecimal newRating) {
-        List<DriverFeedback> previousFeedbacks = driverFeedbackRepository.findByFeedbackReceiverDriver(driver);
-        BigDecimal averageRating = previousFeedbacks.stream()
+    private void updateRatedUserNewAverageRating(User driver) {
+        List<DriverFeedback> feedbacks = driverFeedbackRepository.findByFeedbackReceiverDriver(driver);
+        BigDecimal averageRating = feedbacks.stream()
                 .map(feedback -> BigDecimal.valueOf(feedback.getRating()))
                 .reduce(BigDecimal.ZERO, BigDecimal::add)
-                .add(newRating)
-                .divide(BigDecimal.valueOf(previousFeedbacks.size() + 1), 2, RoundingMode.HALF_UP);
+                .divide(BigDecimal.valueOf(feedbacks.size() + 1L), 2, RoundingMode.HALF_UP);
         driver.setAverageRating(averageRating);
         userDaoRepository.save(driver);
     }

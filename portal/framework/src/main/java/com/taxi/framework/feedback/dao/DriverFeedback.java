@@ -32,6 +32,10 @@ public class DriverFeedback {
     @Column(name = "comments")
     private String comments;
 
+    @Column(name = "created_at")
+    private String createdAt;
+
+
     @ManyToMany
     @JoinTable(
             name = "driver_feedback_options",
