@@ -15,7 +15,6 @@ public class TranslationControllerImpl extends AbstractTranslationController<Bas
 
     @Autowired
     private TranslationServiceImpl translationService;
-
     @Autowired
     private GeoIPLocationService geoIPLocationService;
 
