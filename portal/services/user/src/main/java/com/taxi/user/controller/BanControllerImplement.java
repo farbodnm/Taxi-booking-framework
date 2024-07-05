@@ -15,5 +15,6 @@ public class BanControllerImplement extends AbstractBanController<ExtendedBanDTO
     private ExtendBanServiceImpl extendBanService;
     protected BanControllerImplement(ExtendBanServiceImpl extendBanService) {
         super(extendBanService);
+        
     }
 }
