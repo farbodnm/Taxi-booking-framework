@@ -10,4 +10,5 @@ import lombok.Setter;
 @NoArgsConstructor
 public class ExtendedUserSigninDTO extends BaseUserSigninDTO {
     private String captcha;
+    private String token;
 }
