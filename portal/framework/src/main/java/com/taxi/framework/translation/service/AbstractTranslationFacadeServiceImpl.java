@@ -6,6 +6,7 @@ import com.taxi.framework.translation.dto.BaseTranslationDto;
 import com.taxi.framework.translation.dto.TranslationDto;
 
 import java.io.IOException;
+import java.util.List;
 
 public class AbstractTranslationFacadeServiceImpl <T extends BaseTranslationDto, Y extends BaseResponseTranslationDto> implements TranslationFacadeService<T, Y> {
 
@@ -24,5 +25,14 @@ public class AbstractTranslationFacadeServiceImpl <T extends BaseTranslationDto,
         Y translationDto = (Y) translationService.findByContentIdAndLanguageTypeLanguage(dto.getContentId(), languageType);
 
         return translationDto;
+    }
+
+    @Override
+    public List<Y> GetSectionTranslationContentByIP(T dto, String ip) throws IOException, GeoIp2Exception {
+        String languageType = geoIPLocationService.getLocation(ip);
+
+        List<Y> result = translationService.findByPageContentIdAndLanguageTypeLanguage(dto.getSection(), languageType);
+
+        return result;
     }
 }

@@ -84,6 +84,17 @@ public abstract class AbstractTranslationServiceImpl<T extends BaseTranslationDt
         return createTranslationResponse(translation);
     }
 
+    @Override
+    public List<Y> findByPageContentIdAndLanguageTypeLanguage(String section, String language) {
+        List<Translation> translationList = translationRepository.findByContentSectionAndLanguageTypeLanguage(section, language);
+        List<Y> result = new ArrayList<>();
+        for (Translation translation : translationList){
+            result.add(createTranslationResponse(translation));
+        }
+
+        return result;
+    }
+
     protected abstract Y createTranslationResponse(Translation translation);
 
 

@@ -14,4 +14,7 @@ public interface TranslationService <T extends BaseTranslationDto, Y extends Bas
     boolean addTranslation(AddTranslationDto addTranslationDto);
     Y findByContentIdAndLanguageTypeLanguage(Long contentId, String language);
 
+    List<Y> findByPageContentIdAndLanguageTypeLanguage(String section, String language);
+
+
 }

@@ -31,7 +31,7 @@ public class TranslationServiceImpl extends AbstractTranslationServiceImpl<BaseT
     protected BaseResponseTranslationDto createTranslationResponse(Translation translation) {
         BaseResponseTranslationDto result = new BaseResponseTranslationDto();
         result.setTranslationText(translation.getTranslationText());
-
+        result.setContentId(translation.getContent().getId());
         return result;
     }
 }

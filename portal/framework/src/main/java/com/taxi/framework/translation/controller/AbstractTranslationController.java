@@ -67,6 +67,10 @@ public class AbstractTranslationController <T extends BaseTranslationDto, Y exte
         return ResponseEntity.ok(translationFacadeService.GetTranslationContentByIP(inputDto, "94.182.121.78"));
     }
 
+    @GetMapping("/translationSectionByIp")
+    public ResponseEntity<List<Y>> getSectionTranslationByIP(@RequestBody T inputDto) throws IOException, GeoIp2Exception {
+        return ResponseEntity.ok(translationFacadeService.GetSectionTranslationContentByIP(inputDto, "94.182.121.78"));
+    }
 }
 
 
