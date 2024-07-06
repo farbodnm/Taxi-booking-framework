@@ -7,9 +7,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class BaseUserSignupDTO {
+public class AccessibilitySettingsDTO {
     private long userId;
-    private String username;
-    private String password;
-    private AccessibilitySettingsDTO accessibilitySettings;
+    private boolean screenReaderEnabled;
+    private boolean voiceCommandEnabled;
+    private float textZoomLevel;
 }

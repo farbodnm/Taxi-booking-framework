@@ -1,4 +1,4 @@
-# Taxi Booking Framework
+# Taxi Booking Frameworks
 
 Simple software architectures project to design a taxi booking framework.
 
