@@ -6,6 +6,7 @@ import com.taxi.framework.translation.model.LanguageType;
 import com.taxi.framework.translation.service.GeoIPLocationService;
 import com.taxi.framework.translation.service.TranslationFacadeService;
 import com.taxi.framework.translation.service.TranslationService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -50,7 +51,7 @@ public class AbstractTranslationController <T extends BaseTranslationDto, Y exte
     }
 
     @GetMapping("/languageTypes")
-    public ResponseEntity<List<LanguageTypeDto>> refresh() throws IOException, GeoIp2Exception {
+    public ResponseEntity<List<LanguageTypeDto>> getLnguageTypes() throws IOException, GeoIp2Exception {
         return ResponseEntity.ok(translationService.getAllLanguageTypes());
     }
 
@@ -61,13 +62,15 @@ public class AbstractTranslationController <T extends BaseTranslationDto, Y exte
     }
 
     @GetMapping("/ip")
-    public ResponseEntity<Y> getTranslationByIP(@RequestBody T inputDto) throws IOException, GeoIp2Exception {
-        return ResponseEntity.ok(translationFacadeService.GetTranslationContentByIP(inputDto, "94.182.121.78"));
+    public ResponseEntity<Y> getTranslationByIP(@RequestBody T inputDto, HttpServletRequest request)
+            throws IOException, GeoIp2Exception {
+        return ResponseEntity.ok(translationFacadeService.GetTranslationContentByIP(inputDto, request.getRemoteAddr()));
     }
 
     @GetMapping("/section/ip")
-    public ResponseEntity<List<Y>> getSectionTranslationByIP(@RequestBody T inputDto) throws IOException, GeoIp2Exception {
-        return ResponseEntity.ok(translationFacadeService.GetSectionTranslationContentByIP(inputDto, "94.182.121.78"));
+    public ResponseEntity<List<Y>> getSectionTranslationByIP(@RequestBody T inputDto, HttpServletRequest request)
+            throws IOException, GeoIp2Exception {
+        return ResponseEntity.ok(translationFacadeService.GetSectionTranslationContentByIP(inputDto, request.getRemoteAddr()));
     }
 }
 
