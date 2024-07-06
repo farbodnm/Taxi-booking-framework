@@ -1,6 +1,5 @@
 package com.taxi.framework.user.dto;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,8 +8,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class BaseUserSigninDTO {
-
     private String username;
     private String password;
-
+    private AccessibilitySettingsDTO accessibilitySettings;
 }
