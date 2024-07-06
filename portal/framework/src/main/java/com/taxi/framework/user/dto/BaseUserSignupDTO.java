@@ -4,13 +4,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
-
-@Setter
 @Getter
+@Setter
 @NoArgsConstructor
 public class BaseUserSignupDTO {
+    private long userId;
     private String username;
     private String password;
-    private Date dateOfBirth;
+    private AccessibilitySettingsDTO accessibilitySettings;
 }
