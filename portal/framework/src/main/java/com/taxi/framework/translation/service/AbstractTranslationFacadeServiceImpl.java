@@ -3,7 +3,6 @@ package com.taxi.framework.translation.service;
 import com.maxmind.geoip2.exception.GeoIp2Exception;
 import com.taxi.framework.translation.dto.BaseResponseTranslationDto;
 import com.taxi.framework.translation.dto.BaseTranslationDto;
-import com.taxi.framework.translation.dto.TranslationDto;
 
 import java.io.IOException;
 import java.util.List;
@@ -22,7 +21,7 @@ public class AbstractTranslationFacadeServiceImpl <T extends BaseTranslationDto,
     public Y GetTranslationContentByIP(T dto, String ip) throws IOException, GeoIp2Exception {
         String languageType = geoIPLocationService.getLocation(ip);
 
-        Y translationDto = (Y) translationService.findByContentIdAndLanguageTypeLanguage(dto.getContentId(), languageType);
+        Y translationDto = (Y) translationService.getTranslationByContentIdAndLanguageTypeLanguage(dto.getContentId(), languageType);
 
         return translationDto;
     }
@@ -31,7 +30,7 @@ public class AbstractTranslationFacadeServiceImpl <T extends BaseTranslationDto,
     public List<Y> GetSectionTranslationContentByIP(T dto, String ip) throws IOException, GeoIp2Exception {
         String languageType = geoIPLocationService.getLocation(ip);
 
-        List<Y> result = translationService.findByPageContentIdAndLanguageTypeLanguage(dto.getSection(), languageType);
+        List<Y> result = translationService.getSectionTranslationContentIdAndLanguageTypeLanguage(dto.getSection(), languageType);
 
         return result;
     }

@@ -2,7 +2,6 @@ package com.taxi.framework.translation.controller;
 
 import com.maxmind.geoip2.exception.GeoIp2Exception;
 import com.taxi.framework.translation.dto.*;
-import com.taxi.framework.translation.model.Content;
 import com.taxi.framework.translation.model.LanguageType;
 import com.taxi.framework.translation.service.GeoIPLocationService;
 import com.taxi.framework.translation.service.TranslationFacadeService;
@@ -29,45 +28,44 @@ public class AbstractTranslationController <T extends BaseTranslationDto, Y exte
         this.translationFacadeService = translationFacadeService;
     }
 
-    @GetMapping("/test")
-    public ResponseEntity<List<LanguageType>> refresh() throws IOException, GeoIp2Exception {
-        return ResponseEntity.ok(translationService.getAllLanguageTypes());
-    }
     @PostMapping("/content")
     public ResponseEntity<Boolean> addContent(@RequestBody AddContentDto addContentDto) {
         return ResponseEntity.ok(translationService.addContent(addContentDto));
     }
 
-    @PostMapping("/language")
+    @PostMapping("/languageType")
     public ResponseEntity<Boolean> addLanguageType(@RequestBody AddLanguageTypeDto languageTypeDto) {
         return ResponseEntity.ok(translationService.addLanguageTypes(languageTypeDto));
     }
 
-    @GetMapping("/gettranslation")
-    public ResponseEntity<List<TranslationDto>> getTranslation(@RequestParam Long contentId,
-                                                               @RequestParam Long languageTypeId) {
-        return ResponseEntity.ok(translationService.findByContentIdAndLanguageTypeId(contentId,
-                languageTypeId));
-    }
-
-    @PostMapping("/addTranslation")
+    @PostMapping()
     public ResponseEntity<Boolean> addTranslation(@RequestBody AddTranslationDto translationDto) {
         return ResponseEntity.ok(translationService.addTranslation(translationDto));
     }
 
-    @GetMapping("/translationv2")
-    public ResponseEntity<Y> getTranslationBylanguage(@RequestParam Long contentId,
-                                                               @RequestParam String languageType) {
-        return ResponseEntity.ok(translationService.findByContentIdAndLanguageTypeLanguage(contentId,
-                languageType));
+
+    @GetMapping
+    public ResponseEntity<Y> getTranslation(@RequestBody T inputDto) {
+        return ResponseEntity.ok(translationService.getTranslationsByContentIdAndLanguageTypeId(inputDto));
     }
 
-    @GetMapping("/translationByIp")
+    @GetMapping("/languageTypes")
+    public ResponseEntity<List<LanguageTypeDto>> refresh() throws IOException, GeoIp2Exception {
+        return ResponseEntity.ok(translationService.getAllLanguageTypes());
+    }
+
+    @GetMapping("/v2")
+    public ResponseEntity<Y> getTranslationBylanguage(@RequestBody T inputDto) {
+        return ResponseEntity.ok(translationService.getTranslationByContentIdAndLanguageTypeLanguage(inputDto.getContentId(),
+                inputDto.getLanguageType()));
+    }
+
+    @GetMapping("/ip")
     public ResponseEntity<Y> getTranslationByIP(@RequestBody T inputDto) throws IOException, GeoIp2Exception {
         return ResponseEntity.ok(translationFacadeService.GetTranslationContentByIP(inputDto, "94.182.121.78"));
     }
 
-    @GetMapping("/translationSectionByIp")
+    @GetMapping("/section/ip")
     public ResponseEntity<List<Y>> getSectionTranslationByIP(@RequestBody T inputDto) throws IOException, GeoIp2Exception {
         return ResponseEntity.ok(translationFacadeService.GetSectionTranslationContentByIP(inputDto, "94.182.121.78"));
     }

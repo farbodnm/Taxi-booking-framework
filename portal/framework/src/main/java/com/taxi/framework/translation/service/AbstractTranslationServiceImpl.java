@@ -25,10 +25,15 @@ public abstract class AbstractTranslationServiceImpl<T extends BaseTranslationDt
         this.translationRepository = languageRepository;
     }
 
-    public List<LanguageType> getAllLanguageTypes() {
-        List<LanguageType> result = new ArrayList<>();
+    public List<LanguageTypeDto> getAllLanguageTypes() {
+        List<LanguageTypeDto> result = new ArrayList<>();
 
-        result = languageTypeRepository.findAll();
+        List<LanguageType> retVal = languageTypeRepository.findAll();
+
+        for(LanguageType languageType : retVal){
+            result.add(new LanguageTypeDto(languageType.getId(), languageType.getLanguage()));
+        }
+
         return result;
     }
 
@@ -53,16 +58,6 @@ public abstract class AbstractTranslationServiceImpl<T extends BaseTranslationDt
     }
 
     @Override
-    public List<TranslationDto> findByContentIdAndLanguageTypeId(Long contentId, Long languageTypeId) {
-        List<Translation> list = translationRepository.findByContentIdAndLanguageTypeId(contentId, languageTypeId);
-        List<TranslationDto> res = new ArrayList<>();
-        for (Translation translation : list) {
-            res.add(new TranslationDto(translation.getTranslationText()));
-        }
-        return res;
-    }
-
-    @Override
     public boolean addTranslation(@RequestBody AddTranslationDto addTranslationDto) {
         Translation translation = new Translation();
         translation.setTranslationText(addTranslationDto.getTranslationText());
@@ -78,14 +73,20 @@ public abstract class AbstractTranslationServiceImpl<T extends BaseTranslationDt
     }
 
     @Override
-    public Y findByContentIdAndLanguageTypeLanguage(Long contentId, String language) {
+    public Y getTranslationsByContentIdAndLanguageTypeId(T dto) {
+        Translation translation = translationRepository.findByContentIdAndLanguageTypeId(dto.getContentId(), dto.getLanguageTypeId());
+        return createTranslationResponse(translation);
+    }
+
+    @Override
+    public Y getTranslationByContentIdAndLanguageTypeLanguage(Long contentId, String language) {
         Translation translation = translationRepository.findByContentIdAndLanguageTypeLanguage(contentId, language);
 
         return createTranslationResponse(translation);
     }
 
     @Override
-    public List<Y> findByPageContentIdAndLanguageTypeLanguage(String section, String language) {
+    public List<Y> getSectionTranslationContentIdAndLanguageTypeLanguage(String section, String language) {
         List<Translation> translationList = translationRepository.findByContentSectionAndLanguageTypeLanguage(section, language);
         List<Y> result = new ArrayList<>();
         for (Translation translation : translationList){
