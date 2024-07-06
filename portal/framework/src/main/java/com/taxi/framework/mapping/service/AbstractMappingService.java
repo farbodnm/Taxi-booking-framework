@@ -1,4 +1,4 @@
-package com.taxi.framework.mapService.service;
+package com.taxi.framework.mapping.service;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
@@ -14,6 +14,8 @@ public abstract class AbstractMappingService {
     private String apiKey;
 
     private static final String API_URL = "https://api.neshan.org/v4/direction";
+
+
 
     public String getDirections(String origin, String destination, String type, boolean withTraffic) {
         RestTemplate restTemplate = new RestTemplate();

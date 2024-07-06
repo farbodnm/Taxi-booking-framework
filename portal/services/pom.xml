@@ -28,6 +28,8 @@
         <module>dispatch</module>
         <module>fleet</module>
         <module>pricing</module>
+        <module>mapping</module>
+
     </modules>
 
     <properties>

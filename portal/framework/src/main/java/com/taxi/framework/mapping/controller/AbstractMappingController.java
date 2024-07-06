@@ -1,6 +1,6 @@
-package com.taxi.framework.mapService.controller;
+package com.taxi.framework.mapping.controller;
 
-import com.taxi.framework.mapService.service.AbstractMappingService;
+import com.taxi.framework.mapping.service.AbstractMappingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -12,7 +12,6 @@
         <module name="mapping" />
         <module name="framework" />
         <module name="dispatch" />
-        <module name="mapService" />
         <module name="user" />
         <module name="pricing" />
       </profile>
@@ -20,7 +19,6 @@
     <bytecodeTargetLevel>
       <module name="core" target="17" />
       <module name="driver" target="17" />
-      <module name="mapping" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -29,7 +27,6 @@
       <module name="dispatch" options="-parameters" />
       <module name="fleet" options="-parameters" />
       <module name="framework" options="-parameters" />
-      <module name="mapService" options="-parameters" />
       <module name="mapping" options="-parameters" />
       <module name="pricing" options="-parameters" />
       <module name="user" options="-parameters" />
