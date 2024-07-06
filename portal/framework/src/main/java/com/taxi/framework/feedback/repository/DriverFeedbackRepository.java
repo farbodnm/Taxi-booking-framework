@@ -1,4 +1,4 @@
-package com.taxi.feedback.repository;
+package com.taxi.framework.feedback.repository;
 
 import com.taxi.framework.commons.dao.User;
 import com.taxi.framework.feedback.dao.DriverFeedback;

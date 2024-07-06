@@ -1,8 +1,8 @@
 package com.taxi.feedback.service;
 
-import com.taxi.feedback.repository.DriverFeedbackRepository;
-import com.taxi.feedback.repository.FeedbackOptionRepository;
-import com.taxi.feedback.repository.UserDaoRepository;
+import com.taxi.framework.feedback.repository.DriverFeedbackRepository;
+import com.taxi.framework.feedback.repository.FeedbackOptionRepository;
+import com.taxi.framework.feedback.repository.UserDaoRepository;
 import com.taxi.framework.commons.dao.User;
 import com.taxi.framework.feedback.dao.DriverFeedback;
 import com.taxi.framework.feedback.dao.FeedbackOption;
@@ -45,6 +45,11 @@ public class DriverFeedbackServiceImpl extends AbstractDriverFeedbackServiceImpl
         return generateFeedbackSubmissionResponseDto(feedback);
     }
 
+    @Override
+    public Optional<BigDecimal> getAverageRating(Long driverId) {
+        Optional<User> userOptional = getRatedDriver(driverId);
+        return userOptional.map(User::getAverageRating);
+    }
     private DriverFeedback mapFeedbackDtoToEntity(BaseDriverFeedbackDto dto) {
         DriverFeedback feedback = new DriverFeedback();
         feedback.setFeedbackGiverUser(userDaoRepository.findById(dto.getFeedbackGiverUserId()).get());
@@ -86,7 +91,7 @@ public class DriverFeedbackServiceImpl extends AbstractDriverFeedbackServiceImpl
         userDaoRepository.save(driver);
     }
 
-    public Optional<User> getRatedDriver(Long id) {
+    private Optional<User> getRatedDriver(Long id) {
         return userDaoRepository.findById(id);
     }
 }

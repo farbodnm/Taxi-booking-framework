@@ -27,15 +27,4 @@ public class UserFeedbackControllerImpl extends AbstractUserFeedbackController<B
         super(feedbackService);
         this.feedbackService = feedbackService;
     }
-    @GetMapping("/{userId}/average-rating")
-    public ResponseEntity<Map<String, BigDecimal>> getAverageRating(@PathVariable Long userId) {
-        Optional<User> userOptional = feedbackService.getRatedUser(userId);
-
-        if (userOptional.isPresent()) {
-            BigDecimal averageRating = userOptional.get().getAverageRating();
-            return ResponseEntity.ok(Collections.singletonMap("averageRating", averageRating));
-        } else {
-            return ResponseEntity.notFound().build();
-        }
-    }
 }

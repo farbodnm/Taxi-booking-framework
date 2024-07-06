@@ -1,8 +1,8 @@
 package com.taxi.feedback.service;
 
-import com.taxi.feedback.repository.FeedbackOptionRepository;
-import com.taxi.feedback.repository.UserDaoRepository;
-import com.taxi.feedback.repository.UserFeedbackRepository;
+import com.taxi.framework.feedback.repository.FeedbackOptionRepository;
+import com.taxi.framework.feedback.repository.UserDaoRepository;
+import com.taxi.framework.feedback.repository.UserFeedbackRepository;
 import com.taxi.framework.commons.dao.User;
 import com.taxi.framework.feedback.dao.FeedbackOption;
 import com.taxi.framework.feedback.dao.UserFeedback;
@@ -42,7 +42,11 @@ public class UserFeedbackServiceImpl extends AbstractUserFeedbackServiceImpl<Bas
         updateRatedUserNewAverageRating(feedback.getFeedbackReceiverUser());
         return generateFeedbackSubmissionResponseDto(feedback);
     }
-
+    @Override
+    public Optional<BigDecimal> getAverageRating(Long userId) {
+        Optional<User> userOptional = getRatedUser(userId);
+        return userOptional.map(User::getAverageRating);
+    }
     @Override
     public BaseUserFeedbackResponseDto createFeedbackResponseDTO() {
         return new BaseUserFeedbackResponseDto();
@@ -88,7 +92,7 @@ public class UserFeedbackServiceImpl extends AbstractUserFeedbackServiceImpl<Bas
         user.setAverageRating(averageRating);
         userDaoRepository.save(user);
     }
-    public Optional<User> getRatedUser(Long id) {
+    private Optional<User> getRatedUser(Long id) {
         return userDaoRepository.findById(id);
     }
 

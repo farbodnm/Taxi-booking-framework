@@ -17,21 +17,7 @@ public abstract class AbstractDriverFeedbackServiceImpl<B extends BaseDriverFeed
         baseFeedbackResponseDTO.setCreatedAt(Utilities.getCurrentDateTime());
         return baseFeedbackResponseDTO;
     }
-    @Override
-    public R getFeedback(Long id) {
-        return null;
 
-    }
-
-    @Override
-    public R updateFeedback(Long id, B dto) {
-        return null;
-    }
-
-    @Override
-    public void deleteFeedback(Long id) {
-
-    }
     protected abstract R createFeedbackResponseDto();
 
 

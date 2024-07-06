@@ -18,19 +18,5 @@ public abstract class AbstractUserFeedbackServiceImpl<B extends BaseUserFeedback
         return baseFeedbackResponseDTO;
     }
 
-    @Override
-    public R getFeedback(Long id) {
-        return null;
-    }
-
-    @Override
-    public R updateFeedback(Long id, B dto) {
-        return null;
-    }
-
-    @Override
-    public void deleteFeedback(Long id) {
-    }
-
-    protected abstract R createFeedbackResponseDTO();
+    public abstract R createFeedbackResponseDTO();
 }
