@@ -46,6 +46,10 @@ public class DriverFeedbackServiceImpl extends AbstractDriverFeedbackServiceImpl
     }
 
     @Override
+    public Optional<BaseDriverFeedbackResponseDto> getFeedbackById(Long id) {
+        return driverFeedbackRepository.findById(id).map(this::mapFeedbackEntityToDto);
+    }
+    @Override
     public Optional<BigDecimal> getAverageRating(Long driverId) {
         Optional<User> userOptional = getRatedDriver(driverId);
         return userOptional.map(User::getAverageRating);
@@ -94,4 +98,16 @@ public class DriverFeedbackServiceImpl extends AbstractDriverFeedbackServiceImpl
     private Optional<User> getRatedDriver(Long id) {
         return userDaoRepository.findById(id);
     }
+
+    private BaseDriverFeedbackResponseDto mapFeedbackEntityToDto(DriverFeedback feedback) {
+        BaseDriverFeedbackResponseDto responseDTO = createFeedbackResponseDto();
+        responseDTO.setId(feedback.getId());
+        responseDTO.setFeedbackGiverUserId(feedback.getFeedbackGiverUser().getId());
+        responseDTO.setFeedbackReceiverDriverId(feedback.getFeedbackReceiverDriver().getId());
+        responseDTO.setRating(feedback.getRating());
+        responseDTO.setComments(feedback.getComments());
+        responseDTO.setCreatedAt(feedback.getCreatedAt());
+        return responseDTO;
+    }
+
 }

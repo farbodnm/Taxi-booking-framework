@@ -31,4 +31,11 @@ public abstract class AbstractDriverFeedbackController<T extends BaseDriverFeedb
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Y> getFeedbackById(@PathVariable Long id) {
+        Optional<Y> feedback = feedbackService.getFeedbackById(id);
+        return feedback.map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
 }

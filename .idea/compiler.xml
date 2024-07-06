@@ -19,6 +19,7 @@
     <bytecodeTargetLevel>
       <module name="core" target="17" />
       <module name="driver" target="17" />
+      <module name="services" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

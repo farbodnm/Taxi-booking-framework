@@ -48,6 +48,10 @@ public class UserFeedbackServiceImpl extends AbstractUserFeedbackServiceImpl<Bas
         return userOptional.map(User::getAverageRating);
     }
     @Override
+    public Optional<BaseUserFeedbackResponseDto> getFeedbackById(Long id) {
+        return userFeedbackRepository.findById(id).map(this::mapFeedbackEntityToDto);
+    }
+    @Override
     public BaseUserFeedbackResponseDto createFeedbackResponseDTO() {
         return new BaseUserFeedbackResponseDto();
     }
@@ -94,6 +98,17 @@ public class UserFeedbackServiceImpl extends AbstractUserFeedbackServiceImpl<Bas
     }
     private Optional<User> getRatedUser(Long id) {
         return userDaoRepository.findById(id);
+    }
+
+    private BaseUserFeedbackResponseDto mapFeedbackEntityToDto(UserFeedback feedback) {
+        BaseUserFeedbackResponseDto responseDTO = createFeedbackResponseDTO();
+        responseDTO.setId(feedback.getId());
+        responseDTO.setFeedbackGiverDriverId(feedback.getFeedbackGiverDriver().getId());
+        responseDTO.setFeedbackReceiverUserId(feedback.getFeedbackReceiverUser().getId());
+        responseDTO.setRating(feedback.getRating());
+        responseDTO.setComments(feedback.getComments());
+        responseDTO.setCreatedAt(feedback.getCreatedAt());
+        return responseDTO;
     }
 
 }
