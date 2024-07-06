@@ -7,6 +7,9 @@ import com.taxi.framework.translation.dto.*;
 import com.taxi.framework.translation.model.Content;
 import com.taxi.framework.translation.model.LanguageType;
 import com.taxi.framework.translation.model.Translation;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.ArrayList;
@@ -18,6 +21,8 @@ public abstract class AbstractTranslationServiceImpl<T extends BaseTranslationDt
     private final AbstractLanguageTypeRepository languageTypeRepository;
     private final AbstractContentRepository contentRepository;
     private final AbstractTranslationRepository translationRepository;
+    @Autowired
+    private Environment env;
 
     public AbstractTranslationServiceImpl(AbstractLanguageTypeRepository languageTypeRepository, AbstractContentRepository contentRepository, AbstractTranslationRepository languageRepository) {
         this.languageTypeRepository = languageTypeRepository;
@@ -74,12 +79,22 @@ public abstract class AbstractTranslationServiceImpl<T extends BaseTranslationDt
 
     @Override
     public Y getTranslationsByContentIdAndLanguageTypeId(T dto) {
+
+        if(!isLanguageTypeExistsById(dto.getLanguageTypeId())){
+            dto.setLanguageTypeId(Integer.parseInt(env.getProperty("deafultLanguageTypeId")));
+        }
+
         Translation translation = translationRepository.findByContentIdAndLanguageTypeId(dto.getContentId(), dto.getLanguageTypeId());
         return createTranslationResponse(translation);
     }
 
     @Override
     public Y getTranslationByContentIdAndLanguageTypeLanguage(Long contentId, String language) {
+
+        if(!isLanguageTypeExistsByLanguage(language)){
+            language = env.getProperty("deafultLanguageType");
+        }
+
         Translation translation = translationRepository.findByContentIdAndLanguageTypeLanguage(contentId, language);
 
         return createTranslationResponse(translation);
@@ -87,6 +102,11 @@ public abstract class AbstractTranslationServiceImpl<T extends BaseTranslationDt
 
     @Override
     public List<Y> getSectionTranslationContentIdAndLanguageTypeLanguage(String section, String language) {
+
+        if(!isLanguageTypeExistsByLanguage(language)){
+            language = env.getProperty("deafultLanguageType");
+        }
+
         List<Translation> translationList = translationRepository.findByContentSectionAndLanguageTypeLanguage(section, language);
         List<Y> result = new ArrayList<>();
         for (Translation translation : translationList){
@@ -94,6 +114,16 @@ public abstract class AbstractTranslationServiceImpl<T extends BaseTranslationDt
         }
 
         return result;
+    }
+
+    @Override
+    public boolean isLanguageTypeExistsById(Long id) {
+        return languageTypeRepository.existsById(id);
+    }
+
+    @Override
+    public boolean isLanguageTypeExistsByLanguage(String language) {
+        return languageTypeRepository.existsByLanguage(language);
     }
 
     protected abstract Y createTranslationResponse(Translation translation);

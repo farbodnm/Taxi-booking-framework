@@ -8,4 +8,7 @@ import java.util.List;
 
 public interface AbstractLanguageTypeRepository extends JpaRepository<LanguageType, Integer> {
 
+    boolean existsById(Long id);
+    boolean existsByLanguage(String language);
+
 }

@@ -14,5 +14,8 @@ public interface TranslationService <T extends BaseTranslationDto, Y extends Bas
     Y getTranslationByContentIdAndLanguageTypeLanguage(Long contentId, String language);
     List<Y> getSectionTranslationContentIdAndLanguageTypeLanguage(String section, String language);
 
+    boolean isLanguageTypeExistsById(Long id);
+    boolean isLanguageTypeExistsByLanguage(String language);
+
 
 }
