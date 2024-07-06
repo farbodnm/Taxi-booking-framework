@@ -2,6 +2,7 @@ package com.taxi.framework.booking.service;
 
 import com.taxi.framework.booking.dto.BaseBookedRequestDTO;
 import com.taxi.framework.booking.dto.BaseBookingRequestDTO;
+import com.taxi.framework.user.dto.AccessibilitySettingsDTO;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -19,7 +20,16 @@ public abstract class AbstractBookingCreationServiceImpl<B extends BaseBookingRe
     }
 
     @Override
-    public String createBooking(B bookingRequestDTO) {
+    public String createBooking(B bookingRequestDTO, AccessibilitySettingsDTO settings) {
+        if (settings != null) {
+            if (settings.isScreenReaderEnabled()) {
+                // Apply screen reader specific logic
+            }
+            if (settings.isVoiceCommandEnabled()) {
+                // Apply voice command specific logic
+            }
+        }
+
         String url = dispatchEndpoint + "/dispatch/find/driver";
         RestTemplate restTemplate = new RestTemplate();
         if (restTemplate.exchange(
@@ -27,10 +37,10 @@ public abstract class AbstractBookingCreationServiceImpl<B extends BaseBookingRe
                 HttpMethod.POST,
                 new HttpEntity<>(bookingRequestDTO),
                 Void.class
-        ).getStatusCode() == HttpStatusCode.valueOf(200)) {
+        ).getStatusCode() == HttpStatus.OK) {
 
             R bookedRequest = createBookedRequestDTO();
-            bookedRequest.setMessage(R.MessageEnum.LOOKING_FOR_A_DRIVER);
+            bookedRequest.setMessage(BaseBookedRequestDTO.MessageEnum.LOOKING_FOR_A_DRIVER);
             assignedDriversMap.put(bookingRequestDTO.getUserId(), bookedRequest);
 
             return "Booking request successful.";
@@ -40,33 +50,8 @@ public abstract class AbstractBookingCreationServiceImpl<B extends BaseBookingRe
 
     @Override
     public R booked(R bookedRequestDTO, long userId) {
-
         bookedRequestDTO.setMessage(BaseBookedRequestDTO.MessageEnum.DRIVER_ON_THE_WAY);
         assignedDriversMap.put(userId, bookedRequestDTO);
-
-        return bookedRequestDTO;
-    }
-
-    @Override
-    public String bookingNextState(long userId) {
-
-        R bookedRequestDTO = assignedDriversMap.get(userId);
-        bookedRequestDTO.setMessage(bookedRequestDTO.getMessage().getNextState());
-
-        assignedDriversMap.put(userId, bookedRequestDTO);
-
-        return bookedRequestDTO.getMessage().getMessage();
-    }
-
-    @Override
-    public R refresh(long userId){
-
-        R bookedRequestDTO = assignedDriversMap.get(userId);
-
-        if (bookedRequestDTO != null && bookedRequestDTO.getMessage() == BaseBookedRequestDTO.MessageEnum.REACHED_DESTINATION) {
-            assignedDriversMap.remove(userId);
-        }
-
         return bookedRequestDTO;
     }
 
