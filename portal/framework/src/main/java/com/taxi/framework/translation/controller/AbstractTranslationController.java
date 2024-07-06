@@ -64,13 +64,13 @@ public class AbstractTranslationController <T extends BaseTranslationDto, Y exte
     @GetMapping("/ip")
     public ResponseEntity<Y> getTranslationByIP(@RequestBody T inputDto, HttpServletRequest request)
             throws IOException, GeoIp2Exception {
-        return ResponseEntity.ok(translationFacadeService.GetTranslationContentByIP(inputDto, "5.237.1.53"));
+        return ResponseEntity.ok(translationFacadeService.GetTranslationContentByIP(inputDto, request.getRemoteAddr()));
     }
 
     @GetMapping("/section/ip")
     public ResponseEntity<List<Y>> getSectionTranslationByIP(@RequestBody T inputDto, HttpServletRequest request)
             throws IOException, GeoIp2Exception {
-        return ResponseEntity.ok(translationFacadeService.GetSectionTranslationContentByIP(inputDto, "5.237.1.53"));
+        return ResponseEntity.ok(translationFacadeService.GetSectionTranslationContentByIP(inputDto, request.getRemoteAddr()));
     }
 }
 
