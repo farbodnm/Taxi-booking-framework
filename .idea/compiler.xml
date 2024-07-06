@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="fleet" />
         <module name="booking" />
+        <module name="mapping" />
         <module name="framework" />
         <module name="dispatch" />
         <module name="user" />
@@ -26,6 +27,7 @@
       <module name="dispatch" options="-parameters" />
       <module name="fleet" options="-parameters" />
       <module name="framework" options="-parameters" />
+      <module name="mapping" options="-parameters" />
       <module name="pricing" options="-parameters" />
       <module name="user" options="-parameters" />
     </option>
