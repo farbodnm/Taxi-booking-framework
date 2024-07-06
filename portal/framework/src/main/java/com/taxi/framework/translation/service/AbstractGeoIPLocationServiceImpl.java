@@ -12,7 +12,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.InetAddress;
 
-public class AbstractGeoIPLocationServiceImpl<T extends BaseGeoIpLocationDto, Y extends BaseGeoIpLocationResponseDto> implements GeoIPLocationService<T,Y> {
+public abstract class AbstractGeoIPLocationServiceImpl<T extends BaseGeoIpLocationDto, Y extends BaseGeoIpLocationResponseDto> implements GeoIPLocationService<T,Y> {
     private DatabaseReader dbReader;
 
     public AbstractGeoIPLocationServiceImpl(ResourceLoader resourceLoader) throws IOException {;
