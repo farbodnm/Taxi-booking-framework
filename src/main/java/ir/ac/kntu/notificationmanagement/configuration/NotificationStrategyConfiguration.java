@@ -1,12 +1,10 @@
 package ir.ac.kntu.notificationmanagement.configuration;
 
 import ir.ac.kntu.notificationmanagement.model.EmailNotification;
+import ir.ac.kntu.notificationmanagement.model.NotificationType;
 import ir.ac.kntu.notificationmanagement.model.PushNotification;
 import ir.ac.kntu.notificationmanagement.model.SmsNotification;
-import ir.ac.kntu.notificationmanagement.strategy.EmailNotificationStrategy;
-import ir.ac.kntu.notificationmanagement.strategy.NotificationStrategy;
-import ir.ac.kntu.notificationmanagement.strategy.PushNotificationStrategy;
-import ir.ac.kntu.notificationmanagement.strategy.SmsNotificationStrategy;
+import ir.ac.kntu.notificationmanagement.strategy.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -15,16 +13,16 @@ public class NotificationStrategyConfiguration {
 
     @Bean
     public NotificationStrategy<SmsNotification> smsNotificationStrategy() {
-        return new SmsNotificationStrategy();
+        return NotificationFactory.createNotificationStrategy(NotificationType.SMS);
     }
 
     @Bean
     public NotificationStrategy<EmailNotification> emailNotificationStrategy() {
-        return new EmailNotificationStrategy();
+        return NotificationFactory.createNotificationStrategy(NotificationType.EMAIL);
     }
 
     @Bean
     public NotificationStrategy<PushNotification> pushNotificationStrategy() {
-        return new PushNotificationStrategy();
+        return NotificationFactory.createNotificationStrategy(NotificationType.PUSH);
     }
 }
