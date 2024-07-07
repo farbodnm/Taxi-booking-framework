@@ -1,4 +1,4 @@
-package com.taxi.mapservice.controller;
+package com.taxi.mapping.controller;
 
 import com.taxi.framework.mapping.controller.AbstractMappingController;
 import com.taxi.framework.mapping.service.AbstractMappingService;
