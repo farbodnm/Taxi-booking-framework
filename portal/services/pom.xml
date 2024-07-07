@@ -22,12 +22,13 @@
     </dependencies>
 
     <modules>
-        <module>mapping</module>
         <module>booking</module>
         <module>dispatch</module>
         <module>fleet</module>
         <module>pricing</module>
         <module>user</module>
+        <module>mapping</module>
+
     </modules>
     <properties>
         <java.version>17</java.version>
