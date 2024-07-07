@@ -90,7 +90,7 @@ public class DriverFeedbackServiceImpl extends AbstractDriverFeedbackServiceImpl
         BigDecimal averageRating = feedbacks.stream()
                 .map(feedback -> BigDecimal.valueOf(feedback.getRating()))
                 .reduce(BigDecimal.ZERO, BigDecimal::add)
-                .divide(BigDecimal.valueOf(feedbacks.size() + 1L), 2, RoundingMode.HALF_UP);
+                .divide(BigDecimal.valueOf(feedbacks.size()), 2, RoundingMode.HALF_UP);
         driver.setAverageRating(averageRating);
         userDaoRepository.save(driver);
     }
