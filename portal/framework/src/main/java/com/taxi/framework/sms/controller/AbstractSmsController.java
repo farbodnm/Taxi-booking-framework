@@ -1,4 +1,4 @@
-package com.example.smssender.controller;
+package com.taxi.framework.sms.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 
