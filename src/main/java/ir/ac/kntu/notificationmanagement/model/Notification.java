@@ -9,6 +9,8 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
+@Table(name = "notification")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Notification {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
