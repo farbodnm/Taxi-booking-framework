@@ -1,5 +1,6 @@
 package ir.ac.kntu.notificationmanagement.service;
 
+import ir.ac.kntu.notificationmanagement.model.Notification;
 import ir.ac.kntu.notificationmanagement.model.NotificationStatus;
 import ir.ac.kntu.notificationmanagement.model.PushNotification;
 import ir.ac.kntu.notificationmanagement.model.User;
@@ -8,6 +9,7 @@ import ir.ac.kntu.notificationmanagement.strategy.NotificationStrategy;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 public class PushNotificationService implements NotificationService {
@@ -58,6 +60,12 @@ public class PushNotificationService implements NotificationService {
         User user = userService.getUserById(userId);
         sendNotification(user, "Payment Confirmed", "You've Been Paid",
                 "Hi %s, payment for the ride has been successfully processed. Thank you for driving with us!".formatted(user.getName()));
+    }
+
+    @Override
+    public List<? extends Notification> getNotificationListOfUser(Long userId) {
+        User user = userService.getUserById(userId);
+        return pushNotificationRepository.findByUser(user);
     }
 
     private PushNotification createPushNotification(User user) {

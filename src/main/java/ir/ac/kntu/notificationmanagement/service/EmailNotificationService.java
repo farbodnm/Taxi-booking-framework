@@ -1,6 +1,7 @@
 package ir.ac.kntu.notificationmanagement.service;
 
 import ir.ac.kntu.notificationmanagement.model.EmailNotification;
+import ir.ac.kntu.notificationmanagement.model.Notification;
 import ir.ac.kntu.notificationmanagement.model.NotificationStatus;
 import ir.ac.kntu.notificationmanagement.model.User;
 import ir.ac.kntu.notificationmanagement.repository.EmailNotificationRepository;
@@ -8,9 +9,10 @@ import ir.ac.kntu.notificationmanagement.strategy.NotificationStrategy;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
-public class EmailNotificationService implements NotificationService{
+public class EmailNotificationService implements NotificationService {
 
     private final EmailNotificationRepository emailNotificationRepository;
 
@@ -53,6 +55,12 @@ public class EmailNotificationService implements NotificationService{
     public void sendPaymentConfirmationToDriver(Long userId) {
         User user = userService.getUserById(userId);
         sendNotification(user, "Payment Confirmation", "Your payment has been processed.");
+    }
+
+    @Override
+    public List<? extends Notification> getNotificationListOfUser(Long userId) {
+        User user = userService.getUserById(userId);
+        return emailNotificationRepository.findByUser(user);
     }
 
     private EmailNotification createEmailNotification(User user) {

@@ -1,5 +1,6 @@
 package ir.ac.kntu.notificationmanagement.service;
 
+import ir.ac.kntu.notificationmanagement.model.Notification;
 import ir.ac.kntu.notificationmanagement.model.NotificationStatus;
 import ir.ac.kntu.notificationmanagement.model.SmsNotification;
 import ir.ac.kntu.notificationmanagement.model.User;
@@ -8,6 +9,7 @@ import ir.ac.kntu.notificationmanagement.strategy.NotificationStrategy;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 public class SmsNotificationService implements NotificationService {
@@ -52,6 +54,12 @@ public class SmsNotificationService implements NotificationService {
     public void sendPaymentConfirmationToDriver(Long userId) {
         User user = userService.getUserById(userId);
         sendNotification(user, "Your payment has been processed.");
+    }
+
+    @Override
+    public List<SmsNotification> getNotificationListOfUser(Long userId) {
+        User user = userService.getUserById(userId);
+        return smsNotificationRepository.findByUser(user);
     }
 
     private SmsNotification createSmsNotification(User user) {

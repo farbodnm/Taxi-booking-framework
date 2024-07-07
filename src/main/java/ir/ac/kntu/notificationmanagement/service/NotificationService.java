@@ -3,6 +3,8 @@ package ir.ac.kntu.notificationmanagement.service;
 import ir.ac.kntu.notificationmanagement.model.Notification;
 import ir.ac.kntu.notificationmanagement.model.NotificationType;
 
+import java.util.List;
+
 public interface NotificationService {
 
     void sendBookingConfirmation(Long userId);
@@ -15,4 +17,5 @@ public interface NotificationService {
 
     void sendPaymentConfirmationToDriver(Long userId);
 
+    List<? extends Notification> getNotificationListOfUser(Long userId);
 }
