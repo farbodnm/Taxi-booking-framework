@@ -8,8 +8,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 public abstract class AbstractMappingController {
 
+    private final AbstractMappingService directionService;
+
     @Autowired
-    private AbstractMappingService directionService;
+    public AbstractMappingController(AbstractMappingService directionService) {
+        this.directionService = directionService;
+    }
 
     @GetMapping
     public ResponseEntity<String> getDirections(
