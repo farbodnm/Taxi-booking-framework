@@ -3,6 +3,7 @@ package ir.ac.kntu.notificationmanagement.service;
 import ir.ac.kntu.notificationmanagement.controller.user.dto.UserCreateDTO;
 import ir.ac.kntu.notificationmanagement.exceptions.DuplicateValueException;
 import ir.ac.kntu.notificationmanagement.exceptions.ResourceNotFoundException;
+import ir.ac.kntu.notificationmanagement.exceptions.UserNotFoundException;
 import ir.ac.kntu.notificationmanagement.model.User;
 import ir.ac.kntu.notificationmanagement.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
@@ -43,11 +44,6 @@ public class UserService {
 
 
     public User getUserById(Long id) {
-        Optional<User> user = userRepository.findById(id);
-        if (user.isEmpty()) {
-            throw new ResourceNotFoundException("User %d not found".formatted(id));
-        } else {
-            return user.get();
-        }
+        return userRepository.findById(id).orElseThrow(() -> new UserNotFoundException(id));
     }
 }
