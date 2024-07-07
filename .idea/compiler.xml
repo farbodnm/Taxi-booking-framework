@@ -19,6 +19,8 @@
     <bytecodeTargetLevel>
       <module name="core" target="17" />
       <module name="driver" target="17" />
+      <module name="map" target="17" />
+      <module name="mapping (1)" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -27,7 +29,9 @@
       <module name="dispatch" options="-parameters" />
       <module name="fleet" options="-parameters" />
       <module name="framework" options="-parameters" />
+      <module name="map" options="-parameters" />
       <module name="mapping" options="-parameters" />
+      <module name="mapping (1)" options="-parameters" />
       <module name="pricing" options="-parameters" />
       <module name="user" options="-parameters" />
     </option>

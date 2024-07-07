@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/portal/services/mapping" />
+    <file type="web" url="file://$PROJECT_DIR$/portal/services/map" />
     <file type="web" url="file://$PROJECT_DIR$/portal/services/pricing" />
   </component>
   <component name="MavenProjectsManager">
@@ -12,8 +12,9 @@
         <option value="$PROJECT_DIR$/portal/services/dispatch/pom.xml" />
         <option value="$PROJECT_DIR$/portal/services/fleet/pom.xml" />
         <option value="$PROJECT_DIR$/portal/services/pricing/pom.xml" />
-        <option value="$PROJECT_DIR$/portal/services/mapping/pom.xml" />
         <option value="$PROJECT_DIR$/portal/services/mapService/pom.xml" />
+        <option value="$PROJECT_DIR$/portal/services/mapping2/pom.xml" />
+        <option value="$PROJECT_DIR$/portal/services/mapping/pom.xml" />
       </list>
     </option>
   </component>
