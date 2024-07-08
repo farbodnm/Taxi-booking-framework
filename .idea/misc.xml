@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/portal/services/mapService/pom.xml" />
         <option value="$PROJECT_DIR$/portal/services/mapping2/pom.xml" />
         <option value="$PROJECT_DIR$/portal/services/mapping/pom.xml" />
+        <option value="$PROJECT_DIR$/portal/services/sms/pom.xml" />
       </list>
     </option>
   </component>

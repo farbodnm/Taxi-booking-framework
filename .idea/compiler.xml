@@ -12,6 +12,7 @@
         <module name="mapping" />
         <module name="framework" />
         <module name="dispatch" />
+        <module name="sms" />
         <module name="user" />
         <module name="pricing" />
       </profile>
@@ -33,6 +34,7 @@
       <module name="mapping" options="-parameters" />
       <module name="mapping (1)" options="-parameters" />
       <module name="pricing" options="-parameters" />
+      <module name="sms" options="-parameters" />
       <module name="user" options="-parameters" />
     </option>
   </component>
