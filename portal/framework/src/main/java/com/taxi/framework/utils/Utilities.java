@@ -1,5 +1,8 @@
 package com.taxi.framework.utils;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public interface Utilities {
     static double calculateDistance(double lat1, double lon1, double lat2, double lon2) {
         final int R = 6371; // Radius of the earth
@@ -13,6 +16,10 @@ public interface Utilities {
 
         return R * c;
     }
-
+    static String getCurrentDateTime() {
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        return now.format(formatter);
+    }
 
 }

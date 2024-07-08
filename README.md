@@ -78,7 +78,8 @@ The framework is designed using a service oriented architecture with each servic
 #### [User Service](portal/framework/src/main/java/com/taxi/framework/user)
 
 > Pre-made endpoints, DTOs, and service interface for user management.
-
+#### [Feedback Service](portal/framework/src/main/java/com/taxi/framework/feedback)
+> Manages the feedback and rating system, allowing passengers to rate drivers and drivers to rate passengers. 
 ## Component, and Class Diagram
 
 To view the enforced architecture diagram please check the UML.drawio file inside the repository (The classes provided by the framework are colored blue, while the classes that are supposed to be made by the developer are coloured purple).

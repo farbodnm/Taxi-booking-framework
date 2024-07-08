@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="create-driver-feedback-table" author="hamidrezashahabi">
+        <createTable tableName="driver_feedback">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="feedback_giver_user_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="feedback_receiver_driver_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rating" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="comments" type="VARCHAR(1000)"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="feedback_giver_user_id"
+                                 baseTableName="driver_feedback"
+                                 constraintName="fk_driver_feedback_giver_user"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user"/>
+
+        <addForeignKeyConstraint baseColumnNames="feedback_receiver_driver_id"
+                                 baseTableName="driver_feedback"
+                                 constraintName="fk_driver_feedback_receiver_driver"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user"/>
+    </changeSet>
+
+    <changeSet id="create-driver-feedback-options-table" author="hamidrezashahabi">
+        <createTable tableName="driver_feedback_options">
+            <column name="feedback_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="option_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="feedback_id, option_id"
+                       tableName="driver_feedback_options"
+                       constraintName="pk_driver_feedback_options"/>
+
+        <addForeignKeyConstraint baseColumnNames="feedback_id"
+                                 baseTableName="driver_feedback_options"
+                                 constraintName="fk_driver_feedback_options_feedback"
+                                 referencedColumnNames="id"
+                                 referencedTableName="driver_feedback"/>
+
+        <addForeignKeyConstraint baseColumnNames="option_id"
+                                 baseTableName="driver_feedback_options"
+                                 constraintName="fk_driver_feedback_options_option"
+                                 referencedColumnNames="id"
+                                 referencedTableName="feedback_option"/>
+    </changeSet>
+</databaseChangeLog>
