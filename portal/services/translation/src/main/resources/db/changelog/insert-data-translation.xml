@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="04" author="amirhoseinSaeedi">
+        <comment>Inserting Translation</comment>
+
+        <insert tableName="translation">
+            <column name="content_id" valueNumeric="1"/>
+            <column name="language_type_id" value="1"/>
+            <column name="translation_text" value="Hello"/>
+        </insert>
+
+        <insert tableName="translation">
+            <column name="content_id" valueNumeric="1"/>
+            <column name="language_type_id" value="2"/>
+            <column name="translation_text" value="Hola"/>
+        </insert>
+
+        <insert tableName="translation">
+            <column name="content_id" valueNumeric="2"/>
+            <column name="language_type_id" value="1"/>
+            <column name="translation_text" value="Good bye"/>
+        </insert>
+
+        <insert tableName="translation">
+            <column name="content_id" valueNumeric="2"/>
+            <column name="language_type_id" value="2"/>
+            <column name="translation_text" value="Adios"/>
+        </insert>
+
+        <insert tableName="translation">
+            <column name="content_id" valueNumeric="3"/>
+            <column name="language_type_id" value="1"/>
+            <column name="translation_text" value="Account"/>
+        </insert>
+
+        <insert tableName="translation">
+            <column name="content_id" valueNumeric="3"/>
+            <column name="language_type_id" value="2"/>
+            <column name="translation_text" value="Cuenta"/>
+        </insert>
+
+        <insert tableName="translation">
+            <column name="content_id" valueNumeric="4"/>
+            <column name="language_type_id" value="1"/>
+            <column name="translation_text" value="Wallet"/>
+        </insert>
+
+        <insert tableName="translation">
+            <column name="content_id" valueNumeric="4"/>
+            <column name="language_type_id" value="2"/>
+            <column name="translation_text" value="Billetera"/>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>
