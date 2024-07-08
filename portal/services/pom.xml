@@ -28,6 +28,8 @@
         <module>pricing</module>
         <module>user</module>
         <module>mapping</module>
+        <module>sms</module>
+
 
     </modules>
     <properties>
