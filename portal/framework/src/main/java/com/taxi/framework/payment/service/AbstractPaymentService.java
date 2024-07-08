@@ -2,13 +2,17 @@ package com.taxi.framework.payment.service;
 
 import com.taxi.framework.payment.dto.PaymentRequest;
 import com.taxi.framework.payment.dto.PaymentResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 public abstract class AbstractPaymentService<T extends PaymentRequest, R extends PaymentResponse> {
+    private static final Logger logger = LoggerFactory.getLogger(AbstractPaymentService.class);
 
     @Value("${payment.gateway.url}")
     protected String paymentGatewayUrl;
@@ -28,8 +32,19 @@ public abstract class AbstractPaymentService<T extends PaymentRequest, R extends
 
         HttpEntity<T> entity = new HttpEntity<>(request, headers);
 
-        ResponseEntity<R> response = restTemplate.postForEntity(paymentGatewayUrl, entity, getResponseType());
-        return response.getBody();
+        logger.info("Calling payment gateway URL: {}", paymentGatewayUrl);
+
+        try {
+            ResponseEntity<R> response = restTemplate.postForEntity(paymentGatewayUrl, entity, getResponseType());
+            logger.info("Received response: {}", response);
+            return response.getBody();
+        } catch (HttpClientErrorException e) {
+            logger.error("HTTP error: {}", e.getStatusCode());
+            throw e;
+        } catch (Exception e) {
+            logger.error("Error during payment initiation", e);
+            throw e;
+        }
     }
 
     protected abstract Class<R> getResponseType();

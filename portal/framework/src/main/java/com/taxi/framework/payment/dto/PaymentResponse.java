@@ -21,6 +21,4 @@ public class PaymentResponse {
         this.status = status;
     }
 
-    // Getters and setters
-    // Constructors, etc.
 }

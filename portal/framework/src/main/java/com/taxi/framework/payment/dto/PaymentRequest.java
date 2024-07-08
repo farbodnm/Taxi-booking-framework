@@ -30,8 +30,5 @@ public class PaymentRequest {
         this.paymentMethod = paymentMethod;
     }
 
-
-    // Getters and setters
-    // Constructors, etc.
 }
 
