@@ -29,7 +29,6 @@
         <module>user</module>
         <module>mapping</module>
         <module>sms</module>
-        <module>payment</module>
 
     </modules>
     <properties>

@@ -1,8 +1,10 @@
 package com.taxi.framework.mapping.controller;
 
-import com.taxi.framework.mapping.service.AbstractMappingService;
 import com.taxi.framework.mapping.dto.DirectionsRequestDTO;
 import com.taxi.framework.mapping.dto.DirectionsResponseDTO;
+import com.taxi.framework.mapping.dto.ReverseGeocodingRequestDTO;
+import com.taxi.framework.mapping.dto.ReverseGeocodingResponseDTO;
+import com.taxi.framework.mapping.service.AbstractMappingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +19,7 @@ public abstract class AbstractMappingController {
         this.directionService = directionService;
     }
 
-    @GetMapping
+    @GetMapping("/directions")
     public ResponseEntity<DirectionsResponseDTO> getDirections(
             @RequestParam String origin,
             @RequestParam String destination,
@@ -29,6 +31,19 @@ public abstract class AbstractMappingController {
             return ResponseEntity.ok(response);
         } catch (Exception e) {
             return ResponseEntity.status(500).body(new DirectionsResponseDTO(e.getMessage()));
+        }
+    }
+
+    @GetMapping("/reverse-geocoding")
+    public ResponseEntity<ReverseGeocodingResponseDTO> getReverseGeocoding(
+            @RequestParam double lat,
+            @RequestParam double lng) {
+        try {
+            ReverseGeocodingRequestDTO request = new ReverseGeocodingRequestDTO(lat, lng);
+            ReverseGeocodingResponseDTO response = directionService.getReverseGeocoding(request);
+            return ResponseEntity.ok(response);
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body(new ReverseGeocodingResponseDTO(e.getMessage()));
         }
     }
 }
