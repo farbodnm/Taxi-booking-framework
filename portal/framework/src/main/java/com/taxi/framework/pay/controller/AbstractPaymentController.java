@@ -49,10 +49,10 @@ public abstract class AbstractPaymentController<T extends PaymentRequestDTO, R e
      * @return a ResponseEntity containing a confirmation message
      */
     @PostMapping("/callback")
-    public ResponseEntity<String> handleCallback(@RequestBody PaymentResponseDTO paymentResponseDTO) {
+    public ResponseEntity<R> handleCallback(@RequestBody PaymentResponseDTO paymentResponseDTO) {
         // Validate the callback
         // Update payment status in your system
-        return ResponseEntity.ok("Callback received");
+        return ResponseEntity.ok((R) paymentResponseDTO);
     }
 
     // Other common methods for handling payment-related operations
