@@ -1,6 +1,7 @@
 package ir.ac.kntu.notificationmanagement.controller.notification;
 
 import ir.ac.kntu.notificationmanagement.controller.notification.dto.EmailNotificationResponseDTO;
+import ir.ac.kntu.notificationmanagement.controller.notification.dto.NotificationResponseDTO;
 import ir.ac.kntu.notificationmanagement.controller.notification.dto.PushNotificationResponseDTO;
 import ir.ac.kntu.notificationmanagement.controller.notification.dto.SmsNotificationResponseDTO;
 import ir.ac.kntu.notificationmanagement.model.*;
@@ -26,21 +27,21 @@ public class NotificationInfoController {
 
     @GetMapping(path = "sms")
     public List<SmsNotificationResponseDTO> getSmsNotifications(@PathVariable Long userId) {
-        NotificationService service = notificationServiceManager.getNotificationServiceByType(NotificationType.SMS);
-        List<SmsNotification> notificationListOfUser = (List<SmsNotification>) service.getNotificationListOfUser(userId);
-        return notificationListOfUser.stream().map(this::convertSmsNotificationToDTO).collect(Collectors.toList());
+        return (List<SmsNotificationResponseDTO>) getNotificationsInformation(userId, NotificationType.SMS);
     }
 
     @GetMapping(path = "email")
     public List<EmailNotificationResponseDTO> getEmailNotifications(@PathVariable Long userId) {
-        NotificationService service = notificationServiceManager.getNotificationServiceByType(NotificationType.EMAIL);
-        List<EmailNotification> notificationListOfUser = (List<EmailNotification>) service.getNotificationListOfUser(userId);
-        return notificationListOfUser.stream().map(this::convertEmailNotificationToDTO).collect(Collectors.toList());
+        return (List<EmailNotificationResponseDTO>) getNotificationsInformation(userId, NotificationType.EMAIL);
     }
 
     @GetMapping(path = "push")
     public List<PushNotificationResponseDTO> getPushNotifications(@PathVariable Long userId) {
-        NotificationService service = notificationServiceManager.getNotificationServiceByType(NotificationType.PUSH);
+        return (List<PushNotificationResponseDTO>) getNotificationsInformation(userId, NotificationType.PUSH);
+    }
+
+    private List<? extends NotificationResponseDTO> getNotificationsInformation(Long userId, NotificationType notificationType) {
+        NotificationService service = notificationServiceManager.getNotificationServiceByType(notificationType);
         List<PushNotification> notificationListOfUser = (List<PushNotification>) service.getNotificationListOfUser(userId);
         return notificationListOfUser.stream().map(this::convertPushNotificationToDTO).collect(Collectors.toList());
     }
