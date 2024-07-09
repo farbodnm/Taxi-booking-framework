@@ -12,10 +12,10 @@ import java.io.IOException;
 
 @RestController
 @RequestMapping("/api/sms")
-public class Controller extends AbstractSmsController {
+public class SmsController extends AbstractSmsController {
 
     @Autowired
-    public Controller(AbstractSmsService smsService) {
+    public SmsController(AbstractSmsService smsService) {
         super(smsService);
     }
 

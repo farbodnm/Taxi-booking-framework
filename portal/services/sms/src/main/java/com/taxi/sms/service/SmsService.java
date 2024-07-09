@@ -14,12 +14,12 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 
 @Service
-public class ServiceImp extends AbstractSmsService {
+public class SmsService extends AbstractSmsService {
     private final OkHttpClient client;
     private final String apiUrl;
     private final String apiKey;
 
-    public ServiceImp(
+    public SmsService(
 
             @Value("${sms.api.url}") String apiUrl,
             @Value("${sms.api.key}") String apiKey) {

@@ -23,7 +23,7 @@
       <module name="driver" target="17" />
       <module name="map" target="17" />
       <module name="mapping (1)" target="17" />
-      <module name="payment" target="17" />
+      <module name="payment" target="18" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
