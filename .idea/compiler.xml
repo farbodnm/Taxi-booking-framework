@@ -13,7 +13,7 @@
         <module name="framework" />
         <module name="dispatch" />
         <module name="sms" />
-        <module name="payment" />
+        <module name="pay" />
         <module name="user" />
         <module name="pricing" />
       </profile>
@@ -23,6 +23,7 @@
       <module name="driver" target="17" />
       <module name="map" target="17" />
       <module name="mapping (1)" target="17" />
+      <module name="payment" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -34,6 +35,7 @@
       <module name="map" options="-parameters" />
       <module name="mapping" options="-parameters" />
       <module name="mapping (1)" options="-parameters" />
+      <module name="pay" options="-parameters" />
       <module name="payment" options="-parameters" />
       <module name="pricing" options="-parameters" />
       <module name="sms" options="-parameters" />

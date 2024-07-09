@@ -1,9 +1,17 @@
 package com.taxi.framework.sms.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
 
-@RequestMapping("/api/sms")
+import com.taxi.framework.sms.dto.SmsRequestDTO;
+import com.taxi.framework.sms.service.AbstractSmsService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
 public abstract class AbstractSmsController {
-    // Abstract methods to be implemented by subclasses
-    public abstract void sendSms();
+
+    protected AbstractSmsService smsService;
+
+    public AbstractSmsController(AbstractSmsService smsService) {
+        this.smsService = smsService;
+    }
+
+    public abstract ResponseEntity<String> sendSms(@RequestBody SmsRequestDTO smsRequest);
 }

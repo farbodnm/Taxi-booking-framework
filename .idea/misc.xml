@@ -16,8 +16,13 @@
         <option value="$PROJECT_DIR$/portal/services/mapping2/pom.xml" />
         <option value="$PROJECT_DIR$/portal/services/mapping/pom.xml" />
         <option value="$PROJECT_DIR$/portal/services/sms/pom.xml" />
-        <option value="$PROJECT_DIR$/portal/services/payment/pom.xml" />
+        <option value="$PROJECT_DIR$/portal/services/pay/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/portal/services/payment/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="21" project-jdk-type="JavaSDK">
