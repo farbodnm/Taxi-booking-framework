@@ -4,15 +4,13 @@ import com.taxi.framework.sms.dto.SmsRequestDTO;
 import java.io.IOException;
 
 public abstract class AbstractSmsService {
-    public String sendSms(SmsRequestDTO smsRequestDTO) throws IOException {
-        String jsonBody = convertToJson(smsRequestDTO);
-        String response = sendHttpRequest(jsonBody);
-        return processResponse(response);
+    protected String apiUrl;
+    protected String apiKey;
+
+    public AbstractSmsService(String apiUrl, String apiKey) {
+        this.apiUrl = apiUrl;
+        this.apiKey = apiKey;
     }
 
-    protected abstract String convertToJson(SmsRequestDTO smsRequestDTO);
-
-    protected abstract String sendHttpRequest(String jsonBody) throws IOException;
-
-    protected abstract String processResponse(String response);
+    public abstract String sendSms(SmsRequestDTO smsRequest) throws IOException;
 }

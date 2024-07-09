@@ -16,41 +16,29 @@ import java.io.IOException;
 @Service
 public class SmsService extends AbstractSmsService {
     private final OkHttpClient client;
+    private final String apiUrl;
     private final String apiKey;
-    private final String url;
 
-    public SmsService(@Value("${sms.api.key}") String apiKey, @Value("${sms.api.url}") String url) {
-        this.client = new OkHttpClient().newBuilder().build();
+    public SmsService(
+
+            @Value("${sms.api.url}") String apiUrl,
+            @Value("${sms.api.key}") String apiKey) {
+        super(apiUrl, apiKey);
+        this.client = new OkHttpClient();
+        this.apiUrl = apiUrl;
         this.apiKey = apiKey;
-        this.url = url;
     }
 
     @Override
-    protected String convertToJson(SmsRequestDTO smsRequestDTO) {
-        StringBuilder parametersJson = new StringBuilder("[");
-        for (SmsRequestDTO.Parameter parameter : smsRequestDTO.getParameters()) {
-            parametersJson.append("{")
-                    .append("\"name\":\"").append(parameter.getName()).append("\",")
-                    .append("\"value\":\"").append(parameter.getValue()).append("\"},");
-        }
-        if (parametersJson.length() > 1) {
-            parametersJson.setLength(parametersJson.length() - 1); // Remove trailing comma
-        }
-        parametersJson.append("]");
+    public String sendSms(SmsRequestDTO smsRequest) throws IOException {
+        Gson gson = new Gson();
+        String requestBodyJson = gson.toJson(smsRequest);
 
-        return "{\n" +
-                "\"mobile\":\"" + smsRequestDTO.getMobile() + "\",\n" +
-                "\"templateId\":\"" + smsRequestDTO.getTemplateId() + "\",\n" +
-                "\"parameters\":" + parametersJson.toString() + "\n" +
-                "}";
-    }
-
-    @Override
-    protected String sendHttpRequest(String jsonBody) throws IOException {
         MediaType mediaType = MediaType.parse("application/json");
-        RequestBody body = RequestBody.create(mediaType, jsonBody);
+        RequestBody body = RequestBody.create(requestBodyJson, mediaType);
+
         Request request = new Request.Builder()
-                .url(url)
+                .url(apiUrl)
                 .post(body)
                 .addHeader("Content-Type", "application/json")
                 .addHeader("Accept", "text/plain")
@@ -58,12 +46,10 @@ public class SmsService extends AbstractSmsService {
                 .build();
 
         try (Response response = client.newCall(request).execute()) {
-            return response.body() != null ? response.body().string() : null;
+            if (!response.isSuccessful()) {
+                throw new IOException("Unexpected code " + response);
+            }
+            return response.body().string();
         }
-    }
-
-    @Override
-    protected String processResponse(String response) {
-        return response;
     }
 }
