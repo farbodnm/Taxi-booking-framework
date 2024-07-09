@@ -8,6 +8,8 @@ public class SmsRequestDTO {
     private String templateId;
     private List<Parameter> parameters;
 
+
+
     // Inner class for parameters
     public static class Parameter {
         private String name;

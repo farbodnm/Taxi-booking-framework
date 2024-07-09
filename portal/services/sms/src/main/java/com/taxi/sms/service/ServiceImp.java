@@ -20,6 +20,7 @@ public class ServiceImp extends AbstractSmsService {
     private final String apiKey;
 
     public ServiceImp(
+
             @Value("${sms.api.url}") String apiUrl,
             @Value("${sms.api.key}") String apiKey) {
         super(apiUrl, apiKey);
