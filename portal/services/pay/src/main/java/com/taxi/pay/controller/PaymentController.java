@@ -3,7 +3,7 @@ package com.taxi.pay.controller;
 import com.taxi.framework.pay.controller.AbstractPaymentController;
 import com.taxi.framework.pay.dto.PaymentRequest;
 import com.taxi.framework.pay.dto.PaymentResponse;
-import com.taxi.pay.service.PaymentService;
+import com.taxi.pay.service.ZarinPalPaymentService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 public class PaymentController extends AbstractPaymentController<PaymentRequest, PaymentResponse> {
 
     @Autowired
-    public PaymentController(PaymentService paymentService) {
+    public PaymentController(ZarinPalPaymentService paymentService) {
         super(paymentService);
     }
 
