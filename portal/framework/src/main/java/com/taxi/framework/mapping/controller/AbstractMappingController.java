@@ -10,15 +10,32 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+/**
+ * Abstract controller class for mapping services.
+ */
 public abstract class AbstractMappingController {
 
     private final AbstractMappingService directionService;
 
+    /**
+     * Constructor for AbstractMappingController.
+     *
+     * @param directionService the mapping service to be used
+     */
     @Autowired
     public AbstractMappingController(AbstractMappingService directionService) {
         this.directionService = directionService;
     }
 
+    /**
+     * Endpoint to get directions.
+     *
+     * @param origin the origin location
+     * @param destination the destination location
+     * @param type the type of route
+     * @param withTraffic whether to consider traffic
+     * @return the directions response
+     */
     @GetMapping("/directions")
     public ResponseEntity<DirectionsResponseDTO> getDirections(
             @RequestParam String origin,
@@ -34,6 +51,13 @@ public abstract class AbstractMappingController {
         }
     }
 
+    /**
+     * Endpoint to get reverse geocoding information.
+     *
+     * @param lat the latitude
+     * @param lng the longitude
+     * @return the reverse geocoding response
+     */
     @GetMapping("/reverse-geocoding")
     public ResponseEntity<ReverseGeocodingResponseDTO> getReverseGeocoding(
             @RequestParam double lat,

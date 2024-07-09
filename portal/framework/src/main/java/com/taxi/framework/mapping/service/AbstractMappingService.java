@@ -12,6 +12,9 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.util.UriComponentsBuilder;
 
+/**
+ * Abstract service class for mapping services using Neshan API.
+ */
 public abstract class AbstractMappingService {
 
     @Value("${neshan.api.key}")
@@ -22,10 +25,21 @@ public abstract class AbstractMappingService {
 
     private final RestTemplate restTemplate;
 
+    /**
+     * Constructor for AbstractMappingService.
+     *
+     * @param restTemplate the RestTemplate to be used for API requests
+     */
     public AbstractMappingService(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 
+    /**
+     * Gets directions from the Neshan API.
+     *
+     * @param request the directions request DTO
+     * @return the directions response DTO
+     */
     public DirectionsResponseDTO getDirections(DirectionsRequestDTO request) {
         if (apiKey == null || apiKey.isEmpty()) {
             throw new IllegalArgumentException("API key must not be null or empty");
@@ -53,6 +67,12 @@ public abstract class AbstractMappingService {
         }
     }
 
+    /**
+     * Gets reverse geocoding information from the Neshan API.
+     *
+     * @param request the reverse geocoding request DTO
+     * @return the reverse geocoding response DTO
+     */
     public ReverseGeocodingResponseDTO getReverseGeocoding(ReverseGeocodingRequestDTO request) {
         if (apiKey == null || apiKey.isEmpty()) {
             throw new IllegalArgumentException("API key must not be null or empty");
