@@ -1,9 +1,9 @@
-package com.taxi.framework.payment.controller;
+package com.taxi.framework.pay.controller;
 
-import com.taxi.framework.payment.dto.CallbackRequest;
-import com.taxi.framework.payment.dto.PaymentRequest;
-import com.taxi.framework.payment.dto.PaymentResponse;
-import com.taxi.framework.payment.service.AbstractPaymentService;
+import com.taxi.framework.pay.dto.CallbackRequest;
+import com.taxi.framework.pay.dto.PaymentRequest;
+import com.taxi.framework.pay.dto.PaymentResponse;
+import com.taxi.framework.pay.service.AbstractPaymentService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

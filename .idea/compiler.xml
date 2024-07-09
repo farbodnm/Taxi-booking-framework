@@ -36,7 +36,7 @@
       <module name="mapping" options="-parameters" />
       <module name="mapping (1)" options="-parameters" />
       <module name="pay" options="-parameters" />
-      <module name="payment" options="" />
+      <module name="payment" options="-parameters" />
       <module name="pricing" options="-parameters" />
       <module name="sms" options="-parameters" />
       <module name="user" options="-parameters" />

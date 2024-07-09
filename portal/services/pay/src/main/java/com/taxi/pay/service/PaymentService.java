@@ -1,8 +1,8 @@
 package com.taxi.pay.service;
 
-import com.taxi.framework.payment.dto.PaymentRequest;
-import com.taxi.framework.payment.dto.PaymentResponse;
-import com.taxi.framework.payment.service.AbstractPaymentService;
+import com.taxi.framework.pay.dto.PaymentRequest;
+import com.taxi.framework.pay.dto.PaymentResponse;
+import com.taxi.framework.pay.service.AbstractPaymentService;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
