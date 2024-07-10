@@ -13,36 +13,12 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
-/**
- * Service for sending SMS messages using a specified SMS gateway.
- * This class extends AbstractSmsService and uses OkHttpClient to send HTTP requests to the SMS API.
- *
- * @see AbstractSmsService
- */
 @Service
-public class SmsService extends AbstractSmsService {
-
-    /**
-     * The OkHttpClient used for making HTTP requests.
-     */
+public class SmsService extends AbstractSmsService<SmsRequestDTO, String> {
     private final OkHttpClient client;
-
-    /**
-     * The URL of the SMS API endpoint.
-     */
     private final String apiUrl;
-
-    /**
-     * The API key used for authentication with the SMS API.
-     */
     private final String apiKey;
 
-    /**
-     * Constructs a new SmsService with the specified API URL and API key.
-     *
-     * @param apiUrl the URL of the SMS API endpoint
-     * @param apiKey the API key used for authentication with the SMS API
-     */
     public SmsService(
             @Value("${sms.api.url}") String apiUrl,
             @Value("${sms.api.key}") String apiKey) {
@@ -52,13 +28,6 @@ public class SmsService extends AbstractSmsService {
         this.apiKey = apiKey;
     }
 
-    /**
-     * Sends an SMS message based on the provided SMS request DTO.
-     *
-     * @param smsRequest the SMS request DTO containing the message details
-     * @return a string containing the result of the SMS send operation
-     * @throws IOException if an I/O error occurs during the SMS send operation
-     */
     @Override
     public String sendSms(SmsRequestDTO smsRequest) throws IOException {
         Gson gson = new Gson();
