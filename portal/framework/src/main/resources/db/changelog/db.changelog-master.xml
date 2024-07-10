@@ -1,0 +1,53 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- Create the content table -->
+    <changeSet id="createContentTable" author="amirhoseinSaeedi">
+        <createTable tableName="content">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="text" type="VARCHAR(255)"/>
+            <column name="section" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+
+    <!-- Create the language_type table -->
+    <changeSet id="createLanguageTypeTable" author="amirhoseinSaeedi">
+        <createTable tableName="language_type">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="language" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+
+    <!-- Create the translation table -->
+    <changeSet id="createTranslationTable" author="amirhoseinSaeedi">
+        <createTable tableName="translation">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="content_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="language_type_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="translation_text" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+
+    <!-- Add foreign key constraints -->
+    <changeSet id="addForeignKeyConstraints" author="amirhoseinSaeedi">
+        <addForeignKeyConstraint baseTableName="translation" baseColumnNames="content_id"
+                                 referencedTableName="content" referencedColumnNames="id"
+                                 constraintName="fk_translation_content" onDelete="CASCADE"/>
+        <addForeignKeyConstraint baseTableName="translation" baseColumnNames="language_type_id"
+                                 referencedTableName="language_type" referencedColumnNames="id"
+                                 constraintName="fk_translation_language_type" onDelete="CASCADE"/>
+    </changeSet>
+
+</databaseChangeLog>

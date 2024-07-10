@@ -57,6 +57,278 @@ The framework is designed using a service oriented architecture with each servic
   <img width="1000" src="images/Project-Architecture.png" alt="Project Architecture">
 </p>
 
+## getLnguageTypes
+
+> Description
+>
+> <div style="color:red"> get all language that application support
+> </div>
+> Route
+>
+> ```
+> api/translation/languageTypes
+> ```
+>
+> Method : GET
+>
+> Header :--
+>
+> Request Payload :
+>
+> ```json
+>{
+>    
+>}
+>```
+
+> Success Response
+>
+> ```json
+> {
+>    [
+>       "id": 1,
+>       "language": "United States"
+>     ]
+> }
+> ```
+
+## getTranslationBylanguage
+
+> Description
+>
+> <div style="color:red"> get translation of one content by language name
+> </div>
+> Route
+>
+> ```
+> api/translation/v2
+> ```
+>
+> Method : GET
+>
+> Header :--
+>
+> Request Payload :
+>
+> ```json
+> {
+>     "contentId":1,
+>     "languageType":"United States"
+> }
+>```
+
+> Success Response
+>
+> ```json
+> {
+>    "contentId": 1,
+>    "translationText": "Hello"
+> }
+>
+>
+## getTranslation
+
+> Description
+>
+> <div style="color:red"> get translation of one content by language id
+> </div>
+> Route
+>
+> ```
+> api/translation
+> ```
+>
+> Method : GET
+>
+> Header :--
+>
+> Request Payload :
+>
+> ```json
+> {
+>    "contentId":1,
+>    "languageTypeId":1
+> }
+>```
+
+> Success Response
+>
+> ```json
+> {
+>    "contentId": 1,
+>    "translationText": "Hello"
+> }
+> ```
+
+## getTranslationByIP
+
+>
+> Description
+>
+> <div style="color:red"> get translation of one content by ip
+> </div>
+> Route
+>
+> ```
+> api/translation/ip
+> ```
+>
+> Method : GET
+>
+> Header :--
+>
+> Request Payload :
+>
+> ```json
+> {
+>    "contentId":1
+> }
+>```
+
+> Success Response
+>
+> ```json
+> {
+>    "contentId": 1,
+>    "translationText": "Hello"
+> }
+>```
+>
+## getSectionTranslationByIP
+>
+> Description
+>
+> <div style="color:red"> get translation of one section by ip
+> </div>
+> Route
+>
+> ```
+> api/translation/section/ip
+> ```
+>
+> Method : GET
+>
+> Header :--
+>
+> Request Payload :
+>
+> ```json
+> {
+>    "section":"home"
+> }
+>```
+
+> Success Response
+>
+> ```json
+> {
+>   [
+>     "contentId": 1,
+>     "translationText": "Hello"
+>   ]
+> }
+>
+>
+## addContent
+
+> Description
+>
+> <div style="color:red"> creating new contact
+> </div>
+> Route
+>
+> ```
+> api/translation/content
+> ```
+>
+> Method : POST
+>
+> Header :--
+>
+> Request Payload :
+>
+> ```json
+> {
+>    "text":"salam",
+>    "section":"home"
+> }
+>```
+
+> Success Response
+>
+> ```json
+> {
+>    "succeeded": "true"
+> }
+> ```
+
+
+## addLanguageType
+
+> Description
+>
+> <div style="color:red"> creating new languageType
+> </div>
+> Route
+>
+> ```
+> api/translation/languageType
+> ```
+>
+> Method : POST
+>
+> Header :--
+>
+> Request Payload :
+>
+> ```json
+> {
+>    "language":"Iran"
+> }
+>```
+
+> Success Response
+>
+> ```json
+> {
+>    "succeeded": "true"
+> }
+> ```
+
+
+## addTranslation
+
+> Description
+>
+> <div style="color:red"> creating new Translation
+> </div>
+> Route
+>
+> ```
+> api/translation
+> ```
+>
+> Method : POST
+>
+> Header :--
+>
+> Request Payload :
+>
+> ```json
+> {
+>    "contentId": 1,
+>   "languageTypeId": 1,
+>   "translationText": "hello"
+> }
+>```
+
+> Success Response
+>
+> ```json
+> {
+>    "succeeded": "true"
+> }
+> ```
 ### Framework Services:
 
 #### [Booking Service](portal/framework/src/main/java/com/taxi/framework/booking)
@@ -78,6 +350,10 @@ The framework is designed using a service oriented architecture with each servic
 #### [User Service](portal/framework/src/main/java/com/taxi/framework/user)
 
 > Pre-made endpoints, DTOs, and service interface for user management.
+
+#### [Translation Service](portal/framework/src/main/java/com/taxi/framework/translation)
+
+> Handles translation base on user ip
 
 ## Component, and Class Diagram
 

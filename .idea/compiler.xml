@@ -11,8 +11,11 @@
         <module name="booking" />
         <module name="framework" />
         <module name="dispatch" />
+        <module name="translation" />
         <module name="user" />
         <module name="pricing" />
+        <module name="user (1)" />
+        <module name="user (2)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -27,7 +30,10 @@
       <module name="fleet" options="-parameters" />
       <module name="framework" options="-parameters" />
       <module name="pricing" options="-parameters" />
+      <module name="translation" options="-parameters" />
       <module name="user" options="-parameters" />
+      <module name="user (1)" options="-parameters" />
+      <module name="user (2)" options="-parameters" />
     </option>
   </component>
 </project>

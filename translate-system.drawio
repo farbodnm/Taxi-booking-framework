@@ -1,0 +1,603 @@
+<mxfile host="65bd71144e">
+    <diagram id="0d4MvXkD0wXUWxOnUOBm" name="Page-1">
+        <mxGraphModel dx="8847" dy="3180" grid="1" gridSize="50" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" background="#FFFFFF" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="51" style="edgeStyle=none;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;fontColor=#0a0a0a;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2984.6153846153848" y="100" as="targetPoint"/>
+                        <mxPoint x="2984.5" y="103" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="158" value="" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="-300" y="1650" width="7600" height="2800" as="geometry"/>
+                </mxCell>
+                <mxCell id="163" value="&lt;b&gt;&lt;font style=&quot;font-size: 38px;&quot;&gt;Translation&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#04011D;" parent="1" vertex="1">
+                    <mxGeometry x="2950" y="1650" width="250" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="168" value="" style="group;rotation=90;fillColor=#b0e3e6;strokeColor=#0e8088;direction=east;" parent="1" connectable="0" vertex="1">
+                    <mxGeometry x="100" y="2650" width="2000" height="1750" as="geometry"/>
+                </mxCell>
+                <mxCell id="169" value="" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=150;tabHeight=20;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#bac8d3;strokeColor=#23445d;" parent="168" vertex="1">
+                    <mxGeometry x="-150" y="-700" width="1900" height="2300" as="geometry"/>
+                </mxCell>
+                <mxCell id="172" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;&lt;font style=&quot;font-size: 33px;&quot; color=&quot;#000000&quot;&gt;Translation Services&lt;/font&gt;&lt;/b&gt;" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="168" vertex="1">
+                    <mxGeometry x="-50" y="650" width="1750" height="850" as="geometry"/>
+                </mxCell>
+                <mxCell id="170" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;&lt;font style=&quot;font-size: 33px;&quot; color=&quot;#000000&quot;&gt;Framework Translation Services&lt;/font&gt;&lt;/b&gt;" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="168" vertex="1">
+                    <mxGeometry x="-50" y="-650" width="1750" height="1200" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;span style=&quot;font-weight: 700;&quot;&gt;GeoIPLocationServiceImplassname&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+&amp;nbsp;getLocation(): String&lt;/p&gt;&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(4, 1, 29);&quot;&gt;&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;labelBackgroundColor=none;strokeColor=#001DBC;fontColor=#ffffff;fillColor=#0050ef;" parent="168" vertex="1">
+                    <mxGeometry x="1300" y="300" width="300" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="120" value="" style="endArrow=block;dashed=1;endFill=0;html=1;labelBackgroundColor=#f2eff5;fontColor=#04011D;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1.009;exitY=1.169;exitDx=0;exitDy=0;shape=flexArrow;strokeColor=#b85450;fillColor=#f8cecc;exitPerimeter=0;" parent="168" target="117" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="653.5999999999995" y="356.39400000000023" as="sourcePoint"/>
+                        <mxPoint x="965" y="-1716" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="650" y="350"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="378" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;Implements&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontColor=#000000;" parent="168" vertex="1">
+                    <mxGeometry x="950" y="-50" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="379" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;Implements&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontColor=#000000;" parent="168" vertex="1">
+                    <mxGeometry x="950" y="300" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="405" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;Implements&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontColor=#000000;" parent="168" vertex="1">
+                    <mxGeometry x="900" y="-450" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="330" value="TranslateFacadeServiceImpl" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;labelBackgroundColor=none;strokeColor=#001DBC;fontSize=20;fontColor=#ffffff;fillColor=#0050ef;" parent="168" vertex="1">
+                    <mxGeometry x="950" y="1100" width="730" height="198" as="geometry"/>
+                </mxCell>
+                <mxCell id="332" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelBackgroundColor=none;fontSize=20;fontColor=#000000;" parent="330" vertex="1">
+                    <mxGeometry y="26" width="730" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="331" value="- translationService: TranslationServiceImpl&#10;- geoIPLocationService: GeoIPLocationService" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontSize=20;fontColor=#000000;" parent="330" vertex="1">
+                    <mxGeometry y="34" width="730" height="74" as="geometry"/>
+                </mxCell>
+                <mxCell id="333" value="+ TranslateFacadeServiceImpl(TranslationService, GeoIPLocationService, )" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontSize=20;fontColor=#000000;" parent="330" vertex="1">
+                    <mxGeometry y="108" width="730" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="334" value="GeoIpLocationServiceImpl" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;labelBackgroundColor=none;strokeColor=#001DBC;fontSize=20;fontColor=#ffffff;fillColor=#0050ef;" parent="168" vertex="1">
+                    <mxGeometry x="1140" y="799" width="500" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="336" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelBackgroundColor=none;fontSize=20;fontColor=#000000;" parent="334" vertex="1">
+                    <mxGeometry y="26" width="500" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="337" value="+ GeoIpLocationServiceImpl(ResourceLoader)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontSize=20;fontColor=#000000;" parent="334" vertex="1">
+                    <mxGeometry y="34" width="500" height="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="326" value="TranslationServiceImpl" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;labelBackgroundColor=none;strokeColor=#001DBC;fontSize=20;fontColor=#ffffff;fillColor=#0050ef;" parent="168" vertex="1">
+                    <mxGeometry y="725" width="1000" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="327" value="- languageTypeRepository: LanguageTypeRepositoryImpl&#10;- contentRepository: ContentRepositoryImpl&#10;- translationRepository: TranslationRepository&#10;&#10;&#10;&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontSize=20;fontColor=#000000;" parent="326" vertex="1">
+                    <mxGeometry y="26" width="1000" height="124" as="geometry"/>
+                </mxCell>
+                <mxCell id="328" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelBackgroundColor=none;fontSize=20;fontColor=#000000;" parent="326" vertex="1">
+                    <mxGeometry y="150" width="1000" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="329" value="+ TranslationServiceImpl(LanguageTypeRepositoryImpl, ContentRepositoryImpl, TranslationRepository)&#10;# createTranslationResponse(translation) : BaseResponseTranslationDto&#10;&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontSize=20;fontColor=#000000;" parent="326" vertex="1">
+                    <mxGeometry y="158" width="1000" height="92" as="geometry"/>
+                </mxCell>
+                <mxCell id="506" value="&lt;div&gt;&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;/div&gt;&lt;span style=&quot;&quot;&gt;AbstractTranslationServiceImpl&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;lt;T extends BaseJeoIpLocationDto&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;,&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;Y extends BaseJeoIpLocationResponseDto&amp;gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=68;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" vertex="1" parent="168">
+                    <mxGeometry x="100" y="-500" width="700" height="350" as="geometry"/>
+                </mxCell>
+                <mxCell id="507" value="&lt;font color=&quot;#130101&quot;&gt;-&amp;nbsp;languageTypeRepository:&amp;nbsp;AbstractLanguageTypeRepository&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;-&amp;nbsp;contentRepository:&amp;nbsp;AbstractContentRepository&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;-&amp;nbsp;translationRepository:&amp;nbsp;AbstractTranslationRepository&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;- env: Enviroment&lt;/font&gt;&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;font color=&quot;#130101&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(4, 1, 29);&quot;&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="506">
+                    <mxGeometry y="68" width="700" height="82" as="geometry"/>
+                </mxCell>
+                <mxCell id="508" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="506">
+                    <mxGeometry y="150" width="700" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="509" value="&lt;font color=&quot;#000000&quot;&gt;+&amp;nbsp;AbstractTranslationServiceImpl(AbstractLanguageTypeRepository,&amp;nbsp;AbstractContentRepository,AbstractTranslationRepository)&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+&amp;nbsp;getAllLanguageTypes():&amp;nbsp;List&amp;lt;LanguageTypeDto&amp;gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+&amp;nbsp;addContent(AddContentDto):&amp;nbsp;boolean&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+&amp;nbsp;addLanguageTypes(AddLanguageTypeDto):&amp;nbsp;boolean&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+&amp;nbsp;addTranslation(AddTranslationDto):&amp;nbsp;boolean&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+&amp;nbsp;getTranslationsByContentIdAndLanguageTypeId(T): Y&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+&amp;nbsp;getTranslationByContentIdAndLanguageTypeLanguage(Long, String): Y&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+&amp;nbsp;getSectionTranslationContentIdAndLanguageTypeLanguage(String, String): List&amp;lt;Y&amp;gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+&amp;nbsp;isLanguageTypeExistsById(Long): boolean&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+&amp;nbsp;isLanguageTypeExistsByLanguage(String): boolean&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;#&amp;nbsp;createTranslationResponse(Translation): Y&lt;/font&gt;&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(4, 1, 29);&quot;&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="506">
+                    <mxGeometry y="158" width="700" height="192" as="geometry"/>
+                </mxCell>
+                <mxCell id="514" value="&lt;div&gt;&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;/div&gt;&lt;span style=&quot;&quot;&gt;AbstractGeoIPLocationServiceImplassname&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;lt;T extends BaseTranslationDto&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;,&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;Y extends BaseResponseTranslationDto&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=68;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" vertex="1" parent="168">
+                    <mxGeometry x="200" y="300" width="450" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="515" value="&lt;span style=&quot;color: rgb(4, 1, 29);&quot;&gt;-dbReader: dbReader&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="514">
+                    <mxGeometry y="68" width="450" height="32" as="geometry"/>
+                </mxCell>
+                <mxCell id="516" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="514">
+                    <mxGeometry y="100" width="450" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="517" value="&lt;font color=&quot;#000000&quot;&gt;+&amp;nbsp;AbstractGeoIPLocationServiceImpl(ResourceLoader)&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+&amp;nbsp;getLocation(): String&lt;/font&gt;&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(4, 1, 29);&quot;&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="514">
+                    <mxGeometry y="108" width="450" height="92" as="geometry"/>
+                </mxCell>
+                <mxCell id="171" value="&lt;font color=&quot;#0f0000&quot; style=&quot;font-size: 23px;&quot;&gt;Logic Layer&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry y="1900" width="48.07" as="geometry"/>
+                </mxCell>
+                <mxCell id="149" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;TranslationService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;color: rgb(4, 1, 29);&quot;&gt;+&amp;nbsp;getAllLanguageTypes():&amp;nbsp;List&amp;lt;LanguageTypeDto&amp;gt;&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(4, 1, 29);&quot;&gt;&lt;span style=&quot;color: rgb(4, 1, 29);&quot;&gt;+&amp;nbsp;addContent(AddContentDto):&amp;nbsp;boolean&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(4, 1, 29);&quot;&gt;&lt;span style=&quot;color: rgb(4, 1, 29);&quot;&gt;+&amp;nbsp;addLanguageTypes(AddLanguageTypeDto):&amp;nbsp;boolean&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(4, 1, 29);&quot;&gt;&lt;span style=&quot;color: rgb(4, 1, 29);&quot;&gt;+&amp;nbsp;addTranslation(AddTranslationDto):&amp;nbsp;boolean&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(4, 1, 29);&quot;&gt;&lt;span style=&quot;color: rgb(4, 1, 29);&quot;&gt;+&amp;nbsp;getTranslationsByContentIdAndLanguageTypeId(T): Y&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(4, 1, 29);&quot;&gt;&lt;span style=&quot;color: rgb(4, 1, 29);&quot;&gt;+&amp;nbsp;getTranslationByContentIdAndLanguageTypeLanguage(Long, String): Y&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(4, 1, 29);&quot;&gt;&lt;span style=&quot;color: rgb(4, 1, 29);&quot;&gt;+&amp;nbsp;getSectionTranslationContentIdAndLanguageTypeLanguage(String, String): List&amp;lt;Y&amp;gt;&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(4, 1, 29);&quot;&gt;&lt;span style=&quot;color: rgb(4, 1, 29);&quot;&gt;+&amp;nbsp;isLanguageTypeExistsById(Long): boolean&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(4, 1, 29);&quot;&gt;&lt;span style=&quot;color: rgb(4, 1, 29);&quot;&gt;+&amp;nbsp;isLanguageTypeExistsByLanguage(String): boolean&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(4, 1, 29);&quot;&gt;&lt;span style=&quot;color: rgb(4, 1, 29);&quot;&gt;#&amp;nbsp;createTranslationResponse(Translation): Y&lt;/span&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;labelBackgroundColor=none;strokeColor=#001DBC;fontColor=#ffffff;fillColor=#0050ef;" parent="1" vertex="1">
+                    <mxGeometry x="1300" y="2125" width="390" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="137" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;TranslationFacadeService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;color: rgb(4, 1, 29);&quot;&gt;+ GetTranslationContentByIP(T, String): Y&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(4, 1, 29);&quot;&gt;&lt;span style=&quot;color: rgb(4, 1, 29);&quot;&gt;+GetSectionTranslationContentByIP(T, String): List&amp;lt;Y&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;labelBackgroundColor=none;strokeColor=#001DBC;fontColor=#ffffff;fillColor=#0050ef;" parent="1" vertex="1">
+                    <mxGeometry x="1350" y="2575" width="300" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="138" value="" style="endArrow=block;dashed=1;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#b85450;fontColor=#04011D;shape=flexArrow;fillColor=#f8cecc;" parent="1" target="137" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="900" y="2650" as="sourcePoint"/>
+                        <mxPoint x="910" y="1300" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="183" value="" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=150;tabHeight=20;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
+                    <mxGeometry x="2050" y="1900" width="5200" height="2450" as="geometry"/>
+                </mxCell>
+                <mxCell id="184" value="&lt;div&gt;&lt;b&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size: 40px;&quot;&gt;Framework Translate DTOs&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="2100" y="2000" width="1472.5" height="1400" as="geometry"/>
+                </mxCell>
+                <mxCell id="185" value="&lt;b&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size: 40px;&quot;&gt;Framework Translate Controllers&lt;/font&gt;&lt;/b&gt;" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="3650" y="1993.59" width="1350" height="990" as="geometry"/>
+                </mxCell>
+                <mxCell id="186" value="&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 41px;&quot; color=&quot;#000000&quot;&gt;Translate Controllers&lt;/font&gt;&lt;/b&gt;" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="3650" y="3125" width="1361.25" height="1125" as="geometry"/>
+                </mxCell>
+                <mxCell id="192" value="&lt;font style=&quot;font-size: 23px;&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 23px;&quot;&gt;Presentation &lt;/font&gt;Layer&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=41;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2045" y="1850" width="250" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="193" value="&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 41px;&quot; color=&quot;#000000&quot;&gt;Framwork Translate Repository&lt;/font&gt;&lt;/b&gt;" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="5100" y="1993.59" width="2000" height="1006.41" as="geometry"/>
+                </mxCell>
+                <mxCell id="194" value="&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 41px;&quot; color=&quot;#000000&quot;&gt;Framework Translate models&lt;/font&gt;&lt;/b&gt;" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="2111.25" y="3450" width="1488.75" height="800" as="geometry"/>
+                </mxCell>
+                <mxCell id="195" value="&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;span style=&quot;background-color: rgb(51, 51, 255);&quot;&gt;AbstractContentRepository&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="html=1;fontColor=#ffffff;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="6349.25" y="2200" width="400" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="196" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;AbstractTranslationRepository&amp;nbsp;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ findByContentIdAndLanguageTypeId(contentId: Long, languageTypeId: Long): Translation&lt;br/&gt;  + findByContentIdAndLanguageTypeLanguage(contentId: Long, language: String): Translation&lt;br/&gt;  + findByContentSectionAndLanguageTypeLanguage(section: String, language: String): List&amp;lt;Translation&amp;gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;fontColor=#ffffff;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="6250" y="2400" width="598.5" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="197" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;AbstractLanguageTypeRepository&amp;nbsp;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;+ existsById(id: Long): boolean&lt;br/&gt;  + existsByLanguage(language: String): boolean&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;labelBackgroundColor=#3333FF;fontColor=#FFFFFF;fillColor=#04011D;" parent="1" vertex="1">
+                    <mxGeometry x="6409.75" y="2650" width="279" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="199" value="JpaRepository " style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontColor=#ffffff;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="5450" y="2325" width="450" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="200" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontColor=#0a0a0a;" parent="199" vertex="1">
+                    <mxGeometry y="26" width="450" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="201" value="+ flush(): void&#10;  + &lt;S extends T&gt; saveAndFlush(S entity): S&#10;  + &lt;S extends T&gt; saveAllAndFlush(Iterable&lt;S&gt; entities): List&lt;S&gt;&#10;  + deleteInBatch(Iterable&lt;T&gt; entities): void&#10;  + deleteAllInBatch(Iterable&lt;T&gt; entities): void&#10;  + deleteAllByIdInBatch(Iterable&lt;ID&gt; ids): void&#10;  + deleteAllInBatch(): void&#10;  + getOne(ID id): T&#10;  + getById(ID id): T&#10;  + getReferenceById(ID id): T&#10;  + &lt;S extends T&gt; findAll(Example&lt;S&gt; example): List&lt;S&gt;&#10;  + &lt;S extends T&gt; findAll(Example&lt;S&gt; example, Sort sort): List&lt;S&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#0a0a0a;" parent="199" vertex="1">
+                    <mxGeometry y="34" width="450" height="216" as="geometry"/>
+                </mxCell>
+                <mxCell id="204" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#6F0000;fontSize=20;fontColor=#000000;shape=flexArrow;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.003;entryY=0.13;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#a20025;" parent="1" source="195" target="201" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="6200" y="2650" as="sourcePoint"/>
+                        <mxPoint x="6360" y="2650" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="205" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#005700;fontSize=20;fontColor=#000000;shape=flexArrow;exitX=0;exitY=0.5;exitDx=0;exitDy=0;fillColor=#008a00;" parent="1" source="196" target="201" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="6500" y="2400" as="sourcePoint"/>
+                        <mxPoint x="6101.3499999999985" y="2612.0800000000004" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="206" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#B20000;fontSize=20;fontColor=#000000;shape=flexArrow;exitX=0.005;exitY=0.403;exitDx=0;exitDy=0;exitPerimeter=0;fillColor=#e51400;" parent="1" source="197" target="201" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="6550" y="2450" as="sourcePoint"/>
+                        <mxPoint x="6151.3499999999985" y="2662.0800000000004" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="208" value="Content " style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontColor=#ffffff;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="2150" y="3750" width="400" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="209" value="- id: Long&#10;  - text: String&#10;  - section: String&#10;  - translations: Set&lt;Translation&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#0a0a0a;fontStyle=1" parent="208" vertex="1">
+                    <mxGeometry y="26" width="400" height="74" as="geometry"/>
+                </mxCell>
+                <mxCell id="210" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontColor=#0a0a0a;fontStyle=1" parent="208" vertex="1">
+                    <mxGeometry y="100" width="400" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="211" value=" + Content()&#10;  + getId(): Long&#10;  + setId(id: Long): void&#10;  + getText(): String&#10;  + setText(text: String): void&#10;  + getSection(): String&#10;  + setSection(section: String): void&#10;  + getTranslations(): Set&lt;Translation&gt;&#10;  + setTranslations(translations: Set&lt;Translation&gt;): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#0a0a0a;fontStyle=1" parent="208" vertex="1">
+                    <mxGeometry y="108" width="400" height="152" as="geometry"/>
+                </mxCell>
+                <mxCell id="212" value="Translation " style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontColor=#ffffff;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="2680.63" y="3755" width="350" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="213" value="- id: Long&#10;  - content: Content&#10;  - languageType: LanguageType&#10;  - translationText: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#0a0a0a;" parent="212" vertex="1">
+                    <mxGeometry y="26" width="350" height="74" as="geometry"/>
+                </mxCell>
+                <mxCell id="214" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontColor=#0a0a0a;" parent="212" vertex="1">
+                    <mxGeometry y="100" width="350" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="215" value="+ Translation()&#10;  + getId(): Long&#10;  + setId(id: Long): void&#10;  + getContent(): Content&#10;  + setContent(content: Content): void&#10;  + getLanguageType(): LanguageType&#10;  + setLanguageType(languageType: LanguageType): void&#10;  + getTranslationText(): String&#10;  + setTranslationText(translationText: String): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#0a0a0a;" parent="212" vertex="1">
+                    <mxGeometry y="108" width="350" height="142" as="geometry"/>
+                </mxCell>
+                <mxCell id="216" value="Classname" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontColor=#ffffff;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="3150" y="3750" width="200" height="258" as="geometry"/>
+                </mxCell>
+                <mxCell id="217" value=" - id: Long&#10;  - language: String&#10;  - translations: Set&lt;Translation&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#0a0a0a;" parent="216" vertex="1">
+                    <mxGeometry y="26" width="200" height="74" as="geometry"/>
+                </mxCell>
+                <mxCell id="218" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontColor=#0a0a0a;" parent="216" vertex="1">
+                    <mxGeometry y="100" width="200" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="219" value="+ LanguageType()&#10;  + getId(): Long&#10;  + setId(id: Long): void&#10;  + getLanguage(): String&#10;  + setLanguage(language: String): void&#10;  + getTranslations(): Set&lt;Translation&gt;&#10;  + setTranslations(translations: Set&lt;Translation&gt;): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#0a0a0a;" parent="216" vertex="1">
+                    <mxGeometry y="108" width="200" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="220" value="BaseTranslationDto" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;labelBackgroundColor=none;strokeColor=#001DBC;fontColor=#ffffff;fillColor=#0050ef;" parent="1" vertex="1">
+                    <mxGeometry x="2551" y="2150" width="400" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="221" value="-contentId   : Long &#10;-section     : String &#10;-languageTypeId : long &#10;-languageType: String " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#04011D;" parent="220" vertex="1">
+                    <mxGeometry y="26" width="400" height="74" as="geometry"/>
+                </mxCell>
+                <mxCell id="222" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelBackgroundColor=none;fontColor=#04011D;" parent="220" vertex="1">
+                    <mxGeometry y="100" width="400" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="223" value="+BaseTranslationDto(Long, String, long, String)&#10;+getContentId(): Long &#10;+setContentId(Long): void &#10;+getSection(): String &#10;+setSection(String): void &#10;+getLanguageTypeId(): long &#10;+setLanguageTypeId(long): void &#10;+getLanguageType(): String &#10;+setLanguageType(String): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#04011D;" parent="220" vertex="1">
+                    <mxGeometry y="108" width="400" height="142" as="geometry"/>
+                </mxCell>
+                <mxCell id="224" value="BaseResponseTranslationDto" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontColor=#ffffff;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="2551" y="2490" width="400" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="225" value="- translationText: String&#10;- contentId: long&#10;&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#0a0a0a;fontStyle=1" parent="224" vertex="1">
+                    <mxGeometry y="26" width="400" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="226" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontColor=#0a0a0a;fontStyle=1" parent="224" vertex="1">
+                    <mxGeometry y="70" width="400" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="227" value="+ BaseResponseTranslationDto(String, long)&#10;+ getTranslationText(): string&#10;+ getContentId(): long&#10;+ setTranslationText(String): void&#10;+ setContentId(long): void&#10;&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#0a0a0a;fontStyle=1" parent="224" vertex="1">
+                    <mxGeometry y="78" width="400" height="82" as="geometry"/>
+                </mxCell>
+                <mxCell id="228" value="BaseGeoIpLocationResponseDto&#10;&#10;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;labelBackgroundColor=#3333FF;strokeColor=#001DBC;fontColor=#ffffff;fillColor=#0050ef;" parent="1" vertex="1">
+                    <mxGeometry x="2551" y="2800" width="400" height="34" as="geometry"/>
+                </mxCell>
+                <mxCell id="229" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelBackgroundColor=#3333FF;fontColor=#FFFFFF;" parent="228" vertex="1">
+                    <mxGeometry y="26" width="400" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="230" value="BaseGeoIpLocationDto&#10;&#10;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;labelBackgroundColor=#3333FF;strokeColor=#001DBC;fontColor=#ffffff;fillColor=#0050ef;" parent="1" vertex="1">
+                    <mxGeometry x="2551" y="2949.59" width="400" height="34" as="geometry"/>
+                </mxCell>
+                <mxCell id="231" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelBackgroundColor=#3333FF;fontColor=#FFFFFF;" parent="230" vertex="1">
+                    <mxGeometry y="26" width="400" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="257" value="AddContentDto" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontColor=#ffffff;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="3200" y="2750" width="180" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="258" value="- text: String&#10;- section: String &#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#0a0a0a;fontStyle=1" parent="257" vertex="1">
+                    <mxGeometry y="26" width="180" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="259" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontColor=#0a0a0a;fontStyle=1" parent="257" vertex="1">
+                    <mxGeometry y="70" width="180" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="260" value="+ AddContentDto(String, String)&#10;+ getText(): String&#10;+ getSection(): String&#10;+ setText(String): void&#10;+setSection(String): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#0a0a0a;fontStyle=1" parent="257" vertex="1">
+                    <mxGeometry y="78" width="180" height="92" as="geometry"/>
+                </mxCell>
+                <mxCell id="261" value="AddLanguageTypeDto" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontColor=#ffffff;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="3200" y="2400" width="180" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="262" value="- language: String&#10;&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#0a0a0a;fontStyle=1" parent="261" vertex="1">
+                    <mxGeometry y="26" width="180" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="263" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontColor=#0a0a0a;fontStyle=1" parent="261" vertex="1">
+                    <mxGeometry y="52" width="180" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="264" value="+ AddLanguageTypeDto(String)&#10;+ getLanguage(): String&#10;+ setLanguage(String): void&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#0a0a0a;fontStyle=1" parent="261" vertex="1">
+                    <mxGeometry y="60" width="180" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="265" value="AddTranslationDto" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontColor=#ffffff;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="3141" y="2150" width="349" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="266" value="- contentId: Long&#10;- languageTypeId: int&#10;- translationText: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#0a0a0a;fontStyle=1" parent="265" vertex="1">
+                    <mxGeometry y="26" width="349" height="64" as="geometry"/>
+                </mxCell>
+                <mxCell id="267" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontColor=#0a0a0a;fontStyle=1" parent="265" vertex="1">
+                    <mxGeometry y="90" width="349" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="268" value="+ getContentId(): Long&#10;+ getLanguageTypeId(): int&#10;+ getTranslationText(): String&#10;+ setContentId(Long): void&#10;+ setLanguageTypeId(int): void&#10;+ setTranslationText(String): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#0a0a0a;fontStyle=1" parent="265" vertex="1">
+                    <mxGeometry y="98" width="349" height="102" as="geometry"/>
+                </mxCell>
+                <mxCell id="270" value="GeoIP" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontColor=#ffffff;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="3200" y="3170" width="160" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="271" value="- ipAddress: String&#10;- country: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#0a0a0a;fontStyle=1" parent="270" vertex="1">
+                    <mxGeometry y="26" width="160" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="272" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontColor=#0a0a0a;fontStyle=1" parent="270" vertex="1">
+                    <mxGeometry y="70" width="160" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="273" value="+ GeoIP(String, String)&#10;+ getIpAddres(): String&#10;+ getCountry(): String&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#0a0a0a;fontStyle=1" parent="270" vertex="1">
+                    <mxGeometry y="78" width="160" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="274" value="LanguageTypeDto" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontColor=#ffffff;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="3150" y="2950" width="230" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="275" value="- id: long&#10;- language: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#0a0a0a;fontStyle=1" parent="274" vertex="1">
+                    <mxGeometry y="26" width="230" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="276" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontColor=#0a0a0a;fontStyle=1" parent="274" vertex="1">
+                    <mxGeometry y="70" width="230" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="277" value="+ LanguageTypeDto(long, String&#10;+ getId(): long &#10;+ getLanguage(): String&#10;+ setId(id: long): void &#10;+ setLanguage(language: String): void " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#0a0a0a;fontStyle=1" parent="274" vertex="1">
+                    <mxGeometry y="78" width="230" height="82" as="geometry"/>
+                </mxCell>
+                <mxCell id="278" value="TranslationDto" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontColor=#ffffff;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="3200" y="2550" width="190" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="279" value="-   text: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#0a0a0a;fontStyle=1" parent="278" vertex="1">
+                    <mxGeometry y="26" width="190" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="280" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontColor=#0a0a0a;fontStyle=1" parent="278" vertex="1">
+                    <mxGeometry y="52" width="190" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="281" value="+  TranslationDto()&#10;+ TranslationDto(text: String)&#10;+  getText(): String&#10;+  setText(text: String): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#0a0a0a;fontStyle=1" parent="278" vertex="1">
+                    <mxGeometry y="60" width="190" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="284" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;labelBackgroundColor=#f2eff5;fontSize=20;fontColor=#000000;shape=flexArrow;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.001;entryY=0.234;entryDx=0;entryDy=0;fillColor=#a20025;strokeColor=#6F0000;entryPerimeter=0;" parent="1" source="149" target="221" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="1750" y="2250" as="sourcePoint"/>
+                        <mxPoint x="1910" y="2250" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="305" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;labelBackgroundColor=#f2eff5;fontSize=20;fontColor=#000000;shape=flexArrow;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;fillColor=#a20025;strokeColor=#6F0000;" parent="1" target="220" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="725" y="2150" as="sourcePoint"/>
+                        <mxPoint x="1850.0000000000014" y="2105.8160000000003" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="725" y="2100"/>
+                            <mxPoint x="2650" y="2100"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="307" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#B20000;fontSize=20;fontColor=#000000;shape=flexArrow;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fillColor=#e51400;" parent="1" source="509" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="720.0999999999995" y="2456.5280000000002" as="sourcePoint"/>
+                        <mxPoint x="2550" y="2500" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="900" y="2500"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="309" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#B20000;fontSize=20;fontColor=#000000;shape=flexArrow;entryX=0.25;entryY=0;entryDx=0;entryDy=0;fillColor=#e51400;" parent="1" target="224" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="1700" y="2350" as="sourcePoint"/>
+                        <mxPoint x="1860" y="2350" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="2450" y="2350"/>
+                            <mxPoint x="2450" y="2450"/>
+                            <mxPoint x="2650" y="2450"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="310" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#2D7600;fontSize=20;fontColor=#000000;shape=flexArrow;fillColor=#60a917;" parent="1" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="1650" y="2600" as="sourcePoint"/>
+                        <mxPoint x="2550" y="2600" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="312" value="Extends" style="endArrow=block;endSize=8.533333333333333;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#2D7600;fontSize=20;fontColor=#000000;shape=flexArrow;entryX=0.339;entryY=1.133;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.008;exitY=0.821;exitDx=0;exitDy=0;exitPerimeter=0;endWidth=42.22222222222222;fillColor=#60a917;" parent="1" target="227" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="905.5999999999995" y="2783.532" as="sourcePoint"/>
+                        <mxPoint x="1710" y="2650" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1700" y="2784"/>
+                            <mxPoint x="2150" y="2784"/>
+                            <mxPoint x="2150" y="2700"/>
+                            <mxPoint x="2450" y="2700"/>
+                            <mxPoint x="2550" y="2700"/>
+                            <mxPoint x="2650" y="2700"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="313" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#2D7600;fontSize=20;fontColor=#000000;shape=flexArrow;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.001;entryY=1.003;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#60a917;" parent="1" source="137" target="221" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="1550" y="2650" as="sourcePoint"/>
+                        <mxPoint x="1710" y="2650" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1425" y="2450"/>
+                            <mxPoint x="2000" y="2450"/>
+                            <mxPoint x="2350" y="2450"/>
+                            <mxPoint x="2350" y="2250"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="314" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#2D7600;fontSize=20;fontColor=#000000;shape=flexArrow;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#60a917;" parent="1" target="223" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="725" y="2600" as="sourcePoint"/>
+                        <mxPoint x="980" y="2550" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="725" y="2550"/>
+                            <mxPoint x="1150" y="2550"/>
+                            <mxPoint x="1150" y="2400"/>
+                            <mxPoint x="1850" y="2400"/>
+                            <mxPoint x="2550" y="2400"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="315" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#6D1F00;fontSize=20;fontColor=#000000;shape=flexArrow;exitX=1;exitY=0.25;exitDx=0;exitDy=0;fillColor=#a0522d;" parent="1" source="117" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="1950" y="3150" as="sourcePoint"/>
+                        <mxPoint x="2550" y="2817" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1700" y="2900"/>
+                            <mxPoint x="1700" y="2850"/>
+                            <mxPoint x="1700" y="2817"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="316" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#6D1F00;fontSize=20;fontColor=#000000;shape=flexArrow;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;fillColor=#a0522d;" parent="1" source="117" target="230" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="1750" y="3000" as="sourcePoint"/>
+                        <mxPoint x="1910" y="3000" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1950" y="3000"/>
+                            <mxPoint x="1950" y="2950"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="317" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#6D1F00;fontSize=20;fontColor=#000000;shape=flexArrow;entryX=0.601;entryY=0.662;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#a0522d;" parent="1" target="231" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="720" y="3150" as="sourcePoint"/>
+                        <mxPoint x="1460" y="3000" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="720" y="3150"/>
+                            <mxPoint x="1750" y="3150"/>
+                            <mxPoint x="2300" y="3150"/>
+                            <mxPoint x="2791" y="3150"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="318" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#6D1F00;fontSize=20;fontColor=#000000;shape=flexArrow;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.779;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#a0522d;" parent="1" target="229" edge="1">
+                    <mxGeometry x="-0.3657" width="160" relative="1" as="geometry">
+                        <mxPoint x="550" y="2950" as="sourcePoint"/>
+                        <mxPoint x="1060" y="2900" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="550" y="2900"/>
+                            <mxPoint x="1700" y="2900"/>
+                            <mxPoint x="2300" y="2900"/>
+                            <mxPoint x="2863" y="2900"/>
+                        </Array>
+                        <mxPoint x="-1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="325" style="edgeStyle=none;shape=flexArrow;html=1;labelBackgroundColor=#f2eff5;strokeColor=#04011D;fontSize=20;fontColor=#000000;endWidth=0;endSize=206.6;" parent="1" source="324" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="6100" y="5500" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="324" value="&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 41px;&quot; color=&quot;#000000&quot;&gt;Translate Repository&lt;/font&gt;&lt;/b&gt;" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="5100" y="3110" width="2000" height="1125" as="geometry"/>
+                </mxCell>
+                <mxCell id="370" value="TranslationControllerImpl" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;labelBackgroundColor=none;strokeColor=#001DBC;fontSize=20;fontColor=#ffffff;fillColor=#0050ef;" parent="1" vertex="1">
+                    <mxGeometry x="3950" y="3250" width="800" height="550" as="geometry"/>
+                </mxCell>
+                <mxCell id="371" value="- translationService: TranslationServiceImpl&#10;- geoIPLocationService: GeoIPLocationService&#10;- translateFacadeService: TranslateFacadeServiceImpl&#10;&#10;&#10;&#10;&#10;&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontSize=20;fontColor=#000000;" parent="370" vertex="1">
+                    <mxGeometry y="26" width="800" height="224" as="geometry"/>
+                </mxCell>
+                <mxCell id="372" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelBackgroundColor=none;fontSize=20;fontColor=#000000;" parent="370" vertex="1">
+                    <mxGeometry y="250" width="800" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="373" value="+ TranslationControllerImpl(TranslationServiceImpl, GeoIPLocationService)&#10;+ getTranslationService(): TranslationServiceImpl&#10;+ getGeoIPLocationService(): GeoIPLocationService&#10;+ getTranslateFacadeService(): TranslateFacadeServiceImpl&#10;+ setTranslationService(TranslationServiceImpl): void&#10;+ setGeoIPLocationService(GeoIPLocationService): void&#10;+ setTranslateFacadeService(TranslateFacadeServiceImpl): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontSize=20;fontColor=#000000;" parent="370" vertex="1">
+                    <mxGeometry y="258" width="800" height="292" as="geometry"/>
+                </mxCell>
+                <mxCell id="404" value="" style="endArrow=block;dashed=1;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#b85450;fontColor=#04011D;shape=flexArrow;fillColor=#f8cecc;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="149" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="900" y="2250" as="sourcePoint"/>
+                        <mxPoint x="1100" y="2250" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="406" value="«interface»&lt;br&gt;&lt;b&gt;contentRepositoryImpl&lt;/b&gt;" style="html=1;labelBackgroundColor=none;strokeColor=#001DBC;fontSize=22;fontColor=#ffffff;fillColor=#0050ef;" parent="1" vertex="1">
+                    <mxGeometry x="5250" y="3400" width="421.25" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="407" value="«interface»&lt;br&gt;&lt;b&gt;languageTypeRepositoryImpl&lt;/b&gt;" style="html=1;labelBackgroundColor=none;strokeColor=#001DBC;fontSize=22;fontColor=#ffffff;fillColor=#0050ef;" parent="1" vertex="1">
+                    <mxGeometry x="5889.38" y="3400" width="421.25" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="409" value="«interface»&lt;br&gt;&lt;b&gt;translationRepository&lt;/b&gt;" style="html=1;labelBackgroundColor=none;strokeColor=#001DBC;fontSize=22;fontColor=#ffffff;fillColor=#0050ef;" parent="1" vertex="1">
+                    <mxGeometry x="6550" y="3400" width="421.25" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="412" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#A50040;fontSize=22;fontColor=#000000;shape=flexArrow;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;fillColor=#d80073;" parent="1" source="406" target="195" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="5450" y="3300" as="sourcePoint"/>
+                        <mxPoint x="5610" y="3300" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="5350" y="2100"/>
+                            <mxPoint x="5900" y="2100"/>
+                            <mxPoint x="6250" y="2100"/>
+                            <mxPoint x="6449" y="2100"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="413" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#3A5431;fontSize=22;fontColor=#000000;shape=flexArrow;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;fillColor=#6d8764;" parent="1" source="407" target="197" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="6150.63" y="3250" as="sourcePoint"/>
+                        <mxPoint x="6310.63" y="3250" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="6480" y="3425"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="414" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#C73500;fontSize=22;fontColor=#000000;shape=flexArrow;entryX=1;entryY=1;entryDx=0;entryDy=0;fillColor=#fa6800;" parent="1" target="196" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="6850" y="3400" as="sourcePoint"/>
+                        <mxPoint x="6710" y="3100" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="423" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#ae4132;fontSize=22;fontColor=#000000;shape=flexArrow;exitX=0.25;exitY=0;exitDx=0;exitDy=0;fillColor=#fad9d5;" parent="1" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="4105.619999999999" y="2200" as="sourcePoint"/>
+                        <mxPoint x="2950" y="2200" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="4106" y="2100"/>
+                            <mxPoint x="3550" y="2100"/>
+                            <mxPoint x="3200" y="2100"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="424" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#ae4132;fontSize=22;fontColor=#000000;shape=flexArrow;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fillColor=#fad9d5;" parent="1" target="224" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="3050" y="2150" as="sourcePoint"/>
+                        <mxPoint x="3410" y="2500" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="3050" y="2250"/>
+                            <mxPoint x="3050" y="2400"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="465" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 19px; background-color: rgb(255, 255, 255);&quot;&gt;Extends&lt;/font&gt;" style="endArrow=block;endFill=0;html=1;exitX=0.101;exitY=0.002;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.137;entryY=1.003;entryDx=0;entryDy=0;entryPerimeter=0;shape=flexArrow;fillColor=#a20025;strokeColor=#6F0000;" edge="1" parent="1" source="370" target="521">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="3880.62" y="3029.29" as="sourcePoint"/>
+                        <mxPoint x="4028.2199999999975" y="2740" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="510" value="&lt;div&gt;&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;/div&gt;&lt;span style=&quot;&quot;&gt;AbstractTranslationFacadeServiceImple&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;lt;T extends BaseTranslationDto&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;,&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;Y extends BaseResponseTranslationDto&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=68;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="2600" width="700" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="511" value="&lt;font color=&quot;#000000&quot;&gt;-&amp;nbsp;translationService:&amp;nbsp;TranslationService&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;-&amp;nbsp;geoIPLocationService:&amp;nbsp;GeoIPLocationService&lt;/font&gt;&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(4, 1, 29);&quot;&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="510">
+                    <mxGeometry y="68" width="700" height="82" as="geometry"/>
+                </mxCell>
+                <mxCell id="512" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="510">
+                    <mxGeometry y="150" width="700" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="513" value="&lt;span style=&quot;color: rgb(4, 1, 29);&quot;&gt;+&amp;nbsp;AbstractTranslationFacadeServiceImpl(TranslationService,&amp;nbsp;GeoIPLocationService)&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(4, 1, 29);&quot;&gt;&lt;span style=&quot;color: rgb(4, 1, 29);&quot;&gt;+ GetTranslationContentByIP(T, String): Y&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(4, 1, 29);&quot;&gt;&lt;span style=&quot;color: rgb(4, 1, 29);&quot;&gt;+GetSectionTranslationContentByIP(T, String): List&amp;lt;Y&amp;gt;&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="510">
+                    <mxGeometry y="158" width="700" height="92" as="geometry"/>
+                </mxCell>
+                <mxCell id="518" value="&lt;div&gt;&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;/div&gt;&lt;span style=&quot;&quot;&gt;AbstractTranslationController&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;lt;T extends BaseTranslationDto&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;,&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;Y extends BaseResponseTranslationDto&amp;gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=68;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="3900" y="2200" width="900" height="600" as="geometry"/>
+                </mxCell>
+                <mxCell id="519" value="&lt;font color=&quot;#000000&quot;&gt;#&amp;nbsp;translationService:&amp;nbsp;TranslationService&amp;lt;T,Y&amp;gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;#&amp;nbsp;geoIPLocationService:&amp;nbsp;GeoIPLocationService&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;#&amp;nbsp;translationFacadeService:&amp;nbsp;TranslationFacadeService&amp;lt;T,Y&amp;gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;-&amp;nbsp;contentId: Long&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;- section: String&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;-&amp;nbsp;languageTypeId: long&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;-&amp;nbsp;languageType: String&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;-&amp;nbsp;translationText: String&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;-&amp;nbsp;contentId: long&lt;/font&gt;&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(10, 10, 10); font-weight: 700;&quot;&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="518">
+                    <mxGeometry y="68" width="900" height="132" as="geometry"/>
+                </mxCell>
+                <mxCell id="520" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="518">
+                    <mxGeometry y="200" width="900" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="521" value="&lt;font color=&quot;#000000&quot;&gt;+&amp;nbsp;AbstractTranslationController(TranslationService&amp;lt;T, Y&amp;gt;,&amp;nbsp;GeoIPLocationService,&amp;nbsp;TranslationFacadeService&amp;lt;T, Y&amp;gt;)+&amp;nbsp; getTranslationService(): TranslationService&amp;lt;T,Y&amp;gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+ getGeoIPLocationService(): GeoIPLocationService&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+ getTranslationFacadeService(): TranslationFacadeService&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+ getContentId(): Long&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+ getSection(): String&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+ getLanguageTypeId(): long&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+ getLanguageType(): String&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+ getTranslationText(): String&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+ setTranslationService(TranslationService&amp;lt;T,V&amp;gt;): void&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+ setGeoIPLocationService(GepIPLocation): void&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+ setTranslationFacadeService(TranslationFacadeService): void&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+ setContentId(Long): void&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+ setSection(String): void&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+ setLanguageTypeId(long): void&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+ setLanguageType(String): void&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+ setTranslationText(String): void&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+&amp;nbsp;addContent(AddContentDto):ResponseEntity&amp;lt;Boolean&amp;gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+&amp;nbsp;addLanguageType(AddLanguageTypeDto):&amp;nbsp;ResponseEntity&amp;lt;Boolean&amp;gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+&amp;nbsp;addTranslation(AddTranslationDto):&amp;nbsp;ResponseEntity&amp;lt;Boolean&amp;gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+&amp;nbsp;getTranslation(T):&amp;nbsp;ResponseEntity&amp;lt;Y&amp;gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+&amp;nbsp;getLanguageTypes():&amp;nbsp;ResponseEntity&amp;lt;List&amp;lt;LanguageTypeDto&amp;gt;&amp;gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+&amp;nbsp;getTranslationBylanguage(T):ResponseEntity&amp;lt;Y&amp;gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+&amp;nbsp;getTranslationByIP(T,&amp;nbsp;HttpServletRequest):&amp;nbsp;ResponseEntity&amp;lt;Y&amp;gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;+&amp;nbsp;getSectionTranslationByIP(T,&amp;nbsp;HttpServletRequest):&amp;nbsp;ResponseEntity&amp;lt;List&amp;lt;Y&amp;gt;&amp;gt;&lt;/font&gt;&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(10, 10, 10); font-weight: 700;&quot;&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="518">
+                    <mxGeometry y="208" width="900" height="392" as="geometry"/>
+                </mxCell>
+                <mxCell id="522" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#C73500;fontSize=22;fontColor=#000000;shape=flexArrow;exitX=0.137;exitY=-0.012;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.002;entryY=0.087;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#fa6800;" edge="1" parent="1">
+                    <mxGeometry x="0.2401" width="160" relative="1" as="geometry">
+                        <mxPoint x="236.9999999999991" y="3372" as="sourcePoint"/>
+                        <mxPoint x="201.39999999999964" y="2324.7039999999997" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="237" y="3250"/>
+                            <mxPoint x="50" y="3250"/>
+                            <mxPoint x="50" y="2750"/>
+                            <mxPoint x="50" y="2325"/>
+                        </Array>
+                        <mxPoint y="1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="523" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#6D1F00;fontSize=22;fontColor=#000000;shape=flexArrow;exitX=-0.001;exitY=0.051;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#a0522d;" edge="1" parent="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="1049.2699999999995" y="3862.59" as="sourcePoint"/>
+                        <mxPoint x="200" y="2709" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="50" y="3863"/>
+                            <mxPoint x="50" y="2900"/>
+                            <mxPoint x="200" y="2900"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="524" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;labelBackgroundColor=#f2eff5;strokeColor=#B09500;fontSize=22;fontColor=#000000;shape=flexArrow;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.707;entryY=1.112;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#e3c800;" edge="1" parent="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="1490" y="3449" as="sourcePoint"/>
+                        <mxPoint x="538.8499999999995" y="3160.304" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1490" y="3250"/>
+                            <mxPoint x="539" y="3250"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
