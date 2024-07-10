@@ -8,4 +8,8 @@ public interface AccessibilityService<T extends BaseUserAccessibilityDTO> {
     T update(T dto);
 
     UserDao fetch(Long id);
+
+    UserDao changeTextSize(int textSize, Long id);
+
+    UserDao changeColorThem(String textSize, Long id);
 }
