@@ -1,0 +1,16 @@
+package com.taxi.user.repository;
+
+import com.taxi.framework.user.dao.UserDao;
+import com.taxi.framework.user.dto.BaseUserAccessibilityDTO;
+import com.taxi.framework.user.service.AccessibilityService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Service
+public class UserRepository {
+
+    List<UserDao> users = new ArrayList<>();
+}
