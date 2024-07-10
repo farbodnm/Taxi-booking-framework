@@ -1,0 +1,12 @@
+package com.taxi.framework.user.dto;
+
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
+public class BaseColorThemChangeDTO {
+    private String colorThem;
+    private Long id;
+}
