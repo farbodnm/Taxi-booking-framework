@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="fleet" />
+        <module name="notification" />
         <module name="booking" />
         <module name="framework" />
         <module name="dispatch" />
@@ -28,6 +29,7 @@
       <module name="dispatch" options="-parameters" />
       <module name="fleet" options="-parameters" />
       <module name="framework" options="-parameters" />
+      <module name="notification" options="-parameters" />
       <module name="pricing" options="-parameters" />
       <module name="user" options="-parameters" />
     </option>

@@ -30,6 +30,11 @@
         	<version>5.6.4.Final</version>
     	</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
 		<!-- Hibernate Validator (optional, if you need validation support) -->
 		<dependency>
 			<groupId>org.hibernate.validator</groupId>
