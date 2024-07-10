@@ -12,4 +12,8 @@ public interface AccessibilityService<T extends BaseUserAccessibilityDTO> {
     UserDao changeTextSize(int textSize, Long id);
 
     UserDao changeColorThem(String textSize, Long id);
+
+    UserDao changeLanguage(String language, Long id);
+
+    UserDao changeScreenReaderEnabled(int screenReaderEnabled, Long id);
 }
