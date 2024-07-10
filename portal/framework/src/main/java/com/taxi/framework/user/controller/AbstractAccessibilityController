@@ -34,4 +34,14 @@ public abstract class AbstractAccessibilityController<T extends BaseUserAccessib
     public ResponseEntity<UserDao> changeColorThem(@RequestBody BaseColorThemChangeDTO request) {
         return ResponseEntity.ok(accessibilityService.changeColorThem(request.getColorThem(), request.getId()));
     }
+
+    @PostMapping("/preference/changeLanguage")
+    public ResponseEntity<UserDao> changeLanguage(@RequestBody BaseLanguageChangeDTO request) {
+        return ResponseEntity.ok(accessibilityService.changeLanguage(request.getLanguage(), request.getId()));
+    }
+
+    @PostMapping("/preference/changeScreenReaderEnabled")
+    public ResponseEntity<UserDao> changeScreenReaderEnabled(@RequestBody BaseScreenReaderEnabledDTO request) {
+        return ResponseEntity.ok(accessibilityService.changeScreenReaderEnabled(request.getScreenReaderEnabled(), request.getId()));
+    }
 }
