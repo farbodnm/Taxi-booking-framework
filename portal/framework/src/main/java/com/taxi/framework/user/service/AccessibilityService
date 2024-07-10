@@ -5,4 +5,5 @@ import com.taxi.framework.user.dto.BaseUserAccessibilityDTO;
 import com.taxi.framework.user.dto.BaseUserSignupDTO;
 
 public interface AccessibilityService<T extends BaseUserAccessibilityDTO> {
+    T update(T dto);
 }
