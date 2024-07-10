@@ -1,9 +1,8 @@
 package com.taxi.framework.sms.service;
 
-import com.taxi.framework.sms.dto.SmsRequestDTO;
 import java.io.IOException;
 
-public abstract class AbstractSmsService {
+public abstract class AbstractSmsService<T, R> {
     protected String apiUrl;
     protected String apiKey;
 
@@ -12,5 +11,5 @@ public abstract class AbstractSmsService {
         this.apiKey = apiKey;
     }
 
-    public abstract String sendSms(SmsRequestDTO smsRequest) throws IOException;
+    public abstract R sendSms(T smsRequest) throws IOException;
 }

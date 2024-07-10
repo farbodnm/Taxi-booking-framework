@@ -1,5 +1,4 @@
 package com.taxi.sms.controller;
-
 import com.taxi.framework.sms.controller.AbstractSmsController;
 import com.taxi.framework.sms.dto.SmsRequestDTO;
 import com.taxi.framework.sms.service.AbstractSmsService;
@@ -12,10 +11,10 @@ import java.io.IOException;
 
 @RestController
 @RequestMapping("/api/sms")
-public class SmsController extends AbstractSmsController {
+public class SmsController extends AbstractSmsController<SmsRequestDTO, String> {
 
     @Autowired
-    public SmsController(AbstractSmsService smsService) {
+    public SmsController(AbstractSmsService<SmsRequestDTO, String> smsService) {
         super(smsService);
     }
 

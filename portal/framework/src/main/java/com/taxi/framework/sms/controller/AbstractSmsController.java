@@ -1,17 +1,15 @@
 package com.taxi.framework.sms.controller;
-
-
-import com.taxi.framework.sms.dto.SmsRequestDTO;
 import com.taxi.framework.sms.service.AbstractSmsService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
-public abstract class AbstractSmsController {
 
-    protected AbstractSmsService smsService;
+public abstract class AbstractSmsController<T, R> {
 
-    public AbstractSmsController(AbstractSmsService smsService) {
+    protected AbstractSmsService<T, R> smsService;
+
+    public AbstractSmsController(AbstractSmsService<T, R> smsService) {
         this.smsService = smsService;
     }
 
-    public abstract ResponseEntity<String> sendSms(@RequestBody SmsRequestDTO smsRequest);
+    public abstract ResponseEntity<R> sendSms(@RequestBody T smsRequest);
 }
