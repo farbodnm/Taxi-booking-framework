@@ -13,4 +13,8 @@ public abstract class AbstractAccessibilityController<T extends BaseUserAccessib
     protected AbstractAccessibilityController(AccessibilityService<T> service) {
         this.accessibilityService = service;
     }
+    @PostMapping("/preference")
+    public ResponseEntity<T> update(@RequestBody T dto) {
+        return ResponseEntity.ok(accessibilityService.update(dto));
+    }
 }
