@@ -27,4 +27,20 @@ public class UserRepository {
         }
         return null;
     }
+
+    public void changeTextSize (int textSize, Long id){
+        for (UserDao user : users) {
+            if (user.getId().equals(id)) {
+                user.setTextSize(textSize);
+            }
+        }
+    }
+
+    public void changeColorThem (String colorThem, Long id){
+        for (UserDao user : users) {
+            if (user.getId().equals(id)) {
+                user.setColorThem(colorThem);
+            }
+        }
+    }
 }
