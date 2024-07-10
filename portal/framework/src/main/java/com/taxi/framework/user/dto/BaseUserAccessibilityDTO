@@ -1,0 +1,28 @@
+package com.taxi.framework.user.dto;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+public class BaseUserAccessibilityDTO {
+
+    private Long id;
+    private int textSize;
+    private String colorThem;
+    private String language;
+    private int screenReaderEnabled;
+
+    @Override
+    public String toString() {
+        return "BaseUserAccessibilityDTO{" +
+                "id=" + id +
+                ", textSize=" + textSize +
+                ", colorThem='" + colorThem + '\'' +
+                ", language='" + language + '\'' +
+                ", screenReaderEnabled=" + screenReaderEnabled +
+                '}';
+    }
+}
