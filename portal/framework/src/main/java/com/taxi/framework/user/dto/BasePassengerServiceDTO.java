@@ -9,9 +9,14 @@ import java.util.Date;
 @Setter
 @Getter
 @NoArgsConstructor
-public class BaseUserSignupDTO {
+public class BasePassengerServiceDTO {
+    private Long id;
     private String username;
     private String password;
     private String email;
-    private Date dateOfBirth;
+    private String phone;
+    private String fullName;
+
+    private String membership;
+    private String homeAddress;
 }
