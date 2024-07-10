@@ -24,4 +24,14 @@ public abstract class AbstractAccessibilityController<T extends BaseUserAccessib
     public ResponseEntity<UserDao> fetch(@PathVariable Long id) {
         return ResponseEntity.ok(accessibilityService.fetch(id));
     }
+
+    @PostMapping("/preference/changeTextSize")
+    public ResponseEntity<UserDao> changeTextSize(@RequestBody BaseTextSizeChangeDTO request) {
+        return ResponseEntity.ok(accessibilityService.changeTextSize(request.getTextSize(), request.getId()));
+    }
+
+    @PostMapping("/preference/changeColorThem")
+    public ResponseEntity<UserDao> changeColorThem(@RequestBody BaseColorThemChangeDTO request) {
+        return ResponseEntity.ok(accessibilityService.changeColorThem(request.getColorThem(), request.getId()));
+    }
 }
