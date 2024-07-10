@@ -41,4 +41,22 @@ public class AccessibilityServiceImpl implements AccessibilityService<BaseUserAc
         System.out.println("fetched user = " + user);
         return user;
     }
+
+    @Override
+    public UserDao changeTextSize(int textSize, Long id) {
+        UserDao user = userRepository.getUser(id);
+        System.out.println("TextSize before Change = " + user.getTextSize());
+        userRepository.changeTextSize(textSize, id);
+        System.out.println("TextSize of user is Changed = " + user.getTextSize());
+        return user;
+    }
+
+    @Override
+    public UserDao changeColorThem(String colorThem, Long id) {
+        UserDao user = userRepository.getUser(id);
+        System.out.println("ColorThem before Change = " + user.getColorThem());
+        userRepository.changeColorThem(colorThem, id);
+        System.out.println("ColorThem of user is Changed = " + user.getColorThem());
+        return user;
+    }
 }
