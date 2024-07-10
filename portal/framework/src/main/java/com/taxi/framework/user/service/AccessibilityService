@@ -1,0 +1,8 @@
+package com.taxi.framework.user.service;
+
+import com.taxi.framework.user.dao.UserDao;
+import com.taxi.framework.user.dto.BaseUserAccessibilityDTO;
+import com.taxi.framework.user.dto.BaseUserSignupDTO;
+
+public interface AccessibilityService<T extends BaseUserAccessibilityDTO> {
+}
