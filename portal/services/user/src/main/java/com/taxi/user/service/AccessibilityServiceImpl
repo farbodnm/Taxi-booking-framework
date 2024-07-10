@@ -33,4 +33,12 @@ public class AccessibilityServiceImpl implements AccessibilityService<BaseUserAc
 
         return dto;
     }
+
+    @Override
+    public UserDao fetch(Long id) {
+        System.out.println("id = " + id);
+        UserDao user = userRepository.getUser(id);
+        System.out.println("fetched user = " + user);
+        return user;
+    }
 }
