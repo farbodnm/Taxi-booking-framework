@@ -3,6 +3,7 @@ package com.taxi.pay.service;
 import com.taxi.framework.pay.dto.PaymentRequestDTO;
 import com.taxi.framework.pay.dto.PaymentResponseDTO;
 import com.taxi.framework.pay.service.AbstractPaymentService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,14 +17,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Service
 public class ZarinPalPaymentService extends AbstractPaymentService<PaymentRequestDTO, PaymentResponseDTO> {
 
+    private final String zarinpalApiUrl;
+
     /**
-     * Constructs a new ZarinPalPaymentService with the specified RestTemplate.
+     * Constructs a new ZarinPalPaymentService with the specified RestTemplate and API URL.
      *
      * @param restTemplate the RestTemplate used for making HTTP requests
+     * @param zarinpalApiUrl the URL of the ZarinPal payment gateway API endpoint
      */
     @Autowired
-    public ZarinPalPaymentService(RestTemplate restTemplate) {
+    public ZarinPalPaymentService(RestTemplate restTemplate,
+                                  @Value("${zarinpal.api.url}") String zarinpalApiUrl) {
         super(restTemplate);
+        this.zarinpalApiUrl = zarinpalApiUrl;
     }
 
     /**
@@ -43,14 +49,8 @@ public class ZarinPalPaymentService extends AbstractPaymentService<PaymentReques
      * @return a JSON response string received from ZarinPal after sending the payment request
      */
     public String sendPaymentRequest(PaymentRequestDTO paymentRequestDTO) {
-        String jsonResponse = restTemplate.postForObject(ZARINPAL_API_URL, paymentRequestDTO, String.class);
+        String jsonResponse = restTemplate.postForObject(zarinpalApiUrl, paymentRequestDTO, String.class);
         // Handle JSON response from ZarinPal
         return jsonResponse;
     }
-
-    /**
-     * The URL of the ZarinPal payment gateway API endpoint.
-     */
-    private static final String ZARINPAL_API_URL = "https://sandbox.zarinpal.com/pg/v4/payment/request.json";
 }
-

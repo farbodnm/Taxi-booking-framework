@@ -2,6 +2,7 @@ package com.taxi.pay.service;
 
 import com.taxi.framework.pay.service.AbstractPaymentVerificationService;
 import com.taxi.framework.pay.dto.PaymentRequestDTO;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -14,15 +15,21 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class ZarinPalPaymentVerificationService extends AbstractPaymentVerificationService<PaymentRequestDTO, String> {
 
-    /**
-     * The RestTemplate used for making HTTP requests to the ZarinPal API.
-     */
-    private final RestTemplate restTemplate = new RestTemplate();
+    private final RestTemplate restTemplate;
+
+    private final String zarinpalVerifyUrl;
 
     /**
-     * The URL of the ZarinPal payment verification API endpoint.
+     * Constructs a new ZarinPalPaymentVerificationService with the specified RestTemplate and API URL.
+     *
+     * @param restTemplate the RestTemplate used for making HTTP requests
+     * @param zarinpalVerifyUrl the URL of the ZarinPal payment verification API endpoint
      */
-    private static final String ZARINPAL_VERIFY_URL = "https://sandbox.zarinpal.com/pg/v4/payment/verify.json";
+    public ZarinPalPaymentVerificationService(RestTemplate restTemplate,
+                                              @Value("${zarinpal.verify.url}") String zarinpalVerifyUrl) {
+        this.restTemplate = restTemplate;
+        this.zarinpalVerifyUrl = zarinpalVerifyUrl;
+    }
 
     /**
      * Verifies a payment with ZarinPal by sending a verification request.
@@ -32,7 +39,7 @@ public class ZarinPalPaymentVerificationService extends AbstractPaymentVerificat
      */
     @Override
     protected String verifyPayment(PaymentRequestDTO verificationRequest) {
-        return restTemplate.postForObject(ZARINPAL_VERIFY_URL, verificationRequest, String.class);
+        return restTemplate.postForObject(zarinpalVerifyUrl, verificationRequest, String.class);
     }
 }
 
