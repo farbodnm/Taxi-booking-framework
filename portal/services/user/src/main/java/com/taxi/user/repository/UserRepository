@@ -17,4 +17,14 @@ public class UserRepository {
     public void addUser (UserDao user) {
         users.add(user);
     }
+
+    public UserDao getUser (Long id) {
+        System.out.println("users = " + users);
+        for (UserDao user : users) {
+            if (user.getId().equals(id)) {
+                return user;
+            }
+        }
+        return null;
+    }
 }
