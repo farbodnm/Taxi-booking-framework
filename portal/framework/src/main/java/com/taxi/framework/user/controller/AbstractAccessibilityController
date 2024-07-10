@@ -1,0 +1,13 @@
+package com.taxi.framework.user.controller;
+
+import com.taxi.framework.user.dao.UserDao;
+import com.taxi.framework.user.dto.*;
+import com.taxi.framework.user.service.AccessibilityService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+
+public abstract class AbstractAccessibilityController<T extends BaseUserAccessibilityDTO> {
+
+    protected final AccessibilityService<T> accessibilityService;
+}
