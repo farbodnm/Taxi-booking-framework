@@ -13,4 +13,8 @@ import java.util.List;
 public class UserRepository {
 
     List<UserDao> users = new ArrayList<>();
+
+    public void addUser (UserDao user) {
+        users.add(user);
+    }
 }
