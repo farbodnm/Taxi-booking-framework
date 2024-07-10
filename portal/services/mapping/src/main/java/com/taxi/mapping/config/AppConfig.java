@@ -18,7 +18,9 @@ public class AppConfig {
     @Bean
     @Primary
     public MappingService mappingService(RestTemplate restTemplate) {
-        // Use NeshanMappingService
-        return new NeshanMappingService(restTemplate);
+        NeshanMappingService neshanMappingService = new NeshanMappingService(restTemplate);
+        // API Key should be provided here by the user
+        neshanMappingService.setApiKey("your-api-key");
+        return neshanMappingService;
     }
 }
