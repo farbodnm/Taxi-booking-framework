@@ -30,18 +30,21 @@ public class AbstractTranslationController <T extends BaseTranslationDto, Y exte
     }
 
     @PostMapping("/content")
-    public ResponseEntity<Boolean> addContent(@RequestBody AddContentDto addContentDto) {
-        return ResponseEntity.ok(translationService.addContent(addContentDto));
+    public ResponseEntity<InsertCommandDto> addContent(@RequestBody AddContentDto addContentDto) {
+        Boolean result = translationService.addContent(addContentDto);
+        return ResponseEntity.ok(new InsertCommandDto(result));
     }
 
     @PostMapping("/languageType")
-    public ResponseEntity<Boolean> addLanguageType(@RequestBody AddLanguageTypeDto languageTypeDto) {
-        return ResponseEntity.ok(translationService.addLanguageTypes(languageTypeDto));
+    public ResponseEntity<InsertCommandDto> addLanguageType(@RequestBody AddLanguageTypeDto languageTypeDto) {
+        Boolean result = translationService.addLanguageTypes(languageTypeDto);
+        return ResponseEntity.ok(new InsertCommandDto(result));
     }
 
     @PostMapping()
-    public ResponseEntity<Boolean> addTranslation(@RequestBody AddTranslationDto translationDto) {
-        return ResponseEntity.ok(translationService.addTranslation(translationDto));
+    public ResponseEntity<InsertCommandDto> addTranslation(@RequestBody AddTranslationDto translationDto) {
+        Boolean result = translationService.addTranslation(translationDto);
+        return ResponseEntity.ok(new InsertCommandDto(result));
     }
 
 

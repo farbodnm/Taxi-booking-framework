@@ -13,14 +13,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class TranslationServiceImpl extends AbstractTranslationServiceImpl<BaseTranslationDto, BaseResponseTranslationDto> {
 
-
-    @Autowired
-    private LanguageTypeRepositoryImpl languageTypeRepository;
-    @Autowired
-    private ContentRepositoryImpl contentRepository;
-    @Autowired
-    private TranslationRepository translationRepository;
-
     public TranslationServiceImpl(LanguageTypeRepositoryImpl languageTypeRepository,
                                   ContentRepositoryImpl contentRepository,
                                   TranslationRepository translationRepository){

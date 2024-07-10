@@ -14,13 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TranslationControllerImpl extends AbstractTranslationController<BaseTranslationDto, BaseResponseTranslationDto> {
 
-    @Autowired
-    private TranslationServiceImpl translationService;
-    @Autowired
-    private GeoIPLocationService geoIPLocationService;
-    @Autowired
-    private TranslateFacadeServiceImpl translateFacadeService;
-
     public TranslationControllerImpl(TranslationServiceImpl translationService, GeoIPLocationService geoIPLocationService,
                                      TranslateFacadeServiceImpl translateFacadeService) {
         super(translationService, geoIPLocationService, translateFacadeService);

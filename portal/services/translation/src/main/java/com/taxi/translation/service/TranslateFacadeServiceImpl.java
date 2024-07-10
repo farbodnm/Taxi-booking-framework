@@ -12,8 +12,6 @@ import org.springframework.stereotype.Service;
 public class TranslateFacadeServiceImpl extends AbstractTranslationFacadeServiceImpl<BaseTranslationDto, BaseResponseTranslationDto> {
 
     @Autowired
-    private TranslationServiceImpl translationService;
-    @Autowired
     private GeoIPLocationService geoIPLocationService;
     public TranslateFacadeServiceImpl(TranslationService translationService, GeoIPLocationService geoIPLocationService) {
         super(translationService, geoIPLocationService);
