@@ -59,10 +59,6 @@ The framework is designed using a service oriented architecture with each servic
 
 ## getLnguageTypes
 
-** getLnguageTypes **
-
-> Name : getLnguageTypes
-
 > Description
 >
 > <div style="color:red"> get all language that application support
@@ -98,10 +94,6 @@ The framework is designed using a service oriented architecture with each servic
 
 ## getTranslationBylanguage
 
-** getTranslationBylanguage **
-
-> Name : getTranslationBylanguage
-
 > Description
 >
 > <div style="color:red"> get translation of one content by language name
@@ -135,10 +127,6 @@ The framework is designed using a service oriented architecture with each servic
 >
 >
 ## getTranslation
-
-** getTranslation **
-
-> Name : getTranslation
 
 > Description
 >
@@ -174,9 +162,6 @@ The framework is designed using a service oriented architecture with each servic
 
 ## getTranslationByIP
 
-** getTranslationByIP **
-
-> Name : getTranslationByIP
 >
 > Description
 >
@@ -210,9 +195,6 @@ The framework is designed using a service oriented architecture with each servic
 >```
 >
 ## getSectionTranslationByIP
-** getSectionTranslationByIP **
-
-> Name : getSectionTranslationByIP
 >
 > Description
 >
@@ -249,10 +231,6 @@ The framework is designed using a service oriented architecture with each servic
 >
 ## addContent
 
-** addContent **
-
-> Name : addContent
-
 > Description
 >
 > <div style="color:red"> creating new contact
@@ -287,10 +265,6 @@ The framework is designed using a service oriented architecture with each servic
 
 ## addLanguageType
 
-** addLanguageType **
-
-> Name : addLanguageType
-
 > Description
 >
 > <div style="color:red"> creating new languageType
@@ -323,10 +297,6 @@ The framework is designed using a service oriented architecture with each servic
 
 
 ## addTranslation
-
-** addTranslation **
-
-> Name : addTranslation
 
 > Description
 >
