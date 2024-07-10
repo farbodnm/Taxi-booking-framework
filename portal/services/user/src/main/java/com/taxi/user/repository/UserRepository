@@ -43,4 +43,19 @@ public class UserRepository {
             }
         }
     }
+    public void changeLanguage (String language, Long id){
+        for (UserDao user : users) {
+            if (user.getId().equals(id)) {
+                user.setLanguage(language);
+            }
+        }
+    }
+
+    public void changeScreenReaderEnabled (int screenReaderEnabled, Long id){
+        for (UserDao user : users) {
+            if (user.getId().equals(id)) {
+                user.setScreenReaderEnabled(screenReaderEnabled);
+            }
+        }
+    }
 }
