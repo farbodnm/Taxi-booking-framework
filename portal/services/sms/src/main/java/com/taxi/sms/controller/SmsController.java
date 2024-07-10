@@ -9,15 +9,33 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 
+/**
+ * Controller for handling SMS-related operations.
+ * This class extends AbstractSmsController to provide an endpoint for sending SMS messages.
+ *
+ * @see AbstractSmsController
+ * @see AbstractSmsService
+ */
 @RestController
 @RequestMapping("/api/sms")
 public class SmsController extends AbstractSmsController<SmsRequestDTO, String> {
 
+    /**
+     * Constructs a new SmsController with the specified SMS service.
+     *
+     * @param smsService the SMS service used for processing SMS requests
+     */
     @Autowired
     public SmsController(AbstractSmsService<SmsRequestDTO, String> smsService) {
         super(smsService);
     }
 
+    /**
+     * Endpoint for sending an SMS message.
+     *
+     * @param smsRequest the SMS request DTO containing the message details
+     * @return a ResponseEntity containing the result of the SMS send operation
+     */
     @Override
     @PostMapping("/send")
     public ResponseEntity<String> sendSms(@RequestBody SmsRequestDTO smsRequest) {
