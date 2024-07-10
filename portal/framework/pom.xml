@@ -15,52 +15,51 @@
 		<spring-boot.repackage.skip>true</spring-boot.repackage.skip>
 	</properties>
 	<dependencies>
-		<!-- Hibernate Core -->
-    	<dependency>
-    	<groupId>org.hibernate.orm</groupId>
-    	<artifactId>hibernate-core</artifactId>
-    	<version>6.4.3.Final</version>
+		<!-- Spring Boot dependencies -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
-
-    	<!-- Hibernate Entity Manager -->
-    	<dependency>
-        	<groupId>org.hibernate</groupId>
-        	<artifactId>hibernate-entitymanager</artifactId>
-        	<version>5.6.4.Final</version>
-    	</dependency>
-
-		<!-- Hibernate Validator (optional, if you need validation support) -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- Hibernate Core -->
+		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>6.4.3.Final</version>
+		</dependency>
+		<!-- Hibernate Validator -->
 		<dependency>
 			<groupId>org.hibernate.validator</groupId>
 			<artifactId>hibernate-validator</artifactId>
 			<version>6.2.0.Final</version>
 		</dependency>
-
+		<!-- OkHttp for HTTP client -->
 		<dependency>
 			<groupId>com.squareup.okhttp3</groupId>
 			<artifactId>okhttp</artifactId>
 			<version>4.9.1</version>
 		</dependency>
+		<!-- Jackson for JSON processing -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 		</dependency>
-		<!-- Test dependencies -->
+		<!-- Spring Boot Test dependency -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-    	<!-- JDBC Driver for your database -->
-    	<!-- Make sure to replace "postgresql" with your database vendor -->
+		<!-- PostgreSQL JDBC Driver -->
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>42.2.24</version>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -77,5 +76,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

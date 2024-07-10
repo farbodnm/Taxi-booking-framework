@@ -2,6 +2,7 @@ package com.taxi.mapping.config;
 
 import com.taxi.framework.mapping.service.MappingService;
 import com.taxi.mapping.service.NeshanMappingService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -9,6 +10,9 @@ import org.springframework.web.client.RestTemplate;
 
 @Configuration
 public class AppConfig {
+
+    @Value("${neshan.api.key}")
+    private String apiKey; // Corrected variable name
 
     @Bean
     public RestTemplate restTemplate() {
@@ -19,8 +23,8 @@ public class AppConfig {
     @Primary
     public MappingService mappingService(RestTemplate restTemplate) {
         NeshanMappingService neshanMappingService = new NeshanMappingService(restTemplate);
-        // API Key should be provided here by the user
-        neshanMappingService.setApiKey("your-api-key");
+        // Set the API key provided by the user
+        neshanMappingService.setApiKey(apiKey);
         return neshanMappingService;
     }
 }
