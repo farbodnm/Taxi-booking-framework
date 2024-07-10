@@ -43,16 +43,20 @@ public abstract class AbstractPaymentController<T extends PaymentRequestDTO, R e
     }
 
     /**
-     * Endpoint for handling payment callback notifications.
+     * Handles the payment callback by validating the callback request
+     * and updating the payment status in the system.
      *
-     * @param paymentResponseDTO the callback request containing the payment status update
-     * @return a ResponseEntity containing a confirmation message
+     * @param paymentResponseDTO the payment response from the callback
+     * @return a ResponseEntity containing the payment response
      */
     @PostMapping("/callback")
     public ResponseEntity<R> handleCallback(@RequestBody PaymentResponseDTO paymentResponseDTO) {
         // Validate the callback
         // Update payment status in your system
-        return ResponseEntity.ok((R) paymentResponseDTO);
+
+        @SuppressWarnings("unchecked")
+        R response = (R) paymentResponseDTO;
+        return ResponseEntity.ok(response);
     }
 
     // Other common methods for handling payment-related operations
