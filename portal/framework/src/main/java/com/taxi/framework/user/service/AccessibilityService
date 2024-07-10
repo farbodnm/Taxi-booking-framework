@@ -1,0 +1,19 @@
+package com.taxi.framework.user.service;
+
+import com.taxi.framework.user.dao.UserDao;
+import com.taxi.framework.user.dto.BaseUserAccessibilityDTO;
+import com.taxi.framework.user.dto.BaseUserSignupDTO;
+
+public interface AccessibilityService<T extends BaseUserAccessibilityDTO> {
+    T update(T dto);
+
+    UserDao fetch(Long id);
+
+    UserDao changeTextSize(int textSize, Long id);
+
+    UserDao changeColorThem(String textSize, Long id);
+
+    UserDao changeLanguage(String language, Long id);
+
+    UserDao changeScreenReaderEnabled(int screenReaderEnabled, Long id);
+}

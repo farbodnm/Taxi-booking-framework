@@ -1,0 +1,80 @@
+package com.taxi.user.service;
+
+import com.taxi.framework.user.dao.UserDao;
+import com.taxi.framework.user.dto.BaseUserAccessibilityDTO;
+import com.taxi.framework.user.dto.BaseUserSignupDTO;
+import com.taxi.framework.user.service.AccessibilityService;
+import com.taxi.framework.user.service.SignupService;
+import com.taxi.user.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+
+@Service
+@Qualifier("AccessibilityService")
+public class AccessibilityServiceImpl implements AccessibilityService<BaseUserAccessibilityDTO> {
+    @Autowired
+    UserRepository userRepository;
+
+    @Override
+    public BaseUserAccessibilityDTO update(BaseUserAccessibilityDTO dto) {
+        System.out.println("dto = " + dto);
+
+        UserDao userDao = new UserDao();
+        userDao.setId(dto.getId());
+        userDao.setTextSize(dto.getTextSize());
+        userDao.setLanguage(dto.getLanguage());
+        userDao.setColorThem(dto.getColorThem());
+        userDao.setScreenReaderEnabled(dto.getScreenReaderEnabled());
+
+        userRepository.addUser(userDao);
+
+        System.out.println("user preferences updated");
+
+        return dto;
+    }
+
+    @Override
+    public UserDao fetch(Long id) {
+        System.out.println("id = " + id);
+        UserDao user = userRepository.getUser(id);
+        System.out.println("fetched user = " + user);
+        return user;
+    }
+
+    @Override
+    public UserDao changeTextSize(int textSize, Long id) {
+        UserDao user = userRepository.getUser(id);
+        System.out.println("TextSize before Change = " + user.getTextSize());
+        userRepository.changeTextSize(textSize, id);
+        System.out.println("TextSize of user is Changed = " + user.getTextSize());
+        return user;
+    }
+
+    @Override
+    public UserDao changeColorThem(String colorThem, Long id) {
+        UserDao user = userRepository.getUser(id);
+        System.out.println("ColorThem before Change = " + user.getColorThem());
+        userRepository.changeColorThem(colorThem, id);
+        System.out.println("ColorThem of user is Changed = " + user.getColorThem());
+        return user;
+    }
+
+    @Override
+    public UserDao changeLanguage(String language, Long id) {
+        UserDao user = userRepository.getUser(id);
+        System.out.println("Language before Change = " + user.getLanguage());
+        userRepository.changeLanguage(language, id);
+        System.out.println("Language of user is Changed = " + user.getLanguage());
+        return user;
+    }
+
+    @Override
+    public UserDao changeScreenReaderEnabled(int screenReaderEnabled, Long id) {
+        UserDao user = userRepository.getUser(id);
+        System.out.println("ScreenReaderEnabled before Change = " + user.getScreenReaderEnabled());
+        userRepository.changeScreenReaderEnabled(screenReaderEnabled, id);
+        System.out.println("ScreenReaderEnabled of user is Changed = " + user.getScreenReaderEnabled());
+        return user;
+    }
+}

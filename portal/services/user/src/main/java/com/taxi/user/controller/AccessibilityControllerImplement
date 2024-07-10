@@ -1,0 +1,24 @@
+package com.taxi.user.controller;
+
+import com.taxi.framework.user.controller.AbstractAccessibilityController;
+import com.taxi.framework.user.controller.AbstractAuthController;
+import com.taxi.framework.user.dto.BaseUserAccessibilityDTO;
+import com.taxi.framework.user.service.AccessibilityService;
+import com.taxi.user.dto.ExtendedUserSigninDTO;
+import com.taxi.user.service.AccessibilityServiceImpl;
+import com.taxi.user.service.ExtendedAuthServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RequestMapping("/api/user")
+@RestController
+public class AccessibilityControllerImplement extends AbstractAccessibilityController<BaseUserAccessibilityDTO> {
+
+    @Autowired
+    private AccessibilityServiceImpl accessibilityService;
+
+    public AccessibilityControllerImplement(AccessibilityServiceImpl accessibilityService) {
+        super(accessibilityService);
+    }
+}

@@ -1,11 +1,14 @@
-package com.taxi.framework.user.dao;
+package com.taxi.framework.user.dto;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Setter
 @Getter
-public class UserDao {
+@Setter
+@NoArgsConstructor
+public class BaseUserAccessibilityDTO {
+
     private Long id;
     private int textSize;
     private String colorThem;
@@ -14,7 +17,7 @@ public class UserDao {
 
     @Override
     public String toString() {
-        return "UserDao{" +
+        return "BaseUserAccessibilityDTO{" +
                 "id=" + id +
                 ", textSize=" + textSize +
                 ", colorThem='" + colorThem + '\'' +

@@ -1,0 +1,11 @@
+package com.taxi.framework.user.dto;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
+public class BaseScreenReaderEnabledDTO {
+    private int screenReaderEnabled;
+    private Long id;
+}

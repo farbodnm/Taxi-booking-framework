@@ -1,0 +1,47 @@
+package com.taxi.framework.user.controller;
+
+import com.taxi.framework.user.dao.UserDao;
+import com.taxi.framework.user.dto.*;
+import com.taxi.framework.user.service.AccessibilityService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+
+public abstract class AbstractAccessibilityController<T extends BaseUserAccessibilityDTO> {
+
+    protected final AccessibilityService<T> accessibilityService;
+
+    protected AbstractAccessibilityController(AccessibilityService<T> service) {
+        this.accessibilityService = service;
+    }
+
+    @PostMapping("/preference")
+    public ResponseEntity<T> update(@RequestBody T dto) {
+        return ResponseEntity.ok(accessibilityService.update(dto));
+    }
+
+    @GetMapping("/preference/{id}")
+    public ResponseEntity<UserDao> fetch(@PathVariable Long id) {
+        return ResponseEntity.ok(accessibilityService.fetch(id));
+    }
+
+    @PostMapping("/preference/changeTextSize")
+    public ResponseEntity<UserDao> changeTextSize(@RequestBody BaseTextSizeChangeDTO request) {
+        return ResponseEntity.ok(accessibilityService.changeTextSize(request.getTextSize(), request.getId()));
+    }
+
+    @PostMapping("/preference/changeColorThem")
+    public ResponseEntity<UserDao> changeColorThem(@RequestBody BaseColorThemChangeDTO request) {
+        return ResponseEntity.ok(accessibilityService.changeColorThem(request.getColorThem(), request.getId()));
+    }
+
+    @PostMapping("/preference/changeLanguage")
+    public ResponseEntity<UserDao> changeLanguage(@RequestBody BaseLanguageChangeDTO request) {
+        return ResponseEntity.ok(accessibilityService.changeLanguage(request.getLanguage(), request.getId()));
+    }
+
+    @PostMapping("/preference/changeScreenReaderEnabled")
+    public ResponseEntity<UserDao> changeScreenReaderEnabled(@RequestBody BaseScreenReaderEnabledDTO request) {
+        return ResponseEntity.ok(accessibilityService.changeScreenReaderEnabled(request.getScreenReaderEnabled(), request.getId()));
+    }
+}
