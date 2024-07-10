@@ -19,7 +19,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 @Service
-public class NeshanMappingService extends AbstractMappingService {
+public class NeshanMappingService extends AbstractMappingService<NeshanDirectionsRequestDTO, NeshanReverseGeocodingRequestDTO> {
 
     @Value("${neshan.api.url.directions}")
     private String directionsApiUrl;
