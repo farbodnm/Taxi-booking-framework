@@ -12,15 +12,18 @@ Simple software architectures project to design a taxi booking framework.
   * [Component, and Class Diagram](#component-and-class-diagram)
 
 # Team Members
-
 - Farbod Nazari Montazer
 - Mahshad Salimi
 - Amin Hassan Zarei
 - Taha Khani Almoti
+- Mohammad Erfan DoostMohammadi
+- Amir Mohammad Soheili
+- Mahdi Ghasemi
+- Mohammad Mehdi Maleki Nejad
 
 # Description
 
-The prerequisites to designing the framework as requested by the projects are defined as follows.
+This project is a notification service that simulates the notification service of Snap
 
 ## Prioritised Feature List
 
@@ -79,6 +82,19 @@ The framework is designed using a service oriented architecture with each servic
 
 > Pre-made endpoints, DTOs, and service interface for user management.
 
+#### [Notification Service](portal/services/notification/src/main/java/com/taxi/notification)
+
+> A complete service that interacts with other services in order to push,handle and ...
+> operations on user ralated notifications.
+> These notifications include both customers and drivers.
+> <br>This notification service uses docker in order to handle better database and
+other configs.
+<br/><br/>
+Make sure to run ```docker compose up``` before using the project.
+<br/>
+It starts docker containers that contain postgresql database.
+
 ## Component, and Class Diagram
 
 To view the enforced architecture diagram please check the UML.drawio file inside the repository (The classes provided by the framework are colored blue, while the classes that are supposed to be made by the developer are coloured purple).
+
