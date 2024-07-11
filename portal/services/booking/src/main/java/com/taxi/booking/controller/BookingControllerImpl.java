@@ -15,7 +15,7 @@ public class BookingControllerImpl extends AbstractBookingController<BaseBooking
 
     @Autowired
     private BookingCreationServiceImpl bookingCreationService;
-
+    @Autowired
     protected BookingControllerImpl(BookingCreationServiceImpl bookingCreationService) {
         super(bookingCreationService);
     }
