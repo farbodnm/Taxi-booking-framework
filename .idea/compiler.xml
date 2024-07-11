@@ -8,11 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="fleet" />
+        <module name="notification" />
         <module name="booking" />
         <module name="framework" />
         <module name="dispatch" />
         <module name="user" />
         <module name="pricing" />
+        <module name="NotificationManagement" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,10 +24,12 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="NotificationManagement" options="-parameters" />
       <module name="booking" options="-parameters" />
       <module name="dispatch" options="-parameters" />
       <module name="fleet" options="-parameters" />
       <module name="framework" options="-parameters" />
+      <module name="notification" options="-parameters" />
       <module name="pricing" options="-parameters" />
       <module name="user" options="-parameters" />
     </option>
