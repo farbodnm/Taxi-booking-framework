@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  postgres:
+    restart: always
+    container_name: "oosd-postgres"
+    image: postgres:13.14-bullseye
+    environment:
+      POSTGRES_USER: "ali"
+      POSTGRES_PASSWORD: "ppdaaa333ddd33dddd"
+      POSTGRES_DB: "oosd_db"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+
+volumes:
+  postgres-data: { }
