@@ -48,22 +48,38 @@ This is the entry point of the SMS application, bootstrapping the Spring Boot ap
 
 ## Usage
 
+### POST Request Example
+
 Send a POST request to `/api/sms/send` with the following JSON body:
+
+```http
+{
+  POST http://localhost:8081/api/sms/send
+  Headers:
+  X-API-KEY  -> wIbst4oaIhpKbkWiIxP39LGQRpdzPSJllUJdchbddeWmuqNhfdSUI9WZq6mznbzR
+  ACCEPT     -> application/json,
+  
+  "mobile": "9912341111",
+    "templateId": "100000",
+    "parameters": [
+        {
+            "name": "Code",
+            "value": "14482"
+        }
+    ]
+}
+```
+
+### Response Example
 
 ```json
 {
-  "mobile": "09165874525",
-  "templateId": "template-id",
-  "parameters": [
-    {
-      "name": "param1",
-      "value": "value1"
-    },
-    {
-      "name": "param2",
-      "value": "value2"
-    }
-  ]
+  "data": {
+    "messageId": 57419253,
+    "cost": 1.00
+  },
+  "status": 1,
+  "message": "موفق"
 }
 ```
 
