@@ -1,6 +1,6 @@
 package com.taxi.mapping.config;
 
-import com.taxi.framework.mapping.service.MappingService;
+import com.taxi.framework.mapping.service.AbstractMappingService;
 import com.taxi.mapping.service.NeshanMappingService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -12,7 +12,13 @@ import org.springframework.web.client.RestTemplate;
 public class AppConfig {
 
     @Value("${neshan.api.key}")
-    private String apiKey; // Corrected variable name
+    private String apiKey;
+
+    @Value("${neshan.api.url.directions}")
+    private String directionsApiUrl;
+
+    @Value("${neshan.api.url.reverse-geocoding}")
+    private String reverseGeocodingApiUrl;
 
     @Bean
     public RestTemplate restTemplate() {
@@ -21,10 +27,10 @@ public class AppConfig {
 
     @Bean
     @Primary
-    public MappingService mappingService(RestTemplate restTemplate) {
+    public AbstractMappingService mappingService(RestTemplate restTemplate) {
         NeshanMappingService neshanMappingService = new NeshanMappingService(restTemplate);
-        // Set the API key provided by the user
         neshanMappingService.setApiKey(apiKey);
+        neshanMappingService.setDirectionsApiUrl(directionsApiUrl);
         return neshanMappingService;
     }
 }

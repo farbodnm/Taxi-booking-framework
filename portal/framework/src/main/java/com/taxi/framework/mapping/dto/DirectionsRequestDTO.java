@@ -28,4 +28,12 @@ public class DirectionsRequestDTO {
     public void setDestination(String destination) {
         this.destination = destination;
     }
+
+    @Override
+    public String toString() {
+        return "DirectionsRequestDTO{" +
+                "origin='" + origin + '\'' +
+                ", destination='" + destination + '\'' +
+                '}';
+    }
 }

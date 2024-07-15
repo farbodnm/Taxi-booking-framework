@@ -18,4 +18,11 @@ public class DirectionsResponseDTO {
     public void setRoute(String route) {
         this.route = route;
     }
+
+    @Override
+    public String toString() {
+        return "DirectionsResponseDTO{" +
+                "route='" + route + '\'' +
+                '}';
+    }
 }

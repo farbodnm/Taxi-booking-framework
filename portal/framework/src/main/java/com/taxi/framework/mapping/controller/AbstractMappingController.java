@@ -2,48 +2,70 @@ package com.taxi.framework.mapping.controller;
 
 import com.taxi.framework.mapping.dto.DirectionsRequestDTO;
 import com.taxi.framework.mapping.dto.DirectionsResponseDTO;
-import com.taxi.framework.mapping.dto.ReverseGeocodingRequestDTO;
-import com.taxi.framework.mapping.dto.ReverseGeocodingResponseDTO;
-import com.taxi.framework.mapping.service.MappingService;
+import com.taxi.framework.mapping.service.AbstractMappingService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-public abstract class AbstractMappingController {
+import java.util.Map;
 
-    private final MappingService mappingService;
+/**
+ * Abstract controller providing basic mapping functionalities for directions.
+ *
+ * @param <R> Type of the DirectionsRequestDTO.
+ * @param <S> Type of the DirectionsResponseDTO.
+ */
+public abstract class AbstractMappingController<R extends DirectionsRequestDTO, S extends DirectionsResponseDTO> {
 
-    public AbstractMappingController(MappingService mappingService) {
+    protected final AbstractMappingService<R, S> mappingService;
+
+    /**
+     * Constructor to initialize the mapping service.
+     *
+     * @param mappingService The mapping service used to get directions.
+     */
+    public AbstractMappingController(AbstractMappingService<R, S> mappingService) {
         this.mappingService = mappingService;
     }
 
-    protected MappingService getMappingService() {
+    /**
+     * Gets the mapping service.
+     *
+     * @return The mapping service.
+     */
+    protected AbstractMappingService<R, S> getMappingService() {
         return this.mappingService;
     }
 
-    @GetMapping("/directions")
-    public ResponseEntity<DirectionsResponseDTO> getDirections(
-            @RequestParam String origin,
-            @RequestParam String destination) {
+    /**
+     * Gets directions based on the provided parameters.
+     *
+     * @param params Parameters for the directions request.
+     * @return ResponseEntity containing the directions response or an error response.
+     */
+    public ResponseEntity<S> getDirections(@RequestParam Map<String, String> params) {
         try {
-            DirectionsRequestDTO request = new DirectionsRequestDTO(origin, destination);
-            DirectionsResponseDTO response = mappingService.getDirections(request);
+            R request = this.createDirectionsRequest(params);
+            S response = mappingService.getDirections(request);
             return ResponseEntity.ok(response);
         } catch (Exception e) {
-            return ResponseEntity.status(500).body(new DirectionsResponseDTO(e.getMessage()));
+            S errorResponse = this.createErrorResponse(e);
+            return ResponseEntity.status(500).body(errorResponse);
         }
     }
 
-    @GetMapping("/reverse-geocoding")
-    public ResponseEntity<ReverseGeocodingResponseDTO> getReverseGeocoding(
-            @RequestParam double lat,
-            @RequestParam double lng) {
-        try {
-            ReverseGeocodingRequestDTO request = new ReverseGeocodingRequestDTO(lat, lng);
-            ReverseGeocodingResponseDTO response = mappingService.getReverseGeocoding(request);
-            return ResponseEntity.ok(response);
-        } catch (Exception e) {
-            return ResponseEntity.status(500).body(new ReverseGeocodingResponseDTO(e.getMessage()));
-        }
-    }
+    /**
+     * Creates a directions request from the provided parameters.
+     *
+     * @param params Parameters for creating the directions request.
+     * @return A directions request.
+     */
+    protected abstract R createDirectionsRequest(Map<String, String> params);
+
+    /**
+     * Creates an error response based on the provided exception.
+     *
+     * @param e The exception that occurred.
+     * @return An error response.
+     */
+    protected abstract S createErrorResponse(Exception e);
 }

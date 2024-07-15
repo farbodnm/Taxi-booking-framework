@@ -28,4 +28,12 @@ public class ReverseGeocodingRequestDTO {
     public void setLng(double lng) {
         this.lng = lng;
     }
+
+    @Override
+    public String toString() {
+        return "ReverseGeocodingRequestDTO{" +
+                "lat=" + lat +
+                ", lng=" + lng +
+                '}';
+    }
 }
