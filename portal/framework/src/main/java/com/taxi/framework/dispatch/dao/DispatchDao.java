@@ -1,9 +1,8 @@
 package com.taxi.framework.dispatch.dao;
 
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
-import javax.persistence.*;
 
 @Entity
 @Getter
@@ -20,4 +19,14 @@ public class DispatchDao {
     private float destLongitude;
     private float destLatitude;
     private long driverId;
+    @Id
+    private Long id;
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
 }
